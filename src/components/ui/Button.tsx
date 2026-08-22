@@ -3,11 +3,12 @@ import type { ReactNode } from "react";
 
 const variants = {
   primary:
-    "bg-copper text-white hover:bg-copper-hover",
+    "bg-primary text-foreground hover:bg-primary-hover",
   secondary:
-    "border border-charcoal/15 bg-transparent text-charcoal hover:border-copper hover:text-copper",
-  ghost:
-    "text-charcoal hover:text-copper",
+    "border border-border-subtle bg-transparent text-foreground hover:border-primary hover:text-primary",
+  ghost: "text-foreground hover:text-primary",
+  "on-dark":
+    "bg-primary text-foreground hover:bg-primary-hover",
 } as const;
 
 type ButtonVariant = keyof typeof variants;
@@ -39,7 +40,7 @@ type ButtonAsLink = CommonProps & {
 type ButtonProps = ButtonAsButton | ButtonAsLink;
 
 const baseClassName =
-  "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition-colors";
+  "inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium tracking-wide transition-colors duration-200";
 
 function isInternalHref(href: string): boolean {
   return href.startsWith("/") || href.startsWith("#");
@@ -52,7 +53,12 @@ export function Button(props: ButtonProps) {
   if (props.href) {
     if (isInternalHref(props.href)) {
       return (
-        <Link href={props.href} className={classes} onClick={props.onClick} aria-label={props.ariaLabel}>
+        <Link
+          href={props.href}
+          className={classes}
+          onClick={props.onClick}
+          aria-label={props.ariaLabel}
+        >
           {children}
         </Link>
       );

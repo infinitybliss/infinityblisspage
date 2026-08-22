@@ -1,5 +1,3 @@
-import type { ServiceId } from "@/types/service";
-
 export type Dictionary = {
   meta: {
     title: string;
@@ -39,8 +37,15 @@ export type Dictionary = {
     eyebrow: string;
     title: string;
     text: string;
-    duration: string;
-    items: Record<ServiceId, { name: string; description: string }>;
+    pageEyebrow: string;
+    pageTitle: string;
+    pageDescription: string;
+    pilgrimsIntro: string;
+    viewTreatment: string;
+    fromPrice: string;
+    bookCta: string;
+    benefitsTitle: string;
+    durationsTitle: string;
   };
   pilgrims: {
     eyebrow: string;

@@ -8,5 +8,5 @@ export function PendingValue({ value, pendingLabel }: PendingValueProps) {
     return <span>{value}</span>;
   }
 
-  return <span className="text-muted">{pendingLabel}</span>;
+  return <span className="text-inherit opacity-75">{pendingLabel}</span>;
 }

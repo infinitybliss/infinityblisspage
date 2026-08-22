@@ -1,0 +1,36 @@
+import Image from "next/image";
+
+type BrandMarkProps = {
+  size?: "sm" | "md" | "lg";
+  /** Use on dark backgrounds where the asset's black canvas blends in naturally. */
+  onDark?: boolean;
+  className?: string;
+};
+
+const sizeClasses = {
+  sm: "h-8 w-8",
+  md: "h-9 w-9 sm:h-10 sm:w-10",
+  lg: "h-12 w-12 sm:h-14 sm:w-14",
+} as const;
+
+export function BrandMark({
+  size = "md",
+  onDark = false,
+  className = "",
+}: BrandMarkProps) {
+  return (
+    <span
+      className={`relative inline-flex shrink-0 items-center justify-center ${sizeClasses[size]} ${className}`}
+      aria-hidden="true"
+    >
+      <Image
+        src="/brand/imagotipo.png"
+        alt=""
+        width={112}
+        height={112}
+        className={`h-full w-full object-contain ${onDark ? "" : "mix-blend-screen"}`}
+        priority
+      />
+    </span>
+  );
+}

@@ -5,6 +5,7 @@ import { Logo } from "@/components/layout/Logo";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { getHomeSectionHref } from "@/lib/i18n/paths";
+import { getServicesHref } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
 
@@ -16,7 +17,7 @@ type HeaderProps = {
 export function Header({ locale, dictionary }: HeaderProps) {
   const navLinks = [
     { href: `/${locale}`, label: dictionary.nav.home },
-    { href: getHomeSectionHref(locale, "services"), label: dictionary.nav.services },
+    { href: getServicesHref(locale), label: dictionary.nav.services },
     { href: getHomeSectionHref(locale, "pilgrims"), label: dictionary.nav.pilgrims },
     { href: getHomeSectionHref(locale, "about"), label: dictionary.nav.about },
     { href: getHomeSectionHref(locale, "contact"), label: dictionary.nav.contact },
@@ -25,14 +26,17 @@ export function Header({ locale, dictionary }: HeaderProps) {
   const bookHref = getHomeSectionHref(locale, "booking");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-stone/80 bg-ivory/90 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-border-subtle bg-background/95 backdrop-blur-sm">
       <Container className="relative flex h-16 items-center justify-between gap-3 sm:h-[4.5rem]">
         <Logo locale={locale} title={dictionary.brand.name} />
         <nav aria-label={dictionary.nav.main} className="hidden lg:block">
-          <ul className="flex items-center gap-6 text-sm text-charcoal">
+          <ul className="flex items-center gap-6 text-sm text-foreground">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="hover:text-copper">
+                <Link
+                  href={link.href}
+                  className="transition-colors duration-200 hover:text-primary"
+                >
                   {link.label}
                 </Link>
               </li>

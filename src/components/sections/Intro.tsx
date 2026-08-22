@@ -9,12 +9,12 @@ type IntroProps = {
 
 export function Intro({ dictionary }: IntroProps) {
   return (
-    <Section ariaLabelledBy="intro-title">
+    <Section ariaLabelledBy="intro-title" className="bg-sand-soft py-20 sm:py-24">
       <Container className="max-w-3xl text-center">
         <Eyebrow>{dictionary.intro.eyebrow}</Eyebrow>
         <h2
           id="intro-title"
-          className="mt-3 font-serif text-3xl text-charcoal sm:text-4xl"
+          className="mt-3 font-serif text-3xl leading-tight text-foreground sm:text-4xl"
         >
           {dictionary.intro.title}
         </h2>

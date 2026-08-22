@@ -15,12 +15,12 @@ export function Reviews({ dictionary, reviews }: ReviewsProps) {
   }
 
   return (
-    <Section ariaLabelledBy="reviews-title" className="bg-ivory">
+    <Section ariaLabelledBy="reviews-title" className="bg-background">
       <Container>
         <Eyebrow>{dictionary.reviews.eyebrow}</Eyebrow>
         <h2
           id="reviews-title"
-          className="mt-3 font-serif text-3xl text-charcoal sm:text-4xl"
+          className="mt-3 font-serif text-3xl leading-tight text-foreground sm:text-4xl"
         >
           {dictionary.reviews.title}
         </h2>
@@ -28,11 +28,11 @@ export function Reviews({ dictionary, reviews }: ReviewsProps) {
           {reviews.map((review) => (
             <li
               key={review.id}
-              className="rounded-2xl bg-cream p-6"
+              className="rounded-2xl border border-border-subtle bg-surface p-6"
               lang={review.locale}
             >
               <blockquote>
-                <p className="text-base leading-relaxed text-charcoal">
+                <p className="text-base leading-relaxed text-foreground">
                   “{review.quote}”
                 </p>
                 <footer className="mt-4 text-sm text-muted">{review.author}</footer>

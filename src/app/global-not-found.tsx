@@ -14,12 +14,12 @@ export default function GlobalNotFound() {
       lang="es"
       className={`${fontSans.variable} ${fontSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col items-center justify-center bg-cream px-6 font-sans text-charcoal">
+      <body className="flex min-h-full flex-col items-center justify-center bg-background px-6 font-sans text-foreground">
         <h1 className="font-serif text-4xl">{es.notFound.title}</h1>
         <p className="mt-4 max-w-md text-center text-muted">{es.notFound.text}</p>
         <Link
           href="/es"
-          className="mt-8 inline-flex rounded-full bg-copper px-5 py-2.5 text-sm text-white hover:bg-copper-hover"
+          className="mt-8 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm text-foreground transition-colors duration-200 hover:bg-primary-hover"
         >
           {es.notFound.cta}
         </Link>

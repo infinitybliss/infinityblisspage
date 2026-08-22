@@ -57,7 +57,7 @@ export function MobileNav({ dictionary, links, bookHref }: MobileNavProps) {
       <button
         ref={buttonRef}
         type="button"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone text-charcoal"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-subtle text-foreground"
         aria-expanded={open}
         aria-controls={menuId}
         aria-label={open ? dictionary.nav.closeMenu : dictionary.nav.openMenu}
@@ -69,9 +69,9 @@ export function MobileNav({ dictionary, links, bookHref }: MobileNavProps) {
           </span>
         ) : (
           <span aria-hidden="true" className="flex flex-col gap-1.5">
-            <span className="block h-px w-4 bg-charcoal" />
-            <span className="block h-px w-4 bg-charcoal" />
-            <span className="block h-px w-4 bg-charcoal" />
+            <span className="block h-px w-4 bg-foreground" />
+            <span className="block h-px w-4 bg-foreground" />
+            <span className="block h-px w-4 bg-foreground" />
           </span>
         )}
       </button>
@@ -79,7 +79,7 @@ export function MobileNav({ dictionary, links, bookHref }: MobileNavProps) {
         <div
           id={menuId}
           ref={panelRef}
-          className="absolute inset-x-0 top-full z-50 border-t border-stone bg-ivory px-4 py-6 shadow-sm sm:px-6"
+          className="absolute inset-x-0 top-full z-50 border-t border-border-subtle bg-background px-4 py-6 shadow-sm sm:px-6"
         >
           <nav aria-label={dictionary.nav.main}>
             <ul className="flex flex-col gap-1">
@@ -87,7 +87,7 @@ export function MobileNav({ dictionary, links, bookHref }: MobileNavProps) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="block rounded-lg px-3 py-3 text-base text-charcoal hover:bg-cream"
+                    className="block rounded-lg px-3 py-3 text-base text-foreground transition-colors duration-200 hover:bg-sand-soft"
                     onClick={() => setOpen(false)}
                   >
                     {link.label}

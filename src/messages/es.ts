@@ -39,35 +39,18 @@ export const es: Dictionary = {
   services: {
     eyebrow: "Cuidados",
     title: "Servicios destacados",
-    text: "Una selección inicial de tratamientos para el cuerpo, las manos, los pies y el descanso. Los detalles de cada sesión se confirmarán con la apertura del centro.",
-    duration: "Duración",
-    items: {
-      masajes: {
-        name: "Masajes",
-        description:
-          "Sesiones para soltar tensión, aliviar el cansancio y recuperar una sensación de calma.",
-      },
-      "manos-pies": {
-        name: "Manos y pies",
-        description:
-          "Cuidados específicos para manos y pies, especialmente indicados tras jornadas largas de caminata o trabajo.",
-      },
-      unas: {
-        name: "Uñas",
-        description:
-          "Atención estética y de cuidado para uñas, con un enfoque limpio y relajado.",
-      },
-      "spa-japones": {
-        name: "Spa japonés",
-        description:
-          "Un ritual de bienestar inspirado en el cuidado japonés, pensado para renovar y relajar.",
-      },
-      presoterapia: {
-        name: "Presoterapia",
-        description:
-          "Tratamiento de recuperación orientado a piernas cansadas y a una sensación de ligereza.",
-      },
-    },
+    text: "Una selección de nuestros tratamientos de masaje, rituales y spa en Santiago de Compostela.",
+    pageEyebrow: "Tratamientos",
+    pageTitle: "Servicios de bienestar",
+    pageDescription:
+      "Descubre nuestro catálogo de masajes, rituales y experiencias de spa. Consulta duraciones, precios y reserva tu cita.",
+    pilgrimsIntro:
+      "Tratamientos especialmente pensados para recuperar piernas, pies, espalda y cuerpo después de las etapas del Camino de Santiago.",
+    viewTreatment: "Ver tratamiento",
+    fromPrice: "desde",
+    bookCta: "Reservar cita",
+    benefitsTitle: "Beneficios",
+    durationsTitle: "Duraciones y precios",
   },
   pilgrims: {
     eyebrow: "Camino de Santiago",

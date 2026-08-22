@@ -17,7 +17,7 @@ export function generateStaticParams() {
 export const dynamicParams = false;
 
 export const viewport: Viewport = {
-  themeColor: "#f4efe6",
+  themeColor: "#F7F3EE",
 };
 
 export async function generateMetadata({
@@ -67,7 +67,7 @@ export default async function LocaleLayout({
       lang={localeHtmlLang[validLocale]}
       className={`${fontSans.variable} ${fontSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-cream font-sans text-charcoal">
+      <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <SkipLink dictionary={dictionary} />
         <Header locale={validLocale} dictionary={dictionary} />
         <div className="flex-1">{children}</div>

@@ -18,7 +18,7 @@ export default async function LocaleNotFound() {
   return (
     <main id="contenido">
       <Container className="max-w-xl py-24 text-center">
-        <h1 className="font-serif text-4xl text-charcoal">
+        <h1 className="font-serif text-4xl text-foreground">
           {dictionary.notFound.title}
         </h1>
         <p className="mt-4 text-muted">{dictionary.notFound.text}</p>

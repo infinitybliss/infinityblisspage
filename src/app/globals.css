@@ -1,29 +1,50 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #f4efe6;
-  --ivory: #faf7f1;
-  --charcoal: #2b2824;
-  --muted: #5a554c;
-  --copper: #9c5134;
-  --copper-hover: #823f28;
-  --sage: #6f7f69;
-  --sage-soft: #e4e8df;
-  --stone: #e6dfd2;
-  --white: #fffdf8;
+  /* Brand palette */
+  --brand-charcoal: #262626;
+  --brand-copper: #ad7d5b;
+  --brand-sand: #d9bc9a;
+  --brand-sage: #797d75;
+  --brand-taupe: #736258;
+
+  /* Semantic tokens */
+  --background: #f7f3ee;
+  --foreground: var(--brand-charcoal);
+  --surface: #ffffff;
+  --primary: var(--brand-copper);
+  --primary-hover: #9a6b4d;
+  --secondary: var(--brand-sage);
+  --muted: var(--brand-taupe);
+  --accent: var(--brand-sand);
+
+  /* Derived surfaces & borders */
+  --sand-soft: color-mix(in srgb, var(--brand-sand) 22%, var(--background));
+  --sage-soft: color-mix(in srgb, var(--brand-sage) 14%, var(--background));
+  --border: color-mix(in srgb, var(--brand-charcoal) 10%, transparent);
+  --border-subtle: color-mix(in srgb, var(--brand-charcoal) 6%, transparent);
+  --placeholder-copper: color-mix(in srgb, var(--brand-copper) 12%, transparent);
+  --placeholder-sage: color-mix(in srgb, var(--brand-sage) 22%, transparent);
 }
 
 @theme inline {
-  --color-cream: var(--cream);
-  --color-ivory: var(--ivory);
-  --color-charcoal: var(--charcoal);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
   --color-muted: var(--muted);
-  --color-copper: var(--copper);
-  --color-copper-hover: var(--copper-hover);
-  --color-sage: var(--sage);
+  --color-accent: var(--accent);
+  --color-brand-charcoal: var(--brand-charcoal);
+  --color-brand-copper: var(--brand-copper);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-sage: var(--brand-sage);
+  --color-brand-taupe: var(--brand-taupe);
+  --color-sand-soft: var(--sand-soft);
   --color-sage-soft: var(--sage-soft);
-  --color-stone: var(--stone);
-  --color-surface: var(--white);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 }
@@ -39,17 +60,17 @@ html {
 }
 
 body {
-  background: var(--cream);
-  color: var(--charcoal);
+  background: var(--background);
+  color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 :focus-visible {
-  outline: 2px solid var(--copper);
+  outline: 2px solid var(--primary);
   outline-offset: 3px;
 }
 
 ::selection {
   background: var(--sage-soft);
-  color: var(--charcoal);
+  color: var(--foreground);
 }

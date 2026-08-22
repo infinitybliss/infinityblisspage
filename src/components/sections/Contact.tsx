@@ -26,10 +26,13 @@ function ContactItem({
 }) {
   return (
     <div>
-      <dt className="text-sm font-medium text-charcoal">{label}</dt>
+      <dt className="text-sm font-medium text-foreground">{label}</dt>
       <dd className="mt-1 text-sm text-muted">
         {href && value ? (
-          <a href={href} className="hover:text-copper">
+          <a
+            href={href}
+            className="transition-colors duration-200 hover:text-primary"
+          >
             {value}
           </a>
         ) : (
@@ -46,13 +49,17 @@ export function Contact({ locale, dictionary }: ContactProps) {
   const whatsappHref = getWhatsAppHref(site.contact.whatsapp);
 
   return (
-    <Section id={getSectionId(locale, "contact")} ariaLabelledBy={titleId}>
+    <Section
+      id={getSectionId(locale, "contact")}
+      ariaLabelledBy={titleId}
+      className="bg-surface"
+    >
       <Container className="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <Eyebrow>{dictionary.contact.eyebrow}</Eyebrow>
           <h2
             id={titleId}
-            className="mt-3 font-serif text-3xl text-charcoal sm:text-4xl"
+            className="mt-3 font-serif text-3xl leading-tight text-foreground sm:text-4xl"
           >
             {dictionary.contact.title}
           </h2>
@@ -98,7 +105,7 @@ export function Contact({ locale, dictionary }: ContactProps) {
               loading="lazy"
             />
           ) : (
-            <p className="rounded-full bg-ivory/80 px-3 py-1 text-xs text-muted">
+            <p className="rounded-full bg-surface/90 px-3 py-1 text-xs text-muted">
               {dictionary.contact.mapPlaceholder}
             </p>
           )}

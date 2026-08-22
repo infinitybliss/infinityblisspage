@@ -1,4 +1,8 @@
 import { locales, type Locale } from "@/lib/i18n/config";
+import {
+  isServicesPath,
+} from "@/lib/services";
+import { resolveEquivalentServicePath } from "@/lib/services/metadata";
 
 export const routeIds = [
   "home",
@@ -58,6 +62,11 @@ function normalizePath(pathname: string): string {
   return pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
 }
 
+function getLocaleFromPathname(pathname: string): Locale | null {
+  const match = pathname.match(/^\/(es|gl)(?=\/|$)/);
+  return match?.[1] === "gl" ? "gl" : match?.[1] === "es" ? "es" : null;
+}
+
 export function getRouteIdFromPathname(pathname: string): RouteId {
   const rest = normalizePath(stripLocalePrefix(pathname));
 
@@ -65,6 +74,15 @@ export function getRouteIdFromPathname(pathname: string): RouteId {
     for (const locale of locales) {
       if (normalizePath(pathnames[routeId][locale]) === rest) {
         return routeId;
+      }
+    }
+  }
+
+  const segments = rest.split("/").filter(Boolean);
+  if (segments.length >= 1) {
+    for (const locale of locales) {
+      if (isServicesPath(locale, segments[0])) {
+        return "services";
       }
     }
   }
@@ -91,8 +109,15 @@ export function getEquivalentHref(
   targetLocale: Locale,
   hash?: string,
 ): string {
-  const routeId = getRouteIdFromPathname(pathname);
-  const href = getLocalizedHref(targetLocale, routeId);
+  const sourceLocale = getLocaleFromPathname(pathname);
+  const servicePath =
+    sourceLocale &&
+    resolveEquivalentServicePath(pathname, sourceLocale, targetLocale);
+
+  const href = servicePath ?? getLocalizedHref(
+    targetLocale,
+    getRouteIdFromPathname(pathname),
+  );
 
   if (!hash) {
     return href;
