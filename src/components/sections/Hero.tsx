@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { MediaImage } from "@/components/ui/MediaImage";
+import { siteImages } from "@/data/media";
 import { getHomeSectionHref } from "@/lib/i18n/paths";
 import { getServicesHref } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
@@ -40,10 +41,12 @@ export function Hero({ locale, dictionary }: HeroProps) {
             </Button>
           </div>
         </div>
-        <ImagePlaceholder
-          label={hero.imageLabel}
-          alt={hero.imageAlt}
+        <MediaImage
+          image={siteImages.hero}
+          locale={locale}
+          priority
           className="min-h-[20rem] lg:min-h-[28rem]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </Container>
     </section>

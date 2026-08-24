@@ -9,11 +9,11 @@ export const site = {
    */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   contact: {
-    address: null as ContactField,
-    phone: null as ContactField,
-    whatsapp: null as ContactField,
+    address: "Calle Gómez Ulla 4, Bajo" as ContactField,
+    phone: "+34 600 62 28 07" as ContactField,
+    whatsapp: "+34 600 62 28 07" as ContactField,
     email: null as ContactField,
-    hours: null as ContactField,
+    hours: "9:00 – 20:00" as ContactField,
   },
   /**
    * Replace with the SimplyBook.me public booking URL or widget mount point.

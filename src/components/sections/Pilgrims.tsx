@@ -2,9 +2,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { MediaImage } from "@/components/ui/MediaImage";
 import { Section } from "@/components/ui/Section";
 import { categoryLabels } from "@/data/categories";
+import { siteImages } from "@/data/media";
 import { formatServiceMeta } from "@/lib/services/format";
 import {
   getPilgrimFeaturedServices,
@@ -85,11 +86,12 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
           </div>
         </div>
         <div className="overflow-hidden rounded-2xl border border-secondary/30">
-          <ImagePlaceholder
-            label={dictionary.hero.imageLabel}
-            alt={dictionary.hero.imageAlt}
-            variant="light"
-            className="min-h-[16rem] rounded-none sm:min-h-[20rem]"
+          <MediaImage
+            image={siteImages.pilgrims}
+            locale={locale}
+            rounded={false}
+            className="min-h-[16rem] sm:min-h-[20rem] lg:min-h-[24rem]"
+            sizes="(max-width: 1024px) 100vw, 40vw"
           />
         </div>
       </Container>

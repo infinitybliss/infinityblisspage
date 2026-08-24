@@ -43,6 +43,7 @@ export const servicesCatalog: Service[] = [
     featured: true,
     pilgrimFeatured: true,
     audience: ["peregrinos"],
+    image: "/images/massage-back-shoulders.jpg",
   },
   {
     id: "lymphatic-drainage",
@@ -76,6 +77,7 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [{ minutes: 30, price: 35 }],
+    image: "/images/massage-hands.jpg",
   },
   {
     id: "relaxing-massage",
@@ -117,6 +119,7 @@ export const servicesCatalog: Service[] = [
       { minutes: 90, price: 90 },
     ],
     featured: true,
+    image: "/images/massage-back-ambiance.jpg",
   },
   {
     id: "craniofacial-massage",
@@ -154,6 +157,7 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [{ minutes: 30, price: 30 }],
+    image: "/images/facial-mask.jpg",
   },
   {
     id: "express-massage",
@@ -191,6 +195,7 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [{ minutes: 30, price: 35 }],
+    image: "/images/massage-back-oil.jpg",
   },
   {
     id: "ritual-alma",
@@ -229,6 +234,7 @@ export const servicesCatalog: Service[] = [
     ],
     durations: [{ minutes: 45, price: 55 }],
     featured: true,
+    image: "/images/facial-mask.jpg",
   },
   {
     id: "ritual-light-feet",
@@ -268,6 +274,7 @@ export const servicesCatalog: Service[] = [
     durations: [{ minutes: 45, price: 55 }],
     pilgrimFeatured: true,
     audience: ["peregrinos", "deportistas", "personas que trabajan de pie"],
+    image: "/images/massage-hands.jpg",
   },
   {
     id: "ritual-serenity-spa",
@@ -309,6 +316,7 @@ export const servicesCatalog: Service[] = [
       { minutes: 60, price: 70 },
     ],
     featured: true,
+    image: "/images/head-spa.jpg",
   },
   {
     id: "hospitality-reset",
@@ -355,6 +363,7 @@ export const servicesCatalog: Service[] = [
       es: "Tarifa especial para trabajadores/as de hostelería.",
       gl: "Tarifa especial para traballadores/as de hostalaría.",
     },
+    image: "/images/massage-back-oil.jpg",
   },
   {
     id: "hospitality-reset-premium",
@@ -407,5 +416,6 @@ export const servicesCatalog: Service[] = [
       es: "Tarifa especial para trabajadores/as de hostelería.",
       gl: "Tarifa especial para traballadores/as de hostalaría.",
     },
+    image: "/images/massage-back-ambiance.jpg",
   },
 ];

@@ -2,8 +2,6 @@ import Image from "next/image";
 
 type BrandMarkProps = {
   size?: "sm" | "md" | "lg";
-  /** Use on dark backgrounds where the asset's black canvas blends in naturally. */
-  onDark?: boolean;
   className?: string;
 };
 
@@ -15,7 +13,6 @@ const sizeClasses = {
 
 export function BrandMark({
   size = "md",
-  onDark = false,
   className = "",
 }: BrandMarkProps) {
   return (
@@ -28,7 +25,7 @@ export function BrandMark({
         alt=""
         width={112}
         height={112}
-        className={`h-full w-full object-contain ${onDark ? "" : "mix-blend-screen"}`}
+        className="h-full w-full object-contain"
         priority
       />
     </span>

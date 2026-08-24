@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { categoryLabels } from "@/data/categories";
 import { ServiceBadge } from "@/components/services/ServiceBadge";
 import { ServicePriceNote } from "@/components/services/ServicePriceNote";
+import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { formatServiceMeta } from "@/lib/services/format";
 import {
   getServiceHref,
@@ -10,7 +12,6 @@ import {
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
 import type { Service } from "@/types/service";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 
 type ServiceCardProps = {
   service: Service;
@@ -42,12 +43,15 @@ export function ServiceCard({
       <div className={`h-0.5 w-full ${accentBarClass}`} aria-hidden="true" />
       {!compact &&
         (service.image ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={service.image}
-            alt=""
-            className="h-44 w-full object-cover"
-          />
+          <div className="relative h-44 w-full overflow-hidden bg-sage-soft">
+            <Image
+              src={service.image}
+              alt={localized.name}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
         ) : (
           <ImagePlaceholder
             label={dictionary.hero.imageLabel}

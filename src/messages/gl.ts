@@ -99,7 +99,7 @@ export const gl: Dictionary = {
   contact: {
     eyebrow: "Visítanos",
     title: "Localización e contacto",
-    text: "Estamos en Santiago de Compostela. Os datos definitivos de enderezo, teléfono e horario publicaranse antes da apertura.",
+    text: "Estamos na Rúa Gómez Ulla, en Santiago de Compostela. Podes chamarnos ou escribirnos por WhatsApp para reservar a túa cita.",
     address: "Enderezo",
     phone: "Teléfono",
     whatsapp: "WhatsApp",

@@ -1,7 +1,8 @@
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
+import { MediaImage } from "@/components/ui/MediaImage";
 import { Section } from "@/components/ui/Section";
+import { siteImages } from "@/data/media";
 import { getSectionId } from "@/lib/i18n/paths";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
@@ -22,10 +23,11 @@ export function About({ locale, dictionary }: AboutProps) {
       className="bg-background"
     >
       <Container className="grid items-start gap-10 lg:grid-cols-2 lg:gap-16">
-        <ImagePlaceholder
-          label={dictionary.about.imageLabel}
-          alt={dictionary.about.imageAlt}
+        <MediaImage
+          image={siteImages.about}
+          locale={locale}
           className="min-h-[18rem] lg:min-h-[28rem]"
+          sizes="(max-width: 1024px) 100vw, 50vw"
         />
         <div>
           <Eyebrow>{dictionary.about.eyebrow}</Eyebrow>

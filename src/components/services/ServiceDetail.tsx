@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -105,12 +106,16 @@ export function ServiceDetail({
 
           <div>
             {service.image ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={service.image}
-                alt=""
-                className="min-h-[20rem] w-full rounded-2xl object-cover"
-              />
+              <div className="relative min-h-[20rem] overflow-hidden rounded-2xl bg-sage-soft lg:min-h-[28rem]">
+                <Image
+                  src={service.image}
+                  alt={localized.name}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
             ) : (
               <ImagePlaceholder
                 label={dictionary.hero.imageLabel}

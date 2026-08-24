@@ -29,7 +29,7 @@ export function Logo({
       aria-label={title}
       className="group inline-flex items-center gap-2.5 sm:gap-3"
     >
-      <BrandMark size={showTagline ? "lg" : "md"} onDark={onDark} />
+      <BrandMark size={showTagline ? "lg" : "md"} />
       <span className="flex flex-col">
         <span
           className={`font-serif text-lg leading-tight tracking-wide transition-colors duration-200 sm:text-xl ${titleClass}`}
