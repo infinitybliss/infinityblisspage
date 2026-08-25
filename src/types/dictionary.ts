@@ -75,8 +75,10 @@ export type Dictionary = {
     title: string;
     text: string;
     cta: string;
-    placeholderLabel: string;
-    placeholderText: string;
+    loadingLabel: string;
+    errorText: string;
+    errorLinkLabel: string;
+    helpText: string;
   };
   contact: {
     eyebrow: string;

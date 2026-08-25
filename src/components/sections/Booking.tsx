@@ -1,8 +1,9 @@
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Section } from "@/components/ui/Section";
+import { SimplyBookWidget } from "@/components/booking/SimplyBookWidget";
 import { site } from "@/data/site";
+import { getTelHref } from "@/lib/format";
 import { getSectionId } from "@/lib/i18n/paths";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
@@ -14,6 +15,7 @@ type BookingProps = {
 
 export function Booking({ locale, dictionary }: BookingProps) {
   const titleId = "booking-title";
+  const phoneHref = getTelHref(site.contact.phone);
 
   return (
     <Section
@@ -21,8 +23,8 @@ export function Booking({ locale, dictionary }: BookingProps) {
       ariaLabelledBy={titleId}
       className="bg-sand-soft py-20 sm:py-24"
     >
-      <Container className="max-w-3xl text-center">
-        <div className="rounded-2xl border border-primary/20 bg-background/60 px-6 py-10 sm:px-10 sm:py-12">
+      <Container className="max-w-6xl">
+        <div className="mx-auto max-w-2xl text-center">
           <Eyebrow>{dictionary.booking.eyebrow}</Eyebrow>
           <h2
             id={titleId}
@@ -33,19 +35,28 @@ export function Booking({ locale, dictionary }: BookingProps) {
           <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
             {dictionary.booking.text}
           </p>
-          <div className="mt-8">
-            <Button href={site.bookingHref}>{dictionary.booking.cta}</Button>
-          </div>
-          {/* SIMPLYBOOK.ME: replace the placeholder below with the booking widget or embed. */}
-          <div
-            id="simplybook-widget-mount"
-            className="mt-10 rounded-2xl border border-dashed border-primary/30 bg-surface px-6 py-12"
-            aria-label={dictionary.booking.placeholderLabel}
-          >
-            <p className="text-sm leading-relaxed text-muted">
-              {dictionary.booking.placeholderText}
-            </p>
-          </div>
+        </div>
+
+        <div className="mx-auto mt-10 w-full max-w-5xl overflow-x-hidden rounded-2xl border border-primary/15 bg-background/70 p-3 sm:p-5">
+          <SimplyBookWidget
+            loadingLabel={dictionary.booking.loadingLabel}
+            errorText={dictionary.booking.errorText}
+            errorLinkLabel={dictionary.booking.errorLinkLabel}
+          />
+        </div>
+
+        <div className="mx-auto mt-10 max-w-2xl text-center">
+          <p className="text-sm leading-relaxed text-muted">
+            {dictionary.booking.helpText}
+          </p>
+          {site.contact.phone && phoneHref && (
+            <a
+              href={phoneHref}
+              className="mt-2 inline-flex text-base font-medium text-foreground transition-colors duration-200 hover:text-primary"
+            >
+              {site.contact.phone}
+            </a>
+          )}
         </div>
       </Container>
     </Section>

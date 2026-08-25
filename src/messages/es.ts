@@ -92,9 +92,11 @@ export const es: Dictionary = {
     title: "Reserva tu momento",
     text: "Elige el tratamiento y el horario que mejor te encajen. Te esperamos en Santiago de Compostela.",
     cta: "Reservar cita",
-    placeholderLabel: "Reservas",
-    placeholderText:
-      "El sistema de reservas se integrará aquí. Mientras tanto, puedes usar el botón para volver a esta sección.",
+    loadingLabel: "Cargando reservas…",
+    errorText:
+      "No hemos podido cargar el sistema de reservas. Puedes reservar directamente aquí.",
+    errorLinkLabel: "Abrir reservas en SimplyBook.me",
+    helpText: "¿Tienes dudas o quieres reservar para un grupo?",
   },
   contact: {
     eyebrow: "Visítanos",
