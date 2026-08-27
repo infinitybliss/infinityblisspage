@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LegalPlaceholder } from "@/components/legal/LegalPlaceholder";
+import { LegalDocument } from "@/components/legal/LegalDocument";
+import { getLegalDocument } from "@/data/legal";
 import { getLocaleFromParam } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { getRouteAlternates } from "@/lib/i18n/metadata";
@@ -15,7 +16,12 @@ export async function generateMetadata({
   }
   const dictionary = getDictionary(validLocale);
   return {
-    title: dictionary.legal.cookies.title,
+    title: {
+      absolute:
+        validLocale === "es"
+          ? "Política de Cookies | Ritual Essences"
+          : "Política de cookies | Ritual Essences",
+    },
     description: dictionary.legal.cookies.description,
     ...getRouteAlternates(validLocale, "cookies"),
   };
@@ -29,14 +35,10 @@ export default async function CookiesPage({
   if (!validLocale) {
     notFound();
   }
-  const dictionary = getDictionary(validLocale);
 
   return (
     <main id="contenido">
-      <LegalPlaceholder
-        title={dictionary.legal.cookies.title}
-        body={dictionary.legal.pendingBody}
-      />
+      <LegalDocument document={getLegalDocument("cookies", validLocale)} />
     </main>
   );
 }

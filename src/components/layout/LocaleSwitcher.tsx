@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { locales } from "@/lib/i18n/config";
 import { getEquivalentHref } from "@/lib/i18n/paths";
 import type { Dictionary } from "@/types/dictionary";
@@ -19,6 +19,9 @@ export function LocaleSwitcher({
   className = "",
 }: LocaleSwitcherProps) {
   const pathname = usePathname() ?? `/${locale}`;
+  const searchParams = useSearchParams();
+  const search = searchParams.toString();
+  const querySuffix = search ? `?${search}` : "";
 
   return (
     <nav aria-label={dictionary.nav.language} className={className}>
@@ -34,7 +37,7 @@ export function LocaleSwitcher({
                 </span>
               )}
               <Link
-                href={getEquivalentHref(pathname, item)}
+                href={`${getEquivalentHref(pathname, item)}${querySuffix}`}
                 hrefLang={item}
                 lang={item}
                 aria-current={isActive ? "true" : undefined}

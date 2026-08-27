@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LegalPlaceholder } from "@/components/legal/LegalPlaceholder";
+import { LegalDocument } from "@/components/legal/LegalDocument";
+import { getLegalDocument } from "@/data/legal";
 import { getLocaleFromParam } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { getRouteAlternates } from "@/lib/i18n/metadata";
@@ -29,14 +30,10 @@ export default async function LegalNoticePage({
   if (!validLocale) {
     notFound();
   }
-  const dictionary = getDictionary(validLocale);
 
   return (
     <main id="contenido">
-      <LegalPlaceholder
-        title={dictionary.legal.notice.title}
-        body={dictionary.legal.pendingBody}
-      />
+      <LegalDocument document={getLegalDocument("notice", validLocale)} />
     </main>
   );
 }

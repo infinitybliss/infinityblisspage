@@ -7,7 +7,7 @@ import { ServiceBadge } from "@/components/services/ServiceBadge";
 import { ServicePriceNote } from "@/components/services/ServicePriceNote";
 import { categoryLabels } from "@/data/categories";
 import { formatDurationOption } from "@/lib/services/format";
-import { getHomeSectionHref } from "@/lib/i18n/paths";
+import { getBookingHref } from "@/lib/i18n/paths";
 import { localizeService } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
@@ -27,6 +27,15 @@ export function ServiceDetail({
   const localized = localizeService(service, locale);
   const categoryLabel = categoryLabels[service.category][locale];
   const hasNote = Boolean(localized.note);
+  const hasMultipleDurations = localized.durations.length > 1;
+  const singleDuration = localized.durations[0];
+  const singleBookHref =
+    !hasMultipleDurations && singleDuration
+      ? getBookingHref(locale, {
+          serviceId: service.id,
+          durationMinutes: singleDuration.minutes,
+        })
+      : null;
 
   return (
     <main id="contenido">
@@ -80,16 +89,40 @@ export function ServiceDetail({
               >
                 {dictionary.services.durationsTitle}
               </h2>
-              <ul className="mt-4 space-y-2">
-                {localized.durations.map((duration) => (
-                  <li
-                    key={`${duration.minutes}-${duration.price}`}
-                    className="text-base font-medium text-foreground"
-                  >
-                    {formatDurationOption(duration, locale, hasNote)}
-                  </li>
-                ))}
-              </ul>
+              {hasMultipleDurations ? (
+                <ul className="mt-5 space-y-4">
+                  {localized.durations.map((duration) => (
+                    <li
+                      key={`${duration.minutes}-${duration.price}`}
+                      className="flex flex-wrap items-center justify-between gap-3 border-b border-border-subtle pb-4 last:border-b-0 last:pb-0"
+                    >
+                      <span className="text-base font-medium text-foreground">
+                        {formatDurationOption(duration, locale, hasNote)}
+                      </span>
+                      <Button
+                        href={getBookingHref(locale, {
+                          serviceId: service.id,
+                          durationMinutes: duration.minutes,
+                        })}
+                        className="px-4 py-2 text-sm"
+                      >
+                        {dictionary.services.bookDuration}
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="mt-4 space-y-2">
+                  {localized.durations.map((duration) => (
+                    <li
+                      key={`${duration.minutes}-${duration.price}`}
+                      className="text-base font-medium text-foreground"
+                    >
+                      {formatDurationOption(duration, locale, hasNote)}
+                    </li>
+                  ))}
+                </ul>
+              )}
               {localized.note && (
                 <div className="mt-3">
                   <ServicePriceNote note={localized.note} />
@@ -97,11 +130,13 @@ export function ServiceDetail({
               )}
             </section>
 
-            <div className="mt-10">
-              <Button href={getHomeSectionHref(locale, "booking")}>
-                {dictionary.services.bookCta}
-              </Button>
-            </div>
+            {singleBookHref && (
+              <div className="mt-8">
+                <Button href={singleBookHref}>
+                  {dictionary.services.bookThisTreatment}
+                </Button>
+              </div>
+            )}
           </div>
 
           <div>
@@ -123,14 +158,16 @@ export function ServiceDetail({
                 className="min-h-[20rem] lg:min-h-[28rem]"
               />
             )}
-            {/* SIMPLYBOOK.ME: service-level booking widget can be mounted here later using service.bookingId */}
-            <div
-              id={`simplybook-service-${service.id}`}
-              className="mt-6 rounded-2xl border border-dashed border-primary/30 bg-sand-soft/40 px-5 py-8"
-              aria-hidden="true"
-            />
           </div>
         </div>
+
+        {singleBookHref && (
+          <div className="mt-14 border-t border-border-subtle pt-10 text-center sm:mt-16">
+            <Button href={singleBookHref}>
+              {dictionary.services.bookThisTreatment}
+            </Button>
+          </div>
+        )}
       </Container>
     </main>
   );

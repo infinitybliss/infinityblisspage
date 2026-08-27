@@ -8,7 +8,7 @@ import { getRouteAlternates } from "@/lib/i18n/metadata";
 
 export async function generateMetadata({
   params,
-}: PageProps<"/[locale]/privacidad">): Promise<Metadata> {
+}: PageProps<"/[locale]/condiciones-de-reserva">): Promise<Metadata> {
   const { locale } = await params;
   const validLocale = getLocaleFromParam(locale);
   if (!validLocale || validLocale !== "es") {
@@ -16,15 +16,15 @@ export async function generateMetadata({
   }
   const dictionary = getDictionary(validLocale);
   return {
-    title: dictionary.legal.privacy.title,
-    description: dictionary.legal.privacy.description,
-    ...getRouteAlternates(validLocale, "privacy"),
+    title: dictionary.legal.bookingTerms.title,
+    description: dictionary.legal.bookingTerms.description,
+    ...getRouteAlternates(validLocale, "bookingTerms"),
   };
 }
 
-export default async function PrivacyPage({
+export default async function BookingTermsEsPage({
   params,
-}: PageProps<"/[locale]/privacidad">) {
+}: PageProps<"/[locale]/condiciones-de-reserva">) {
   const { locale } = await params;
   const validLocale = getLocaleFromParam(locale);
   if (!validLocale || validLocale !== "es") {
@@ -33,7 +33,7 @@ export default async function PrivacyPage({
 
   return (
     <main id="contenido">
-      <LegalDocument document={getLegalDocument("privacy", validLocale)} />
+      <LegalDocument document={getLegalDocument("bookingTerms", validLocale)} />
     </main>
   );
 }

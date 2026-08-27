@@ -49,6 +49,8 @@ export const gl: Dictionary = {
     viewTreatment: "Ver tratamento",
     fromPrice: "desde",
     bookCta: "Reservar cita",
+    bookThisTreatment: "Reservar este tratamento",
+    bookDuration: "Reservar",
     benefitsTitle: "Beneficios",
     durationsTitle: "Duracións e prezos",
   },
@@ -90,13 +92,26 @@ export const gl: Dictionary = {
   booking: {
     eyebrow: "Cita",
     title: "Reserva o teu momento",
-    text: "Elixe o tratamento e o horario que mellor che encaien. Agardámoste en Santiago de Compostela.",
+    text: "Escolle o tratamento que mellor encaixe contigo e consulta os horarios dispoñibles.",
+    secondaryText: "Reserva en liña de forma rápida e sinxela.",
     cta: "Reservar cita",
+    pageEyebrow: "Reservas",
+    pageTitle: "Reserva o teu momento",
+    pageDescription:
+      "Selecciona o teu tratamento, escolle o horario que mellor che encaixe e completa a túa reserva.",
     loadingLabel: "Cargando as reservas…",
     errorText:
       "Non puidemos cargar o sistema de reservas. Podes reservar directamente aquí.",
     errorLinkLabel: "Abrir reservas en SimplyBook.me",
-    helpText: "Tes dúbidas ou queres reservar para un grupo?",
+    groupTitle: "Queres reservar para un grupo?",
+    groupText:
+      "Para reservas de varias persoas ou necesidades especiais, escríbenos por WhatsApp ou chámanos e axudarémosche a organizalo.",
+    groupCta: "Contactar por WhatsApp",
+    selectionLabel: "Estás reservando",
+    changeTreatment: "Cambiar tratamento",
+    metaTitle: "Reservas | Ritual Essences",
+    metaDescription:
+      "Reserva masaxes e tratamentos de benestar en Ritual Essences, Santiago de Compostela.",
   },
   contact: {
     eyebrow: "Visítanos",
@@ -117,22 +132,29 @@ export const gl: Dictionary = {
     legalNotice: "Aviso legal",
     privacy: "Privacidade",
     cookies: "Cookies",
+    bookingTerms: "Condicións de reserva",
     rights: "Todos os dereitos reservados.",
   },
   legal: {
-    pendingBody:
-      "Esta páxina está preparada e completarase co contido legal definitivo antes da apertura ao público.",
     notice: {
       title: "Aviso legal",
-      description: "Aviso legal de Ritual Essences. Contido en preparación.",
+      description:
+        "Aviso legal de Ritual Essences – Centro de Benestar. Información identificativa e condicións de uso do sitio web.",
     },
     privacy: {
       title: "Política de privacidade",
-      description: "Política de privacidade de Ritual Essences. Contido en preparación.",
+      description:
+        "Política de privacidade de Ritual Essences. Información sobre o tratamento de datos persoais e reservas.",
     },
     cookies: {
       title: "Política de cookies",
-      description: "Política de cookies de Ritual Essences. Contido en preparación.",
+      description:
+        "Información sobre as cookies e tecnoloxías utilizadas na web e no sistema de reservas de Ritual Essences.",
+    },
+    bookingTerms: {
+      title: "Condicións de reserva e cancelación",
+      description:
+        "Condicións de reserva e cancelación de Ritual Essences. Antelación, modificación, grupos e tarifas especiais.",
     },
   },
   notFound: {

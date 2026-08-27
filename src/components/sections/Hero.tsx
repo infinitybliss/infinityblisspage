@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { siteImages } from "@/data/media";
-import { getHomeSectionHref } from "@/lib/i18n/paths";
+import { getBookingHref } from "@/lib/i18n/paths";
 import { getServicesHref } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
@@ -33,7 +33,7 @@ export function Hero({ locale, dictionary }: HeroProps) {
             {hero.text}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href={getHomeSectionHref(locale, "booking")}>
+            <Button href={getBookingHref(locale)}>
               {hero.primaryCta}
             </Button>
             <Button href={getServicesHref(locale)} variant="secondary">

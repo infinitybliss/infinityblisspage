@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { LegalPlaceholder } from "@/components/legal/LegalPlaceholder";
+import { LegalDocument } from "@/components/legal/LegalDocument";
+import { getLegalDocument } from "@/data/legal";
 import { getLocaleFromParam } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { getRouteAlternates } from "@/lib/i18n/metadata";
@@ -10,7 +11,7 @@ export async function generateMetadata({
 }: PageProps<"/[locale]/privacidade">): Promise<Metadata> {
   const { locale } = await params;
   const validLocale = getLocaleFromParam(locale);
-  if (!validLocale) {
+  if (!validLocale || validLocale !== "gl") {
     return {};
   }
   const dictionary = getDictionary(validLocale);
@@ -26,17 +27,13 @@ export default async function PrivacyGlPage({
 }: PageProps<"/[locale]/privacidade">) {
   const { locale } = await params;
   const validLocale = getLocaleFromParam(locale);
-  if (!validLocale) {
+  if (!validLocale || validLocale !== "gl") {
     notFound();
   }
-  const dictionary = getDictionary(validLocale);
 
   return (
     <main id="contenido">
-      <LegalPlaceholder
-        title={dictionary.legal.privacy.title}
-        body={dictionary.legal.pendingBody}
-      />
+      <LegalDocument document={getLegalDocument("privacy", validLocale)} />
     </main>
   );
 }

@@ -44,6 +44,8 @@ export type Dictionary = {
     viewTreatment: string;
     fromPrice: string;
     bookCta: string;
+    bookThisTreatment: string;
+    bookDuration: string;
     benefitsTitle: string;
     durationsTitle: string;
   };
@@ -74,11 +76,21 @@ export type Dictionary = {
     eyebrow: string;
     title: string;
     text: string;
+    secondaryText: string;
     cta: string;
+    pageEyebrow: string;
+    pageTitle: string;
+    pageDescription: string;
     loadingLabel: string;
     errorText: string;
     errorLinkLabel: string;
-    helpText: string;
+    groupTitle: string;
+    groupText: string;
+    groupCta: string;
+    selectionLabel: string;
+    changeTreatment: string;
+    metaTitle: string;
+    metaDescription: string;
   };
   contact: {
     eyebrow: string;
@@ -99,13 +111,14 @@ export type Dictionary = {
     legalNotice: string;
     privacy: string;
     cookies: string;
+    bookingTerms: string;
     rights: string;
   };
   legal: {
-    pendingBody: string;
     notice: { title: string; description: string };
     privacy: { title: string; description: string };
     cookies: { title: string; description: string };
+    bookingTerms: { title: string; description: string };
   };
   notFound: {
     title: string;

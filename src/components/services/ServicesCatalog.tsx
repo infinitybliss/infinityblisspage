@@ -7,7 +7,7 @@ import {
   getPilgrimFeaturedServices,
   getServicesByCategory,
 } from "@/lib/services";
-import { getHomeSectionHref } from "@/lib/i18n/paths";
+import { getBookingHref } from "@/lib/i18n/paths";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
 
@@ -96,7 +96,7 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
 
         <div className="mt-16 text-center">
           <Link
-            href={getHomeSectionHref(locale, "booking")}
+            href={getBookingHref(locale)}
             className="text-sm font-medium text-primary hover:underline"
           >
             {dictionary.services.bookCta}

@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/layout/Logo";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 import { MobileNav } from "@/components/layout/MobileNav";
-import { getHomeSectionHref } from "@/lib/i18n/paths";
+import { getBookingHref, getHomeSectionHref } from "@/lib/i18n/paths";
 import { getServicesHref } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
@@ -23,7 +24,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
     { href: getHomeSectionHref(locale, "contact"), label: dictionary.nav.contact },
   ];
 
-  const bookHref = getHomeSectionHref(locale, "booking");
+  const bookHref = getBookingHref(locale);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border-subtle bg-background/95 backdrop-blur-sm">
@@ -44,7 +45,9 @@ export function Header({ locale, dictionary }: HeaderProps) {
           </ul>
         </nav>
         <div className="flex items-center gap-3 sm:gap-4">
-          <LocaleSwitcher locale={locale} dictionary={dictionary} />
+          <Suspense fallback={null}>
+            <LocaleSwitcher locale={locale} dictionary={dictionary} />
+          </Suspense>
           <Button href={bookHref} className="hidden sm:inline-flex">
             {dictionary.nav.book}
           </Button>

@@ -7,10 +7,12 @@ import { resolveEquivalentServicePath } from "@/lib/services/metadata";
 export const routeIds = [
   "home",
   "services",
+  "booking",
   "contact",
   "legalNotice",
   "privacy",
   "cookies",
+  "bookingTerms",
 ] as const;
 
 export type RouteId = (typeof routeIds)[number];
@@ -32,14 +34,41 @@ export type SectionId = keyof typeof sectionIds;
 export const pathnames: Record<RouteId, Record<Locale, string>> = {
   home: { es: "", gl: "" },
   services: { es: "/servicios", gl: "/servizos" },
+  booking: { es: "/reservas", gl: "/reservas" },
   contact: { es: "/contacto", gl: "/contacto" },
   legalNotice: { es: "/aviso-legal", gl: "/aviso-legal" },
   privacy: { es: "/privacidad", gl: "/privacidade" },
   cookies: { es: "/cookies", gl: "/cookies" },
+  bookingTerms: {
+    es: "/condiciones-de-reserva",
+    gl: "/condicions-de-reserva",
+  },
 };
 
 export function getLocalizedHref(locale: Locale, routeId: RouteId): string {
   return `/${locale}${pathnames[routeId][locale]}`;
+}
+
+/** Dedicated booking page, optionally scoped to a service duration variant. */
+export function getBookingHref(
+  locale: Locale,
+  options?: {
+    serviceId?: string;
+    durationMinutes?: number;
+  },
+): string {
+  const base = getLocalizedHref(locale, "booking");
+  if (!options?.serviceId) {
+    return base;
+  }
+
+  const params = new URLSearchParams();
+  params.set("service", options.serviceId);
+  if (options.durationMinutes != null) {
+    params.set("duration", String(options.durationMinutes));
+  }
+
+  return `${base}?${params.toString()}`;
 }
 
 export function getHomeSectionHref(locale: Locale, section: SectionId): string {

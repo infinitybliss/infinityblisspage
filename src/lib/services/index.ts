@@ -26,7 +26,6 @@ export function localizeService(service: Service, locale: Locale): LocalizedServ
     image: service.image,
     badge: service.badge?.[locale],
     note: service.note?.[locale],
-    bookingId: service.bookingId,
   };
 }
 

@@ -22,16 +22,14 @@ export const site = {
     process.env.NEXT_PUBLIC_SIMPLYBOOK_URL ??
     "https://ritualessences.simplybook.it",
   /**
-   * In-page anchor for the booking section.
-   */
-  bookingHref: "#reservas",
-  /**
    * Replace with the Google Maps embed URL when the address is confirmed.
    */
   mapsEmbedUrl: null as string | null,
 } as const;
 
 /** Official SimplyBook.me widget script. */
+// If non-essential cookies are introduced in the future,
+// consent must be obtained before loading them.
 export const simplyBookWidgetScriptSrc =
   "https://widget.simplybook.it/v2/widget/widget.js";
 
@@ -70,6 +68,19 @@ export const simplyBookWidgetConfig = {
   app_config: {
     clear_session: 0,
     allow_switch_to_ada: 0,
-    predefined: [],
+    predefined: {} as Record<string, string>,
   },
-} as const;
+};
+
+/** Widget config with optional service preselection via SimplyBook predefined.service. */
+export function getSimplyBookWidgetConfig(bookingId?: number) {
+  return {
+    ...simplyBookWidgetConfig,
+    app_config: {
+      ...simplyBookWidgetConfig.app_config,
+      predefined: bookingId
+        ? { service: String(bookingId) }
+        : {},
+    },
+  };
+}

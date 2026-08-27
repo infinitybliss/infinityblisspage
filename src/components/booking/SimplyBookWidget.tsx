@@ -3,15 +3,17 @@
 import Script from "next/script";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import {
-  simplyBookWidgetConfig,
+  getSimplyBookWidgetConfig,
   simplyBookWidgetScriptSrc,
-  site,
 } from "@/data/site";
+import { getSimplyBookServiceUrl } from "@/lib/simplybook";
 
 type SimplyBookWidgetProps = {
   loadingLabel: string;
   errorText: string;
   errorLinkLabel: string;
+  /** SimplyBook.me numeric service ID to preselect, when known. */
+  bookingId?: number;
 };
 
 type WidgetStatus = "loading" | "ready" | "error";
@@ -24,18 +26,25 @@ declare global {
 
 const SCRIPT_ID = "simplybook-widget-script";
 
-/** Prevents duplicate widget bootstrap across React Strict Mode remounts. */
-let widgetBootstrapped = false;
+/** Tracks which bookingId (or "all") was last bootstrapped in this document. */
+let bootstrappedKey: string | null = null;
+
+function bookingKey(bookingId?: number): string {
+  return bookingId == null ? "all" : String(bookingId);
+}
 
 export function SimplyBookWidget({
   loadingLabel,
   errorText,
   errorLinkLabel,
+  bookingId,
 }: SimplyBookWidgetProps) {
   const reactId = useId();
   const containerId = `simplybook-widget-mount-${reactId.replace(/:/g, "")}`;
   const containerRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<WidgetStatus>("loading");
+  const key = bookingKey(bookingId);
+  const fallbackUrl = getSimplyBookServiceUrl(bookingId);
 
   const markReady = useCallback(() => {
     setStatus("ready");
@@ -49,8 +58,8 @@ export function SimplyBookWidget({
       return;
     }
 
-    // Already initialized: keep the iframe if present.
-    if (widgetBootstrapped) {
+    // Already initialized for this selection: keep the iframe if present.
+    if (bootstrappedKey === key) {
       if (container.querySelector("iframe")) {
         markReady();
       }
@@ -58,13 +67,14 @@ export function SimplyBookWidget({
     }
 
     try {
-      widgetBootstrapped = true;
+      container.replaceChildren();
+      bootstrappedKey = key;
 
       // Official SimplyBook.me bootstrap.
       // container_id is required in SPAs: without it the widget calls
       // document.write() and wipes the React page.
       new window.SimplybookWidget({
-        ...simplyBookWidgetConfig,
+        ...getSimplyBookWidgetConfig(bookingId),
         container_id: containerId,
       });
 
@@ -75,13 +85,13 @@ export function SimplyBookWidget({
         window.setTimeout(markReady, 1500);
       } else {
         setStatus("error");
-        widgetBootstrapped = false;
+        bootstrappedKey = null;
       }
     } catch {
-      widgetBootstrapped = false;
+      bootstrappedKey = null;
       setStatus("error");
     }
-  }, [containerId, markReady]);
+  }, [bookingId, containerId, key, markReady]);
 
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
@@ -137,7 +147,7 @@ export function SimplyBookWidget({
         <div className="rounded-2xl border border-border-subtle bg-surface px-6 py-10 text-center">
           <p className="text-sm leading-relaxed text-muted">{errorText}</p>
           <a
-            href={site.bookingUrl}
+            href={fallbackUrl}
             className="mt-4 inline-flex text-sm font-medium text-primary hover:underline"
             target="_blank"
             rel="noopener noreferrer"

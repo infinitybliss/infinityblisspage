@@ -14,6 +14,8 @@ export type ServiceCategory = (typeof serviceCategories)[number];
 export type ServiceDuration = {
   minutes: number;
   price: number;
+  /** SimplyBook.me service ID for this duration variant. */
+  bookingId?: number;
 };
 
 export const serviceIds = [
@@ -47,8 +49,6 @@ export type Service = {
   image?: string;
   badge?: LocalizedString;
   note?: LocalizedString;
-  /** Reserved for future SimplyBook.me mapping */
-  bookingId?: string;
 };
 
 export type LocalizedService = {
@@ -67,5 +67,4 @@ export type LocalizedService = {
   image?: string;
   badge?: string;
   note?: string;
-  bookingId?: string;
 };

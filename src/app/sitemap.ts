@@ -7,9 +7,11 @@ import { getEquivalentServiceHref, servicesCatalog } from "@/lib/services";
 const indexedRoutes: RouteId[] = [
   "home",
   "services",
+  "booking",
   "legalNotice",
   "privacy",
   "cookies",
+  "bookingTerms",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
