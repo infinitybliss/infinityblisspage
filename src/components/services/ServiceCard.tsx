@@ -39,45 +39,50 @@ export function ServiceCard({
     accent === "primary" ? "bg-primary" : "bg-secondary";
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/25 hover:shadow-[0_8px_24px_-12px_var(--placeholder-copper)]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface transition-colors duration-300 hover:border-primary/30">
       <div className={`h-0.5 w-full ${accentBarClass}`} aria-hidden="true" />
       {!compact &&
         (service.image ? (
-          <div className="relative h-44 w-full overflow-hidden bg-sage-soft">
+          <div className="relative aspect-[16/10] w-full overflow-hidden bg-sage-soft">
             <Image
               src={service.image}
               alt={localized.name}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
             />
           </div>
         ) : (
           <ImagePlaceholder
             label={dictionary.hero.imageLabel}
             alt={`${localized.name}. ${dictionary.hero.imageAlt}`}
-            className="h-44 min-h-44 rounded-none"
+            className="aspect-[16/10] min-h-0 rounded-none"
           />
         ))}
-      <div className="flex flex-1 flex-col gap-3 p-5 sm:p-6">
-        <p className="text-xs font-medium uppercase tracking-[0.18em] text-secondary">
+      <div className="flex flex-1 flex-col gap-3.5 p-5 sm:p-6">
+        <p className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted">
           {categoryLabel}
         </p>
         {localized.badge && <ServiceBadge label={localized.badge} />}
-        <h3 className="font-serif text-2xl font-medium leading-snug text-foreground">
-          <Link href={href} className="hover:text-primary">
+        <h3 className="font-serif text-[1.625rem] font-medium leading-snug text-foreground sm:text-[1.75rem]">
+          <Link
+            href={href}
+            className="transition-colors duration-200 hover:text-primary"
+          >
             {localized.name}
           </Link>
         </h3>
-        <p className="text-sm leading-relaxed text-muted">
+        <p className="text-[0.9375rem] leading-relaxed text-muted sm:text-base">
           {localized.shortDescription}
         </p>
         {meta && (
-          <p className="text-sm font-medium text-foreground">{meta}</p>
+          <p className="text-[0.9375rem] font-medium text-foreground sm:text-base">
+            {meta}
+          </p>
         )}
         <Link
           href={href}
-          className="mt-auto inline-flex items-center gap-1 text-sm font-medium text-primary transition-all duration-300 group-hover:translate-x-0.5"
+          className="mt-auto inline-flex items-center gap-1.5 text-[0.9375rem] font-medium text-primary transition-colors duration-200 hover:underline"
         >
           {dictionary.services.viewTreatment}
           <span aria-hidden="true">→</span>

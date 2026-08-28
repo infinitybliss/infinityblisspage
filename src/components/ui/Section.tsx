@@ -19,7 +19,7 @@ export function Section({
     <Component
       id={id}
       aria-labelledby={ariaLabelledBy}
-      className={`scroll-mt-24 py-16 sm:py-20 lg:py-24 ${className}`}
+      className={`scroll-mt-24 py-16 sm:py-20 lg:py-28 ${className}`}
     >
       {children}
     </Component>

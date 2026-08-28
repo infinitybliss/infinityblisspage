@@ -100,9 +100,15 @@ export const es: Dictionary = {
     pageDescription:
       "Selecciona tu tratamiento, elige el horario que mejor te encaje y completa tu reserva.",
     loadingLabel: "Cargando reservas…",
+    loadingTitle: "Preparando tu reserva",
+    loadingSubtitle:
+      "Estamos cargando la disponibilidad para mostrarte los horarios disponibles.",
+    slowText:
+      "Está tardando un poco más de lo habitual. Puedes esperar unos segundos o abrir el sistema de reservas directamente.",
     errorText:
-      "No hemos podido cargar el sistema de reservas. Puedes reservar directamente aquí.",
-    errorLinkLabel: "Abrir reservas en SimplyBook.me",
+      "No hemos podido cargar el sistema de reservas. Puedes intentarlo de nuevo o abrir la reserva directamente.",
+    errorLinkLabel: "Abrir reservas directamente",
+    retryLabel: "Reintentar",
     groupTitle: "¿Quieres reservar para un grupo?",
     groupText:
       "Para reservas de varias personas o necesidades especiales, escríbenos por WhatsApp o llámanos y te ayudaremos a organizarlo.",

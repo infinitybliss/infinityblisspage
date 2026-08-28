@@ -35,7 +35,7 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
         <section
           id="peregrinos"
           aria-labelledby="pilgrims-services-title"
-          className="mt-16 scroll-mt-24 rounded-2xl bg-foreground px-6 py-10 sm:px-8 sm:py-12"
+          className="mt-16 scroll-mt-24 rounded-2xl bg-foreground px-5 py-10 sm:px-8 sm:py-12 lg:px-10 lg:py-14"
         >
           <h2
             id="pilgrims-services-title"
@@ -43,10 +43,10 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
           >
             {dictionary.pilgrims.title}
           </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-background/90 sm:text-base">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-background/90 sm:text-lg">
             {dictionary.services.pilgrimsIntro}
           </p>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 sm:gap-6">
             {pilgrimServices.map((service, index) => (
               <ServiceCard
                 key={service.id}
@@ -97,7 +97,7 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
         <div className="mt-16 text-center">
           <Link
             href={getBookingHref(locale)}
-            className="text-sm font-medium text-primary hover:underline"
+            className="text-sm font-medium text-primary underline-offset-4 transition-colors duration-200 hover:underline"
           >
             {dictionary.services.bookCta}
           </Link>

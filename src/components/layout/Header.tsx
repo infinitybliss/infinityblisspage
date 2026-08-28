@@ -31,7 +31,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
       <Container className="relative flex h-16 items-center justify-between gap-3 sm:h-[4.5rem]">
         <Logo locale={locale} title={dictionary.brand.name} />
         <nav aria-label={dictionary.nav.main} className="hidden lg:block">
-          <ul className="flex items-center gap-6 text-sm text-foreground">
+          <ul className="flex items-center gap-7 text-[0.9375rem] text-foreground">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link

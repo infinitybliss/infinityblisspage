@@ -25,7 +25,7 @@ export function LocaleSwitcher({
 
   return (
     <nav aria-label={dictionary.nav.language} className={className}>
-      <ul className="flex items-center gap-1 text-xs font-medium tracking-wide sm:text-sm">
+      <ul className="flex items-center gap-1 text-sm font-medium tracking-wide">
         {locales.map((item, index) => {
           const isActive = item === locale;
 

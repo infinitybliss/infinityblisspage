@@ -70,7 +70,65 @@ body {
   outline-offset: 3px;
 }
 
-::selection {
-  background: var(--sage-soft);
-  color: var(--foreground);
+@keyframes bookingBreath {
+  0%,
+  100% {
+    transform: translateY(0) scale(0.85);
+    opacity: 0.45;
+  }
+
+  50% {
+    transform: translateY(-4px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bookingLeafBreath {
+  0%,
+  100% {
+    transform: rotate(-6deg) scale(0.96);
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: rotate(4deg) scale(1);
+    opacity: 1;
+  }
+}
+
+.booking-loader-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.booking-loader-dot {
+  display: block;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 9999px;
+  background: var(--brand-copper);
+  animation: bookingBreath 2.4s ease-in-out infinite;
+}
+
+.booking-loader-dot-delay-1 {
+  animation-delay: 0.35s;
+}
+
+.booking-loader-dot-delay-2 {
+  animation-delay: 0.7s;
+}
+
+.booking-loader-leaf {
+  transform-origin: center bottom;
+  animation: bookingLeafBreath 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .booking-loader-dot,
+  .booking-loader-leaf {
+    animation: none;
+    opacity: 0.75;
+  }
 }

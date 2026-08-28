@@ -18,25 +18,27 @@ export function Booking({ locale, dictionary }: BookingProps) {
     <Section
       id={getSectionId(locale, "booking")}
       ariaLabelledBy={titleId}
-      className="bg-sand-soft py-20 sm:py-24"
+      className="bg-sand-soft py-20 sm:py-24 lg:py-28"
     >
       <Container className="max-w-2xl text-center">
         <Eyebrow>{dictionary.booking.eyebrow}</Eyebrow>
         <h2
           id={titleId}
-          className="mt-3 font-serif text-3xl leading-tight text-foreground sm:text-4xl"
+          className="mt-4 font-serif text-3xl leading-tight text-foreground sm:text-4xl lg:text-[2.75rem]"
         >
           {dictionary.booking.title}
         </h2>
-        <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
+        <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg">
           {dictionary.booking.text}
         </p>
-        <div className="mt-8">
+        <div className="mt-9">
           <Button href={getBookingHref(locale)}>
             {dictionary.booking.cta}
           </Button>
         </div>
-        <p className="mt-4 text-sm text-muted">{dictionary.booking.secondaryText}</p>
+        <p className="mt-5 text-[0.9375rem] leading-relaxed text-muted sm:text-base">
+          {dictionary.booking.secondaryText}
+        </p>
       </Container>
     </Section>
   );

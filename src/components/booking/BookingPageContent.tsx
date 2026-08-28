@@ -67,9 +67,12 @@ export function BookingPageContent({
           <SimplyBookWidget
             key={bookingId ?? "all"}
             bookingId={bookingId}
-            loadingLabel={dictionary.booking.loadingLabel}
+            loadingTitle={dictionary.booking.loadingTitle}
+            loadingSubtitle={dictionary.booking.loadingSubtitle}
+            slowText={dictionary.booking.slowText}
             errorText={dictionary.booking.errorText}
             errorLinkLabel={dictionary.booking.errorLinkLabel}
+            retryLabel={dictionary.booking.retryLabel}
           />
         </div>
 

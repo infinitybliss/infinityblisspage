@@ -4,6 +4,8 @@ import { locales } from "@/lib/i18n/config";
 import { getLocalizedHref, type RouteId } from "@/lib/i18n/paths";
 import { getEquivalentServiceHref, servicesCatalog } from "@/lib/services";
 
+export const dynamic = "force-static";
+
 const indexedRoutes: RouteId[] = [
   "home",
   "services",

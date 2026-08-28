@@ -35,7 +35,7 @@ export function Reviews({ dictionary, reviews }: ReviewsProps) {
                 <p className="text-base leading-relaxed text-foreground">
                   “{review.quote}”
                 </p>
-                <footer className="mt-4 text-sm text-muted">{review.author}</footer>
+                <footer className="mt-4 text-[0.9375rem] text-muted">{review.author}</footer>
               </blockquote>
             </li>
           ))}

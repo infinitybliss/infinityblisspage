@@ -82,8 +82,12 @@ export type Dictionary = {
     pageTitle: string;
     pageDescription: string;
     loadingLabel: string;
+    loadingTitle: string;
+    loadingSubtitle: string;
+    slowText: string;
     errorText: string;
     errorLinkLabel: string;
+    retryLabel: string;
     groupTitle: string;
     groupText: string;
     groupCta: string;

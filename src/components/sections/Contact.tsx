@@ -26,8 +26,8 @@ function ContactItem({
 }) {
   return (
     <div>
-      <dt className="text-sm font-medium text-foreground">{label}</dt>
-      <dd className="mt-1 text-sm text-muted">
+      <dt className="text-[0.9375rem] font-medium text-foreground">{label}</dt>
+      <dd className="mt-1.5 text-[0.9375rem] leading-relaxed text-muted sm:text-base">
         {href && value ? (
           <a
             href={href}
@@ -63,10 +63,10 @@ export function Contact({ locale, dictionary }: ContactProps) {
           >
             {dictionary.contact.title}
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-muted">
+          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
             {dictionary.contact.text}
           </p>
-          <dl className="mt-8 grid gap-5 sm:grid-cols-2">
+          <dl className="mt-8 grid gap-5 sm:grid-cols-2 sm:gap-6">
             <ContactItem
               label={dictionary.contact.address}
               value={site.contact.address}

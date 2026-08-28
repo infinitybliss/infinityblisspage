@@ -100,9 +100,15 @@ export const gl: Dictionary = {
     pageDescription:
       "Selecciona o teu tratamento, escolle o horario que mellor che encaixe e completa a túa reserva.",
     loadingLabel: "Cargando as reservas…",
+    loadingTitle: "Preparando a túa reserva",
+    loadingSubtitle:
+      "Estamos cargando a dispoñibilidade para mostrarte os horarios dispoñibles.",
+    slowText:
+      "Está tardando un pouco máis do habitual. Podes agardar uns segundos ou abrir o sistema de reservas directamente.",
     errorText:
-      "Non puidemos cargar o sistema de reservas. Podes reservar directamente aquí.",
-    errorLinkLabel: "Abrir reservas en SimplyBook.me",
+      "Non puidemos cargar o sistema de reservas. Podes intentalo de novo ou abrir a reserva directamente.",
+    errorLinkLabel: "Abrir reservas directamente",
+    retryLabel: "Reintentar",
     groupTitle: "Queres reservar para un grupo?",
     groupText:
       "Para reservas de varias persoas ou necesidades especiais, escríbenos por WhatsApp ou chámanos e axudarémosche a organizalo.",

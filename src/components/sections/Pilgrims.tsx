@@ -30,7 +30,7 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
     <Section
       id={getSectionId(locale, "pilgrims")}
       ariaLabelledBy={titleId}
-      className="bg-foreground py-20 sm:py-28 lg:py-32"
+      className="bg-foreground py-20 sm:py-24 lg:py-28"
     >
       <Container className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="max-w-2xl">
@@ -44,7 +44,7 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
           <p className="mt-5 text-base leading-relaxed text-background/90 sm:text-lg">
             {dictionary.pilgrims.text}
           </p>
-          <ul className="mt-8 space-y-4">
+          <ul className="mt-9 space-y-5">
             {pilgrimServices.map((service) => {
               const localized = localizeService(service, locale);
               const meta = formatServiceMeta(service.durations, locale, {
@@ -54,24 +54,24 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
               return (
                 <li
                   key={service.id}
-                  className="rounded-2xl border border-secondary/25 bg-background/5 p-5"
+                  className="rounded-2xl border border-secondary/25 bg-background/5 p-5 sm:p-6"
                 >
-                  <p className="text-xs font-medium uppercase tracking-[0.18em] text-secondary">
+                  <p className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-secondary">
                     {categoryLabels[service.category][locale]}
                   </p>
-                  <h3 className="mt-2 font-serif text-xl text-accent">
+                  <h3 className="mt-2.5 font-serif text-xl text-accent sm:text-2xl">
                     <Link
                       href={getServiceHref(locale, service)}
-                      className="hover:text-primary"
+                      className="transition-colors duration-200 hover:text-primary"
                     >
                       {localized.name}
                     </Link>
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-background/85">
+                  <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-background/85 sm:text-base">
                     {localized.shortDescription}
                   </p>
                   {meta && (
-                    <p className="mt-2 text-sm font-medium text-background">
+                    <p className="mt-2.5 text-[0.9375rem] font-medium text-background sm:text-base">
                       {meta}
                     </p>
                   )}
@@ -90,7 +90,7 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
             image={siteImages.pilgrims}
             locale={locale}
             rounded={false}
-            className="min-h-[16rem] sm:min-h-[20rem] lg:min-h-[24rem]"
+            className="min-h-[18rem] sm:min-h-[22rem] lg:min-h-[26rem]"
             sizes="(max-width: 1024px) 100vw, 40vw"
           />
         </div>

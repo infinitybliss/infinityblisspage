@@ -8,7 +8,7 @@ export function Eyebrow({ children, id, className = "" }: EyebrowProps) {
   return (
     <p
       id={id}
-      className={`text-xs font-medium uppercase tracking-[0.22em] text-secondary ${className}`}
+      className={`text-[0.8125rem] font-medium uppercase tracking-[0.2em] text-muted sm:text-sm ${className}`}
     >
       {children}
     </p>

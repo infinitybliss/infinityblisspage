@@ -40,7 +40,7 @@ export function ServiceDetail({
   return (
     <main id="contenido">
       <Container className="py-14 sm:py-16 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-16">
           <div>
             <Eyebrow>{categoryLabel}</Eyebrow>
             {localized.badge && (
@@ -48,29 +48,31 @@ export function ServiceDetail({
                 <ServiceBadge label={localized.badge} />
               </div>
             )}
-            <h1 className="mt-3 font-serif text-4xl leading-tight text-foreground sm:text-5xl">
+            <h1 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-[3.25rem]">
               {localized.name}
             </h1>
             {localized.tagline && (
-              <p className="mt-4 text-lg text-primary">{localized.tagline}</p>
+              <p className="mt-4 text-lg leading-snug text-primary sm:text-xl">
+                {localized.tagline}
+              </p>
             )}
             <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
               {localized.description}
             </p>
 
             {localized.benefits.length > 0 && (
-              <section aria-labelledby="service-benefits" className="mt-8">
+              <section aria-labelledby="service-benefits" className="mt-10">
                 <h2
                   id="service-benefits"
-                  className="text-sm font-medium uppercase tracking-[0.18em] text-secondary"
+                  className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"
                 >
                   {dictionary.services.benefitsTitle}
                 </h2>
-                <ul className="mt-4 space-y-2">
+                <ul className="mt-4 space-y-2.5">
                   {localized.benefits.map((benefit) => (
                     <li
                       key={benefit}
-                      className="flex gap-2 text-sm leading-relaxed text-muted"
+                      className="flex gap-2.5 text-[0.9375rem] leading-relaxed text-muted sm:text-base"
                     >
                       <span aria-hidden="true" className="text-primary">
                         ·
@@ -82,21 +84,21 @@ export function ServiceDetail({
               </section>
             )}
 
-            <section aria-labelledby="service-durations" className="mt-8">
+            <section aria-labelledby="service-durations" className="mt-10">
               <h2
                 id="service-durations"
-                className="text-sm font-medium uppercase tracking-[0.18em] text-secondary"
+                className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"
               >
                 {dictionary.services.durationsTitle}
               </h2>
               {hasMultipleDurations ? (
-                <ul className="mt-5 space-y-4">
+                <ul className="mt-5 space-y-0">
                   {localized.durations.map((duration) => (
                     <li
                       key={`${duration.minutes}-${duration.price}`}
-                      className="flex flex-wrap items-center justify-between gap-3 border-b border-border-subtle pb-4 last:border-b-0 last:pb-0"
+                      className="flex items-center justify-between gap-4 border-b border-border-subtle py-4 last:border-b-0"
                     >
-                      <span className="text-base font-medium text-foreground">
+                      <span className="text-base font-medium text-foreground sm:text-lg">
                         {formatDurationOption(duration, locale, hasNote)}
                       </span>
                       <Button
@@ -104,7 +106,7 @@ export function ServiceDetail({
                           serviceId: service.id,
                           durationMinutes: duration.minutes,
                         })}
-                        className="px-4 py-2 text-sm"
+                        className="min-w-[7.5rem] shrink-0 px-5 py-2.5 text-sm sm:min-w-[8rem]"
                       >
                         {dictionary.services.bookDuration}
                       </Button>
@@ -116,7 +118,7 @@ export function ServiceDetail({
                   {localized.durations.map((duration) => (
                     <li
                       key={`${duration.minutes}-${duration.price}`}
-                      className="text-base font-medium text-foreground"
+                      className="text-base font-medium text-foreground sm:text-lg"
                     >
                       {formatDurationOption(duration, locale, hasNote)}
                     </li>
@@ -131,7 +133,7 @@ export function ServiceDetail({
             </section>
 
             {singleBookHref && (
-              <div className="mt-8">
+              <div className="mt-9">
                 <Button href={singleBookHref}>
                   {dictionary.services.bookThisTreatment}
                 </Button>
@@ -141,7 +143,7 @@ export function ServiceDetail({
 
           <div>
             {service.image ? (
-              <div className="relative min-h-[20rem] overflow-hidden rounded-2xl bg-sage-soft lg:min-h-[28rem]">
+              <div className="relative min-h-[22rem] overflow-hidden rounded-2xl bg-sage-soft lg:min-h-[32rem]">
                 <Image
                   src={service.image}
                   alt={localized.name}
@@ -155,7 +157,7 @@ export function ServiceDetail({
               <ImagePlaceholder
                 label={dictionary.hero.imageLabel}
                 alt={`${localized.name}. ${dictionary.hero.imageAlt}`}
-                className="min-h-[20rem] lg:min-h-[28rem]"
+                className="min-h-[22rem] lg:min-h-[32rem]"
               />
             )}
           </div>

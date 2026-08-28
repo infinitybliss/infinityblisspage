@@ -34,11 +34,13 @@ export function Footer({ locale, dictionary }: FooterProps) {
   ];
 
   const year = new Date().getFullYear();
+  const linkClassName =
+    "text-[0.9375rem] text-background/75 transition-colors duration-200 hover:text-primary";
 
   return (
     <footer className="bg-foreground text-background">
-      <Container className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-4 lg:py-16">
-        <div>
+      <Container className="py-12 sm:py-14 lg:py-16">
+        <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
           <Logo
             locale={locale}
             title={dictionary.brand.name}
@@ -47,61 +49,67 @@ export function Footer({ locale, dictionary }: FooterProps) {
             showTagline
           />
         </div>
-        <div>
-          <p className="text-sm font-medium text-background">{dictionary.footer.nav}</p>
-          <ul className="mt-3 space-y-2 text-sm">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-secondary transition-colors duration-200 hover:text-primary"
-                >
-                  {link.label}
-                </Link>
+
+        <div className="mt-10 grid gap-10 border-t border-secondary/25 pt-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-3">
+          <div>
+            <p className="text-sm font-medium tracking-wide text-background">
+              {dictionary.footer.nav}
+            </p>
+            <ul className="mt-4 space-y-2.5">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={linkClassName}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-sm font-medium tracking-wide text-background">
+              {dictionary.footer.contact}
+            </p>
+            <ul className="mt-4 space-y-2.5 text-[0.9375rem] text-background/75">
+              <li>
+                <PendingValue
+                  value={site.contact.address}
+                  pendingLabel={dictionary.contact.pending}
+                />
               </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <p className="text-sm font-medium text-background">{dictionary.footer.contact}</p>
-          <ul className="mt-3 space-y-2 text-sm text-secondary">
-            <li>
-              <PendingValue
-                value={site.contact.address}
-                pendingLabel={dictionary.contact.pending}
-              />
-            </li>
-            <li>
-              <PendingValue
-                value={site.contact.phone}
-                pendingLabel={dictionary.contact.pending}
-              />
-            </li>
-            <li>{site.city}</li>
-          </ul>
-        </div>
-        <div>
-          <p className="text-sm font-medium text-background">{dictionary.footer.legal}</p>
-          <ul className="mt-3 space-y-2 text-sm">
-            {legalLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-secondary transition-colors duration-200 hover:text-primary"
-                >
-                  {link.label}
-                </Link>
+              <li>
+                <PendingValue
+                  value={site.contact.phone}
+                  pendingLabel={dictionary.contact.pending}
+                />
               </li>
-            ))}
-          </ul>
+              <li>{site.city}</li>
+            </ul>
+          </div>
+
+          <div className="sm:col-span-2 lg:col-span-1">
+            <p className="text-sm font-medium tracking-wide text-background">
+              {dictionary.footer.legal}
+            </p>
+            <ul className="mt-4 space-y-2.5">
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={linkClassName}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </Container>
+
       <div className="border-t border-secondary/25">
-        <Container className="flex flex-col gap-2 py-6 text-xs text-secondary sm:flex-row sm:justify-between">
+        <Container className="flex flex-col gap-2 py-6 text-center text-sm text-background/60 sm:flex-row sm:justify-between sm:text-left">
           <p>
             © {year} {dictionary.brand.name}. {dictionary.footer.rights}
           </p>
-          <p>{site.city}</p>
+          <p className="sm:text-right">{site.city}</p>
         </Container>
       </div>
     </footer>

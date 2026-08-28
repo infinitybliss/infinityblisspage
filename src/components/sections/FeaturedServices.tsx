@@ -31,11 +31,11 @@ export function FeaturedServices({ locale, dictionary }: FeaturedServicesProps) 
           >
             {dictionary.services.title}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-muted">
+          <p className="mt-5 text-base leading-relaxed text-muted sm:text-lg">
             {dictionary.services.text}
           </p>
         </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 sm:gap-6">
           {featured.map((service, index) => (
             <ServiceCard
               key={service.id}

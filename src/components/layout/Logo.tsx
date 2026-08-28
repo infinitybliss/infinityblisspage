@@ -32,13 +32,13 @@ export function Logo({
       <BrandMark size={showTagline ? "lg" : "md"} />
       <span className="flex flex-col">
         <span
-          className={`font-serif text-lg leading-tight tracking-wide transition-colors duration-200 sm:text-xl ${titleClass}`}
+          className={`font-serif text-xl leading-tight tracking-wide transition-colors duration-200 sm:text-[1.375rem] ${titleClass}`}
         >
           {title}
         </span>
         {showTagline && tagline && (
           <span
-            className={`mt-0.5 text-[0.625rem] font-medium uppercase tracking-[0.22em] sm:text-xs ${taglineClass}`}
+            className={`mt-1 text-[0.6875rem] font-medium uppercase tracking-[0.2em] sm:text-xs ${taglineClass}`}
           >
             {tagline}
           </span>
