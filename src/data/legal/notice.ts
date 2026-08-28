@@ -289,7 +289,152 @@ const gl: LegalDocumentContent = {
   ],
 };
 
+const en: LegalDocumentContent = {
+  title: "Legal Notice",
+  description:
+    "Legal notice of Ritual Essences – Wellness Centre. Identifying information and terms of use of the website.",
+  sections: [
+    {
+      title: "1. Identifying information",
+      blocks: [
+        {
+          type: "p",
+          text: "In compliance with Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce, you are informed that this website is owned by:",
+        },
+        {
+          type: "fields",
+          items: [
+            {
+              label: "Trade name",
+              value: "Ritual Essences – Centro de Bienestar",
+            },
+            {
+              label: "Owner / Legal name",
+              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
+            },
+            { label: "NIF/CIF", value: "[NIF/CIF]" },
+            { label: "Address", value: "[DIRECCIÓN COMPLETA]" },
+            { label: "Email", value: "[EMAIL]" },
+            { label: "Phone", value: "[TELÉFONO]" },
+            { label: "Website", value: "[DOMINIO DEFINITIVO]" },
+          ],
+        },
+        {
+          type: "p",
+          text: "Hereinafter, “Ritual Essences”.",
+        },
+      ],
+    },
+    {
+      title: "2. Purpose of the website",
+      blocks: [
+        {
+          type: "p",
+          text: "The purpose of this website is to provide information about Ritual Essences, its wellness, massage and treatment services, and to facilitate access to the appointment booking system.",
+        },
+        {
+          type: "p",
+          text: "The information published on the website is for informational and commercial purposes and may be modified when necessary to keep the centre’s services, opening hours, prices or conditions up to date.",
+        },
+      ],
+    },
+    {
+      title: "3. Terms of use",
+      blocks: [
+        {
+          type: "p",
+          text: "Users agree to use this website lawfully, responsibly and in good faith.",
+        },
+        {
+          type: "p",
+          text: "It is prohibited to use the website to:",
+        },
+        {
+          type: "ul",
+          items: [
+            "carry out unlawful activities;",
+            "attempt to access systems or restricted areas without authorisation;",
+            "introduce malicious software;",
+            "interfere with the operation of the website or the booking system;",
+            "make fraudulent bookings or use false data;",
+            "use the website’s content in a manner contrary to the rights of Ritual Essences or third parties.",
+          ],
+        },
+        {
+          type: "p",
+          text: "Ritual Essences may take the necessary measures in response to abusive or fraudulent use of the website or the booking system.",
+        },
+      ],
+    },
+    {
+      title: "4. Intellectual and industrial property",
+      blocks: [
+        {
+          type: "p",
+          text: "The texts, design, structure, visual identity, logos, photographs, illustrations and other content on this website are protected by applicable intellectual and industrial property law.",
+        },
+        {
+          type: "p",
+          text: "Their reproduction, distribution, transformation or commercial use is not permitted without the express authorisation of their owners, except in cases permitted by law.",
+        },
+        {
+          type: "p",
+          text: "Content provided by third parties remains subject to the rights of their respective owners.",
+        },
+      ],
+    },
+    {
+      title: "5. Liability",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences endeavours to keep the information on the website up to date and available, but cannot guarantee the absolute absence of errors, interruptions or technical incidents.",
+        },
+        {
+          type: "p",
+          text: "Availability shown by the booking system may vary in real time.",
+        },
+        {
+          type: "p",
+          text: "Ritual Essences shall not be liable for interruptions caused by external technology providers, communication networks or circumstances beyond its control, without prejudice to the rights legally corresponding to consumers.",
+        },
+      ],
+    },
+    {
+      title: "6. Links and third-party services",
+      blocks: [
+        {
+          type: "p",
+          text: "The website may incorporate services, links or content provided by third parties, including the SimplyBook.me booking system.",
+        },
+        {
+          type: "p",
+          text: "These services may be subject to their own terms and privacy policies.",
+        },
+        {
+          type: "p",
+          text: "Use of external services does not imply that Ritual Essences is responsible for the content or operation of third-party websites, except in cases provided for by law.",
+        },
+      ],
+    },
+    {
+      title: "7. Applicable law",
+      blocks: [
+        {
+          type: "p",
+          text: "The website is governed by Spanish law.",
+        },
+        {
+          type: "p",
+          text: "Where the user is a consumer, any dispute shall be resolved in accordance with the applicable rules on territorial jurisdiction, without limiting the rights recognised by consumer protection legislation.",
+        },
+      ],
+    },
+  ],
+};
+
 export const legalNoticeContent: Record<Locale, LegalDocumentContent> = {
   es,
   gl,
+  en,
 };

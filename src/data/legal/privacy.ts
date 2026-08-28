@@ -617,7 +617,316 @@ const gl: LegalDocumentContent = {
   ],
 };
 
+const en: LegalDocumentContent = {
+  title: "Privacy Policy",
+  description:
+    "Privacy policy of Ritual Essences. Information about the processing of personal data and bookings.",
+  sections: [
+    {
+      title: "1. Data controller",
+      blocks: [
+        {
+          type: "fields",
+          items: [
+            {
+              label: "Controller",
+              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
+            },
+            {
+              label: "Trade name",
+              value: "Ritual Essences – Centro de Bienestar",
+            },
+            { label: "NIF/CIF", value: "[NIF/CIF]" },
+            { label: "Address", value: "[DIRECCIÓN]" },
+            { label: "Email", value: "[EMAIL]" },
+            { label: "Phone", value: "[TELÉFONO]" },
+          ],
+        },
+        {
+          type: "p",
+          text: "Ritual Essences is responsible for processing the personal data used to manage customer relationships and bookings made at the centre.",
+        },
+      ],
+    },
+    {
+      title: "2. What personal data we may process",
+      blocks: [
+        {
+          type: "p",
+          text: "Depending on how you interact with Ritual Essences, we may process:",
+        },
+        {
+          type: "ul",
+          items: [
+            "first and last name;",
+            "phone number;",
+            "email address;",
+            "booking-related data;",
+            "service booked;",
+            "appointment date and time;",
+            "communications related to the booking;",
+            "information you voluntarily provide when contacting us.",
+          ],
+        },
+        {
+          type: "p",
+          text: "We will not request personal data that is not necessary to provide the service.",
+        },
+        {
+          type: "p",
+          text: "We recommend not providing especially sensitive information through open fields or general communications unless strictly necessary and there is an appropriate legal basis for processing it.",
+        },
+      ],
+    },
+    {
+      title: "3. How we use your data",
+      blocks: [
+        {
+          type: "p",
+          text: "Personal data may be used to:",
+        },
+        { type: "h3", text: "Manage bookings and appointments" },
+        {
+          type: "p",
+          text: "This includes:",
+        },
+        {
+          type: "ul",
+          items: [
+            "registering the booking;",
+            "confirming the appointment;",
+            "modifying or cancelling it;",
+            "informing of changes related to the service;",
+            "handling incidents;",
+            "contacting the customer when necessary to provide the service.",
+          ],
+        },
+        {
+          type: "p",
+          text: "The legal basis is the performance of pre-contractual and contractual measures requested by the data subject.",
+        },
+        { type: "h3", text: "Respond to enquiries" },
+        {
+          type: "p",
+          text: "If you contact us by phone, email, WhatsApp or other enabled channels, we will use your data to respond to your enquiry.",
+        },
+        {
+          type: "p",
+          text: "The legal basis will be handling the request made by the data subject.",
+        },
+        { type: "h3", text: "Comply with legal obligations" },
+        {
+          type: "p",
+          text: "When necessary, we may retain or disclose certain data to comply with tax, accounting, administrative or legal obligations.",
+        },
+        {
+          type: "p",
+          text: "The legal basis will be compliance with a legal obligation.",
+        },
+        { type: "h3", text: "Security and fraud prevention" },
+        {
+          type: "p",
+          text: "Certain technical or booking-related data may be used to prevent abusive or fraudulent use or use that may harm the operation of the centre.",
+        },
+        {
+          type: "p",
+          text: "The legal basis will be the legitimate interest of Ritual Essences in protecting its activity and systems, always respecting the rights and freedoms of data subjects.",
+        },
+      ],
+    },
+    {
+      title: "4. SimplyBook.me booking system",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences uses SimplyBook.me as a technology platform to manage online bookings.",
+        },
+        {
+          type: "p",
+          text: "When you make a booking through the system integrated on our website, the data necessary to process it is handled via the SimplyBook.me platform.",
+        },
+        {
+          type: "p",
+          text: "For the purposes of the General Data Protection Regulation, Ritual Essences acts as the data controller of its customers’ data and SimplyBook.me acts as a data processor under the terms set out in its Data Processing Agreement.",
+        },
+        {
+          type: "p",
+          text: "SimplyBook.me may use sub-processors and carry out certain international data transfers under the safeguards provided for in the GDPR, including adequacy decisions or standard contractual clauses where necessary.",
+        },
+        {
+          type: "p",
+          text: "Additional information about processing carried out by SimplyBook.me can be found in its policies and data protection documentation.",
+        },
+      ],
+    },
+    {
+      title: "5. Booking-related communications",
+      blocks: [
+        {
+          type: "p",
+          text: "You may receive communications related to:",
+        },
+        {
+          type: "ul",
+          items: [
+            "booking confirmation;",
+            "modifications;",
+            "cancellations;",
+            "reminders;",
+            "essential information to provide the service.",
+          ],
+        },
+        {
+          type: "p",
+          text: "These communications form part of booking management and are not considered promotional communications.",
+        },
+        {
+          type: "p",
+          text: "If in the future Ritual Essences wishes to send promotions, news or commercial offers not directly related to an existing booking, the corresponding consent will be requested when necessary.",
+        },
+      ],
+    },
+    {
+      title: "6. Data recipients",
+      blocks: [
+        {
+          type: "p",
+          text: "Data may be processed by providers necessary to deliver Ritual Essences’ services, such as:",
+        },
+        {
+          type: "ul",
+          items: [
+            "SimplyBook.me, as the booking management system;",
+            "hosting or web infrastructure providers;",
+            "email or communications providers;",
+            "technical providers necessary to maintain the website.",
+          ],
+        },
+        {
+          type: "p",
+          text: "These providers will process data in accordance with applicable contractual and legal obligations.",
+        },
+        {
+          type: "p",
+          text: "Data will not be sold to third parties.",
+        },
+        {
+          type: "p",
+          text: "Data may also be disclosed where there is a legal obligation or a valid request from a competent authority.",
+        },
+      ],
+    },
+    {
+      title: "7. International transfers",
+      blocks: [
+        {
+          type: "p",
+          text: "Some technology providers may process data from countries outside the European Economic Area.",
+        },
+        {
+          type: "p",
+          text: "Where an international transfer takes place, it must be covered by a mechanism recognised by data protection law, such as an adequacy decision, standard contractual clauses or another valid safeguard under the GDPR.",
+        },
+        {
+          type: "p",
+          text: "SimplyBook.me states that it uses GDPR-compatible transfer mechanisms for the international processing included in its service.",
+        },
+      ],
+    },
+    {
+      title: "8. Retention period",
+      blocks: [
+        {
+          type: "p",
+          text: "Data will be retained for as long as necessary to manage the booking and provide the service.",
+        },
+        {
+          type: "p",
+          text: "Thereafter, it may be kept duly blocked for the periods necessary to comply with legal obligations or address potential liabilities.",
+        },
+        {
+          type: "p",
+          text: "Enquiries that do not lead to a contractual relationship will be retained only for the time reasonably necessary to handle them.",
+        },
+      ],
+    },
+    {
+      title: "9. Rights of data subjects",
+      blocks: [
+        {
+          type: "p",
+          text: "You may request:",
+        },
+        {
+          type: "ul",
+          items: [
+            "access to your personal data;",
+            "rectification of incorrect data;",
+            "erasure;",
+            "objection to processing where applicable;",
+            "restriction of processing;",
+            "data portability, where applicable;",
+            "withdrawal of consent in processing based on consent.",
+          ],
+        },
+        {
+          type: "p",
+          text: "To exercise your rights you can contact:",
+        },
+        {
+          type: "fields",
+          items: [
+            {
+              label: "Email",
+              value: "[EMAIL DE PRIVACIDAD O GENERAL]",
+            },
+          ],
+        },
+        {
+          type: "p",
+          text: "Information necessary to verify the identity of the person exercising the right may be requested.",
+        },
+        {
+          type: "p",
+          text: "You also have the right to lodge a complaint with the Spanish Data Protection Agency (AEPD) if you consider that the processing of your data does not comply with applicable law.",
+        },
+      ],
+    },
+    {
+      title: "10. Security",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences adopts reasonable measures to protect personal data against unauthorised access, loss, alteration or misuse.",
+        },
+        {
+          type: "p",
+          text: "We also endeavour to use technology providers that offer adequate security and data protection measures.",
+        },
+      ],
+    },
+    {
+      title: "11. Changes to this policy",
+      blocks: [
+        {
+          type: "p",
+          text: "This Privacy Policy may be updated when services, technology providers or legal requirements change.",
+        },
+        {
+          type: "p",
+          text: "The current version will always be the one published on this website.",
+        },
+        {
+          type: "fields",
+          items: [{ label: "Last updated", value: "[FECHA]" }],
+        },
+      ],
+    },
+  ],
+};
+
 export const privacyContent: Record<Locale, LegalDocumentContent> = {
   es,
   gl,
+  en,
 };

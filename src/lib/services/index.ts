@@ -1,4 +1,5 @@
 import { servicesCatalog } from "@/data/services/catalog";
+import { pathnames } from "@/lib/i18n/paths";
 import type { Locale } from "@/types/locale";
 import type {
   LocalizedService,
@@ -57,7 +58,7 @@ export function getAllServiceSlugs(locale: Locale): string[] {
 }
 
 export function getServicesBasePath(locale: Locale): string {
-  return locale === "es" ? "/servicios" : "/servizos";
+  return pathnames.services[locale];
 }
 
 export function getServicesHref(locale: Locale): string {

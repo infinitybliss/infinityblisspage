@@ -1,5 +1,9 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/data/site";
+import {
+  buildRouteLanguageAlternates,
+  buildServiceLanguageAlternates,
+} from "@/lib/i18n/alternates";
 import { locales } from "@/lib/i18n/config";
 import { getLocalizedHref, type RouteId } from "@/lib/i18n/paths";
 import { getEquivalentServiceHref, servicesCatalog } from "@/lib/services";
@@ -21,10 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     indexedRoutes.map((routeId) => ({
       url: `${site.url}${getLocalizedHref(locale, routeId)}`,
       alternates: {
-        languages: {
-          es: `${site.url}${getLocalizedHref("es", routeId)}`,
-          gl: `${site.url}${getLocalizedHref("gl", routeId)}`,
-        },
+        languages: buildRouteLanguageAlternates(routeId),
       },
     })),
   );
@@ -33,10 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locales.map((locale) => ({
       url: `${site.url}${getEquivalentServiceHref(service, locale)}`,
       alternates: {
-        languages: {
-          es: `${site.url}${getEquivalentServiceHref(service, "es")}`,
-          gl: `${site.url}${getEquivalentServiceHref(service, "gl")}`,
-        },
+        languages: buildServiceLanguageAlternates(service),
       },
     })),
   );

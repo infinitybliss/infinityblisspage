@@ -409,7 +409,210 @@ const gl: LegalDocumentContent = {
   ],
 };
 
+const en: LegalDocumentContent = {
+  title: "Cookie Policy",
+  description:
+    "Information about the cookies and technologies used on the Ritual Essences website and booking system.",
+  sections: [
+    {
+      title: "1. What are cookies?",
+      blocks: [
+        {
+          type: "p",
+          text: "Cookies are small files or storage mechanisms that may be stored on the user’s device when visiting a website.",
+        },
+        {
+          type: "p",
+          text: "They allow, among other functions, maintaining an active session, remembering certain preferences or enabling the proper functioning of some services.",
+        },
+        {
+          type: "p",
+          text: "Similar technologies also exist that may store or access information on the device.",
+        },
+      ],
+    },
+    {
+      title: "2. What cookies does Ritual Essences use?",
+      blocks: [
+        {
+          type: "p",
+          text: "The Ritual Essences website does not currently use advertising cookies or its own tracking or analytics tools.",
+        },
+        {
+          type: "p",
+          text: "We do not currently use:",
+        },
+        {
+          type: "ul",
+          items: [
+            "Google Analytics;",
+            "Meta Pixel;",
+            "advertising cookies;",
+            "user profiling tools.",
+          ],
+        },
+        {
+          type: "p",
+          text: "The booking page incorporates an external service provided by SimplyBook.me.",
+        },
+        {
+          type: "p",
+          text: "This system uses certain technical cookies necessary to enable the booking process to function.",
+        },
+      ],
+    },
+    {
+      title: "3. SimplyBook.me technical cookies",
+      blocks: [
+        {
+          type: "p",
+          text: "When accessing the booking system, technical and session cookies provided by SimplyBook.me may be used.",
+        },
+        {
+          type: "p",
+          text: "Among the cookies detected during our testing are:",
+        },
+        {
+          type: "table",
+          caption: "SimplyBook.me technical cookies detected on Ritual Essences",
+          headers: ["Cookie", "Provider", "Purpose", "Duration"],
+          rows: [
+            [
+              "__widget_init",
+              "SimplyBook.me",
+              "Initialization and operation of the booking widget",
+              "Session",
+            ],
+            [
+              "sb_line_token_ritualessences",
+              "SimplyBook.me",
+              "Technical management of session, queue and system protection",
+              "Session",
+            ],
+            [
+              "sb_token_ritualessences",
+              "SimplyBook.me",
+              "Technical management of the booking session",
+              "Session",
+            ],
+            [
+              "sess_user_publicv2_ritualessences",
+              "SimplyBook.me",
+              "Maintaining the public session during the booking process",
+              "Session",
+            ],
+            [
+              "sb_widget",
+              "SimplyBook.me",
+              "Widget operation and state",
+              "Session",
+            ],
+            [
+              "cookies_accepted",
+              "SimplyBook.me",
+              "Management of cookie-related preferences",
+              "According to provider configuration",
+            ],
+          ],
+        },
+        {
+          type: "p",
+          text: "The exact names of some cookies may vary slightly due to internal changes by SimplyBook.me.",
+        },
+      ],
+    },
+    {
+      title: "4. Why is there no cookie banner?",
+      blocks: [
+        {
+          type: "p",
+          text: "Technical cookies necessary to provide a service expressly requested by the user may be used without prior consent.",
+        },
+        {
+          type: "p",
+          text: "Currently, the cookies detected on this website are related to the technical operation of the booking system.",
+        },
+        {
+          type: "p",
+          text: "For this reason, a cookie acceptance or rejection banner is not currently displayed.",
+        },
+        {
+          type: "p",
+          text: "If in the future Ritual Essences incorporates analytics, advertising, tracking or any other technology requiring consent, the corresponding consent management system will be implemented before activating such technologies.",
+        },
+      ],
+    },
+    {
+      title: "5. SimplyBook.me",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences uses SimplyBook.me to manage online bookings.",
+        },
+        {
+          type: "p",
+          text: "When a person accesses the booking system, certain elements are provided directly by SimplyBook.me.",
+        },
+        {
+          type: "p",
+          text: "SimplyBook.me may use cookies and similar technologies necessary for the operation of its platform.",
+        },
+        {
+          type: "externalLink",
+          href: SIMPLYBOOK_COOKIE_POLICY_URL,
+          label: "SimplyBook.me Cookie Policy (opens in a new tab)",
+        },
+      ],
+    },
+    {
+      title: "6. How to delete cookies",
+      blocks: [
+        {
+          type: "p",
+          text: "Users may view, delete or block cookies from their browser settings.",
+        },
+        {
+          type: "p",
+          text: "Deleting or blocking certain technical cookies may affect the operation of the booking system.",
+        },
+      ],
+    },
+    {
+      title: "7. Changes to this Cookie Policy",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences may update this Cookie Policy if:",
+        },
+        {
+          type: "ul",
+          items: [
+            "the technologies used change;",
+            "SimplyBook.me modifies its cookies;",
+            "new tools are incorporated;",
+            "applicable legal requirements change.",
+          ],
+        },
+        {
+          type: "p",
+          text: "The current version will always be the one published on this page.",
+        },
+        {
+          type: "fields",
+          items: [
+            {
+              label: "Last updated",
+              value: "August 2026",
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
 export const cookiesContent: Record<Locale, LegalDocumentContent> = {
   es,
   gl,
+  en,
 };

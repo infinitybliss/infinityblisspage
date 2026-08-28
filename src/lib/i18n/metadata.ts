@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
+import { buildRouteLanguageAlternates } from "@/lib/i18n/alternates";
 import { getLocalizedHref, type RouteId } from "@/lib/i18n/paths";
 import type { Locale } from "@/types/locale";
 import { localeOpenGraph } from "@/types/locale";
@@ -10,11 +11,7 @@ export function getRouteAlternates(locale: Locale, routeId: RouteId): Metadata {
   return {
     alternates: {
       canonical,
-      languages: {
-        es: `${site.url}${getLocalizedHref("es", routeId)}`,
-        gl: `${site.url}${getLocalizedHref("gl", routeId)}`,
-        "x-default": `${site.url}${getLocalizedHref("es", routeId)}`,
-      },
+      languages: buildRouteLanguageAlternates(routeId),
     },
     openGraph: {
       url: canonical,

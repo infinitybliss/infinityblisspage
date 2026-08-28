@@ -13,6 +13,7 @@ export const siteImages = {
     alt: {
       es: "Masaje de manos en un ambiente cálido y relajado",
       gl: "Masaxe de mans nun ambiente cálido e relaxado",
+      en: "Hand massage in a warm, relaxing atmosphere",
     },
     width: 1024,
     height: 691,
@@ -22,6 +23,7 @@ export const siteImages = {
     alt: {
       es: "Tratamiento facial con mascarilla en Ritual Essences",
       gl: "Tratamento facial con máscara en Ritual Essences",
+      en: "Facial treatment with mask at Ritual Essences",
     },
     width: 562,
     height: 354,
@@ -31,6 +33,7 @@ export const siteImages = {
     alt: {
       es: "Masaje de espalda para recuperar el cuerpo después del esfuerzo",
       gl: "Masaxe de costas para recuperar o corpo despois do esforzo",
+      en: "Back massage to help the body recover after physical effort",
     },
     width: 701,
     height: 438,
@@ -40,6 +43,7 @@ export const siteImages = {
     alt: {
       es: "Ambiente de bienestar durante un masaje de espalda",
       gl: "Ambiente de benestar durante unha masaxe de costas",
+      en: "Wellbeing atmosphere during a back massage",
     },
     width: 554,
     height: 554,

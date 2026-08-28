@@ -18,11 +18,11 @@ export const routeIds = [
 export type RouteId = (typeof routeIds)[number];
 
 export const sectionIds = {
-  services: { es: "servicios", gl: "servizos" },
-  pilgrims: { es: "peregrinos", gl: "peregrinos" },
-  about: { es: "sobre-nosotros", gl: "sobre-nos" },
-  booking: { es: "reservas", gl: "reservas" },
-  contact: { es: "contacto", gl: "contacto" },
+  services: { es: "servicios", gl: "servizos", en: "treatments" },
+  pilgrims: { es: "peregrinos", gl: "peregrinos", en: "pilgrims" },
+  about: { es: "sobre-nosotros", gl: "sobre-nos", en: "about-us" },
+  booking: { es: "reservas", gl: "reservas", en: "book" },
+  contact: { es: "contacto", gl: "contacto", en: "contact" },
 } as const;
 
 export type SectionId = keyof typeof sectionIds;
@@ -32,18 +32,21 @@ export type SectionId = keyof typeof sectionIds;
  * Home is an empty string so /es and /gl remain the locale roots.
  */
 export const pathnames: Record<RouteId, Record<Locale, string>> = {
-  home: { es: "", gl: "" },
-  services: { es: "/servicios", gl: "/servizos" },
-  booking: { es: "/reservas", gl: "/reservas" },
-  contact: { es: "/contacto", gl: "/contacto" },
-  legalNotice: { es: "/aviso-legal", gl: "/aviso-legal" },
-  privacy: { es: "/privacidad", gl: "/privacidade" },
-  cookies: { es: "/cookies", gl: "/cookies" },
+  home: { es: "", gl: "", en: "" },
+  services: { es: "/servicios", gl: "/servizos", en: "/services" },
+  booking: { es: "/reservas", gl: "/reservas", en: "/book" },
+  contact: { es: "/contacto", gl: "/contacto", en: "/contact" },
+  legalNotice: { es: "/aviso-legal", gl: "/aviso-legal", en: "/legal-notice" },
+  privacy: { es: "/privacidad", gl: "/privacidade", en: "/privacy" },
+  cookies: { es: "/cookies", gl: "/cookies", en: "/cookies" },
   bookingTerms: {
     es: "/condiciones-de-reserva",
     gl: "/condicions-de-reserva",
+    en: "/booking-terms",
   },
 };
+
+const localePathPattern = `^/(${locales.join("|")})(?=/|$)`;
 
 export function getLocalizedHref(locale: Locale, routeId: RouteId): string {
   return `/${locale}${pathnames[routeId][locale]}`;
@@ -80,8 +83,7 @@ export function getSectionId(locale: Locale, section: SectionId): string {
 }
 
 export function stripLocalePrefix(pathname: string): string {
-  const stripped = pathname.replace(/^\/(es|gl)(?=\/|$)/, "");
-  return stripped;
+  return pathname.replace(new RegExp(localePathPattern), "");
 }
 
 function normalizePath(pathname: string): string {
@@ -92,8 +94,9 @@ function normalizePath(pathname: string): string {
 }
 
 function getLocaleFromPathname(pathname: string): Locale | null {
-  const match = pathname.match(/^\/(es|gl)(?=\/|$)/);
-  return match?.[1] === "gl" ? "gl" : match?.[1] === "es" ? "es" : null;
+  const match = pathname.match(new RegExp(localePathPattern));
+  const value = match?.[1];
+  return value && locales.includes(value as Locale) ? (value as Locale) : null;
 }
 
 export function getRouteIdFromPathname(pathname: string): RouteId {
@@ -121,7 +124,8 @@ export function getRouteIdFromPathname(pathname: string): RouteId {
 
 export function mapSectionId(sectionId: string, targetLocale: Locale): string {
   for (const map of Object.values(sectionIds)) {
-    if (map.es === sectionId || map.gl === sectionId) {
+    const values = Object.values(map);
+    if (values.some((value) => value === sectionId)) {
       return map[targetLocale];
     }
   }

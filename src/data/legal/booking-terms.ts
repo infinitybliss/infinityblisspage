@@ -513,7 +513,264 @@ const gl: LegalDocumentContent = {
   ],
 };
 
+const en: LegalDocumentContent = {
+  title: "Booking and Cancellation Terms",
+  description:
+    "Booking and cancellation terms of Ritual Essences. Advance notice, modification, groups and special rates.",
+  sections: [
+    {
+      title: "1. Bookings",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences appointments can be booked through the online booking system available on the website.",
+        },
+        {
+          type: "p",
+          text: "Certain bookings may also be managed by phone when necessary.",
+        },
+        {
+          type: "p",
+          text: "Availability shown in the calendar is updated according to available schedules and resources.",
+        },
+        {
+          type: "p",
+          text: "A booking will be considered confirmed when the customer receives the corresponding confirmation through the enabled system.",
+        },
+      ],
+    },
+    {
+      title: "2. Minimum advance notice",
+      blocks: [
+        {
+          type: "p",
+          text: "Online bookings may generally be made up to 2 hours before the start of the service, subject to availability.",
+        },
+        {
+          type: "p",
+          text: "Certain services or circumstances may require different advance notice, which will be communicated when applicable.",
+        },
+      ],
+    },
+    {
+      title: "3. Modifying a booking",
+      blocks: [
+        {
+          type: "p",
+          text: "Bookings may be modified using the options provided by SimplyBook.me when these are available for the relevant appointment.",
+        },
+        {
+          type: "p",
+          text: "If the user cannot make the change from the platform or has any questions, they may contact Ritual Essences by phone.",
+        },
+        {
+          type: "p",
+          text: "Modification will always be subject to availability.",
+        },
+      ],
+    },
+    {
+      title: "4. Cancellation",
+      blocks: [
+        {
+          type: "p",
+          text: "Bookings may be cancelled using the options provided by SimplyBook.me when available.",
+        },
+        {
+          type: "p",
+          text: "Assistance may also be requested by contacting Ritual Essences directly.",
+        },
+        {
+          type: "p",
+          text: "Bookings currently do not require online payment, so no charges are made through the website when booking.",
+        },
+        {
+          type: "p",
+          text: "Ritual Essences appreciates any cancellation being communicated as far in advance as possible so that the time slot may be used by another person.",
+        },
+      ],
+    },
+    {
+      title: "5. Late arrival",
+      blocks: [
+        {
+          type: "p",
+          text: "We recommend arriving on time.",
+        },
+        {
+          type: "p",
+          text: "In the event of late arrival by the customer, Ritual Essences will try to provide the service whenever availability allows and it is compatible with subsequent bookings.",
+        },
+        {
+          type: "p",
+          text: "When a delay affects following appointments or prevents the treatment from being carried out under adequate conditions, it may be necessary to:",
+        },
+        {
+          type: "ul",
+          items: [
+            "reduce the effective duration of the service;",
+            "offer another available time;",
+            "or reschedule the appointment.",
+          ],
+        },
+        {
+          type: "p",
+          text: "Each situation will be assessed according to the centre’s availability at that time.",
+        },
+      ],
+    },
+    {
+      title: "6. Group bookings",
+      blocks: [
+        {
+          type: "p",
+          text: "Bookings for several people or groups must be managed directly with Ritual Essences by phone.",
+        },
+        {
+          type: "p",
+          text: "Availability for groups will depend on the number of people, treatments requested, duration and the centre’s available capacity.",
+        },
+        {
+          type: "p",
+          text: "A group booking request will not be considered confirmed until express confirmation is received from Ritual Essences.",
+        },
+      ],
+    },
+    {
+      title: "7. Reseteo Hostelero and Reseteo Hostelero Premium",
+      blocks: [
+        {
+          type: "p",
+          text: "The Reseteo Hostelero and Reseteo Hostelero Premium treatments have a special rate.",
+        },
+        {
+          type: "p",
+          text: "To benefit from this rate, at least one of the following conditions must be met:",
+        },
+        {
+          type: "ul",
+          items: [
+            "reside in Santiago de Compostela;",
+            "work in the hospitality sector.",
+          ],
+        },
+        {
+          type: "p",
+          text: "Ritual Essences may request reasonable proof to verify compliance with one of these conditions.",
+        },
+        {
+          type: "p",
+          text: "If neither condition can be verified, the centre may inform the customer of the available alternatives before providing the service.",
+        },
+      ],
+    },
+    {
+      title: "8. Prices",
+      blocks: [
+        {
+          type: "p",
+          text: "Prices published on the website apply to the services indicated unless there is an obvious error or a duly communicated change.",
+        },
+        {
+          type: "note",
+          text: "[CONFIRMAR CON MAR: añadir “Todos los precios incluyen los impuestos legalmente aplicables” si corresponde.]",
+        },
+        {
+          type: "p",
+          text: "Prices and services may be updated for future bookings.",
+        },
+        {
+          type: "p",
+          text: "A subsequent change in prices will not affect a booking already confirmed under the conditions communicated to the customer, unless there is an obvious error that must be corrected.",
+        },
+      ],
+    },
+    {
+      title: "9. Payment",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences does not currently collect online payments through this website.",
+        },
+        {
+          type: "p",
+          text: "Payment will be made at the premises using the payment methods available at Ritual Essences.",
+        },
+        {
+          type: "note",
+          text: "[CONFIRMAR CON MAR: efectivo / tarjeta / Bizum / otros.]",
+        },
+      ],
+    },
+    {
+      title: "10. Choice of therapist",
+      blocks: [
+        {
+          type: "p",
+          text: "Unless expressly stated otherwise, bookings are made for the chosen service and do not guarantee assignment of a specific therapist.",
+        },
+        {
+          type: "p",
+          text: "Ritual Essences will internally organise the team necessary to provide the booked service.",
+        },
+      ],
+    },
+    {
+      title: "11. Contraindications and personal circumstances",
+      blocks: [
+        {
+          type: "p",
+          text: "Certain treatments may not be suitable in certain personal situations.",
+        },
+        {
+          type: "p",
+          text: "The user must inform the centre, before starting the session, of any relevant circumstance that may affect the proper provision of the treatment.",
+        },
+        {
+          type: "p",
+          text: "Ritual Essences may recommend not performing or adapting a service when it considers that it cannot be provided adequately or safely.",
+        },
+        {
+          type: "p",
+          text: "Services offered by Ritual Essences are for wellness purposes and do not replace diagnosis, monitoring or treatment provided by healthcare professionals when this is necessary.",
+        },
+      ],
+    },
+    {
+      title: "12. Availability and force majeure",
+      blocks: [
+        {
+          type: "p",
+          text: "Ritual Essences may propose modifying or rescheduling an appointment when exceptional circumstances make it impossible to provide the booked service.",
+        },
+        {
+          type: "p",
+          text: "In that case, the customer will be contacted using the details provided during the booking.",
+        },
+      ],
+    },
+    {
+      title: "13. Customer service",
+      blocks: [
+        {
+          type: "p",
+          text: "For any questions related to a booking, modification, cancellation or service, you can contact Ritual Essences:",
+        },
+        {
+          type: "fields",
+          items: [
+            { label: "Phone", value: "[TELÉFONO]" },
+            { label: "Email", value: "[EMAIL]" },
+            { label: "Address", value: "[DIRECCIÓN]" },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
 export const bookingTermsContent: Record<Locale, LegalDocumentContent> = {
   es,
   gl,
+  en,
 };

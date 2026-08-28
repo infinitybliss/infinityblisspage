@@ -162,14 +162,6 @@ export function ServiceDetail({
             )}
           </div>
         </div>
-
-        {singleBookHref && (
-          <div className="mt-14 border-t border-border-subtle pt-10 text-center sm:mt-16">
-            <Button href={singleBookHref}>
-              {dictionary.services.bookThisTreatment}
-            </Button>
-          </div>
-        )}
       </Container>
     </main>
   );
