@@ -53,11 +53,11 @@ export function MobileNav({ dictionary, links, bookHref }: MobileNavProps) {
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div className="shrink-0 lg:hidden">
       <button
         ref={buttonRef}
         type="button"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border-subtle text-foreground"
+        className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-border-subtle text-foreground"
         aria-expanded={open}
         aria-controls={menuId}
         aria-label={open ? dictionary.nav.closeMenu : dictionary.nav.openMenu}

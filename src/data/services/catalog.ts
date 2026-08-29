@@ -50,7 +50,7 @@ export const servicesCatalog: Service[] = [
     featured: true,
     pilgrimFeatured: true,
     audience: ["peregrinos"],
-    image: "/images/massage-back-shoulders.jpg",
+    image: "/images/pilgrim-massage.jpg",
   },
   {
     id: "lymphatic-drainage",
@@ -90,7 +90,7 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [{ minutes: 30, price: 35, bookingId: 8 }],
-    image: "/images/massage-hands.jpg",
+    image: "/images/lymphatic-drainage.jpg",
   },
   {
     id: "relaxing-massage",
@@ -322,7 +322,7 @@ export const servicesCatalog: Service[] = [
     durations: [{ minutes: 45, price: 55, bookingId: 6 }],
     pilgrimFeatured: true,
     audience: ["peregrinos", "deportistas", "personas que trabajan de pie"],
-    image: "/images/massage-hands.jpg",
+    image: "/images/ritual-light-feet.jpg",
   },
   {
     id: "ritual-serenity-spa",
@@ -427,7 +427,7 @@ export const servicesCatalog: Service[] = [
       gl: "Tarifa especial para traballadores/as de hostalaría.",
       en: "Special rate for people who live in Santiago de Compostela or work in the hospitality sector.",
     },
-    image: "/images/massage-back-oil.jpg",
+    image: "/images/hospitality-reset.jpg",
   },
   {
     id: "hospitality-reset-premium",
@@ -491,6 +491,6 @@ export const servicesCatalog: Service[] = [
       gl: "Tarifa especial para traballadores/as de hostalaría.",
       en: "Special rate for people who live in Santiago de Compostela or work in the hospitality sector.",
     },
-    image: "/images/massage-back-ambiance.jpg",
+    image: "/images/hospitality-reset.jpg",
   },
 ];

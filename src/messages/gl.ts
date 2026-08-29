@@ -54,6 +54,16 @@ export const gl: Dictionary = {
     benefitsTitle: "Beneficios",
     durationsTitle: "Duracións e prezos",
   },
+  upcoming: {
+    eyebrow: "Novidades",
+    title: "Proximamente en Ritual Essences",
+    text: "Seguimos preparando novas formas de coidarte. Estes servizos estarán dispoñibles proximamente.",
+    homeTitle: "Proximamente",
+    homeText:
+      "Seguimos preparando novas formas de coidarte. Estes servizos estarán dispoñibles proximamente.",
+    badge: "Proximamente",
+    availableSoon: "Dispoñible proximamente",
+  },
   pilgrims: {
     eyebrow: "Camiño de Santiago",
     title: "Recupera o corpo despois do Camiño",

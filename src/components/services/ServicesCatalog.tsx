@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ServiceCard } from "@/components/services/ServiceCard";
+import { UpcomingServices } from "@/components/services/UpcomingServices";
 import { categoryLabels, categoryOrder } from "@/data/categories";
 import {
   getPilgrimFeaturedServices,
@@ -93,6 +94,8 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
             </section>
           );
         })}
+
+        <UpcomingServices locale={locale} dictionary={dictionary} />
 
         <div className="mt-16 text-center">
           <Link

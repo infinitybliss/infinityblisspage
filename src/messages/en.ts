@@ -54,6 +54,16 @@ export const en: Dictionary = {
     benefitsTitle: "Benefits",
     durationsTitle: "Durations and prices",
   },
+  upcoming: {
+    eyebrow: "What's new",
+    title: "Coming soon to Ritual Essences",
+    text: "We're preparing new ways to take care of you. These services will be available soon.",
+    homeTitle: "Coming soon",
+    homeText:
+      "We're preparing new ways to take care of you. These services will be available soon.",
+    badge: "Coming soon",
+    availableSoon: "Available soon",
+  },
   pilgrims: {
     eyebrow: "Camino de Santiago",
     title: "Help your body recover after the Camino",

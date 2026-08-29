@@ -49,6 +49,15 @@ export type Dictionary = {
     benefitsTitle: string;
     durationsTitle: string;
   };
+  upcoming: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    homeTitle: string;
+    homeText: string;
+    badge: string;
+    availableSoon: string;
+  };
   pilgrims: {
     eyebrow: string;
     title: string;

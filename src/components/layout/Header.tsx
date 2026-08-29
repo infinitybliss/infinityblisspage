@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Suspense } from "react";
-import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/layout/Logo";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
@@ -27,9 +26,11 @@ export function Header({ locale, dictionary }: HeaderProps) {
   const bookHref = getBookingHref(locale);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border-subtle bg-background/95 backdrop-blur-sm">
-      <Container className="relative flex h-16 items-center justify-between gap-3 sm:h-[4.5rem]">
-        <Logo locale={locale} title={dictionary.brand.name} />
+    <header className="relative sticky top-0 z-50 border-b border-border-subtle bg-background/95 backdrop-blur-sm">
+      <div className="mx-auto flex h-16 w-full min-w-0 max-w-6xl items-center justify-between gap-2 px-3 sm:h-[4.5rem] sm:gap-4 sm:px-6 lg:px-8">
+        <div className="shrink-0">
+          <Logo locale={locale} title={dictionary.brand.name} compact />
+        </div>
         <nav aria-label={dictionary.nav.main} className="hidden lg:block">
           <ul className="flex items-center gap-7 text-[0.9375rem] text-foreground">
             {navLinks.map((link) => (
@@ -44,11 +45,18 @@ export function Header({ locale, dictionary }: HeaderProps) {
             ))}
           </ul>
         </nav>
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <Suspense fallback={null}>
-            <LocaleSwitcher locale={locale} dictionary={dictionary} />
+            <LocaleSwitcher
+              locale={locale}
+              dictionary={dictionary}
+              compact
+            />
           </Suspense>
-          <Button href={bookHref} className="hidden sm:inline-flex">
+          <Button
+            href={bookHref}
+            className="!min-h-10 !px-3.5 !py-2 !text-sm sm:!min-h-11 sm:!px-7 sm:!py-3 sm:!text-[0.9375rem]"
+          >
             {dictionary.nav.book}
           </Button>
           <MobileNav
@@ -57,7 +65,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
             bookHref={bookHref}
           />
         </div>
-      </Container>
+      </div>
     </header>
   );
 }

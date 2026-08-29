@@ -6,6 +6,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Intro } from "@/components/sections/Intro";
 import { Pilgrims } from "@/components/sections/Pilgrims";
 import { Reviews } from "@/components/sections/Reviews";
+import { UpcomingServices } from "@/components/services/UpcomingServices";
 import { reviews } from "@/data/reviews";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import type { Locale } from "@/types/locale";
@@ -23,6 +24,11 @@ export function HomePage({ locale }: HomePageProps) {
       <Intro dictionary={dictionary} />
       <FeaturedServices locale={locale} dictionary={dictionary} />
       <Pilgrims locale={locale} dictionary={dictionary} />
+      <UpcomingServices
+        locale={locale}
+        dictionary={dictionary}
+        variant="home"
+      />
       <About locale={locale} dictionary={dictionary} />
       <Reviews dictionary={dictionary} reviews={reviews} />
       <Booking locale={locale} dictionary={dictionary} />
