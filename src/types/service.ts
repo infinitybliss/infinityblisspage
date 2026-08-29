@@ -33,15 +33,33 @@ export const serviceIds = [
 
 export type ServiceId = (typeof serviceIds)[number];
 
+/** Rich benefit shown on the treatment detail page. */
+export type ServiceBenefit = {
+  title: LocalizedString;
+  description: LocalizedString;
+};
+
 export type Service = {
   id: ServiceId;
   slug: LocalizedString;
   category: ServiceCategory;
   name: LocalizedString;
-  tagline?: LocalizedString;
+  /** Short card/catalog summary. */
   shortDescription: LocalizedString;
+  /** Lead introduction on the detail page. */
+  intro?: LocalizedString;
+  /** Editorial subtitle on the detail page. */
+  tagline?: LocalizedString;
+  /**
+   * Fallback / primary detail paragraph.
+   * Prefer `paragraphs` for multi-paragraph detail copy.
+   */
   description: LocalizedString;
-  benefits?: LocalizedString[];
+  /** Additional detail paragraphs after intro + tagline. */
+  paragraphs?: LocalizedString[];
+  benefits?: ServiceBenefit[];
+  /** Optional closing line(s) after benefits. */
+  closing?: LocalizedString;
   durations: ServiceDuration[];
   featured?: boolean;
   pilgrimFeatured?: boolean;
@@ -51,15 +69,23 @@ export type Service = {
   note?: LocalizedString;
 };
 
+export type LocalizedBenefit = {
+  title: string;
+  description: string;
+};
+
 export type LocalizedService = {
   id: ServiceId;
   slug: string;
   category: ServiceCategory;
   name: string;
-  tagline?: string;
   shortDescription: string;
+  intro?: string;
+  tagline?: string;
   description: string;
-  benefits: string[];
+  paragraphs: string[];
+  benefits: LocalizedBenefit[];
+  closing?: string;
   durations: ServiceDuration[];
   featured?: boolean;
   pilgrimFeatured?: boolean;

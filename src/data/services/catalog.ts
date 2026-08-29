@@ -1,5 +1,22 @@
 import type { Service } from "@/types/service";
 
+const hospitalityNote = {
+  es: "Tarifa especial para residentes en Santiago de Compostela o personas que trabajen en el sector de la hostelería. Puede solicitarse acreditación.",
+  gl: "Tarifa especial para residentes en Santiago de Compostela ou persoas que traballen no sector da hostalaría. Pode solicitarse acreditación.",
+  en: "Special rate for residents of Santiago de Compostela or people who work in the hospitality sector. Proof may be requested.",
+};
+
+const hospitalityBadge = {
+  es: "Especial hostelería",
+  gl: "Especial hostalaría",
+  en: "Hospitality special",
+};
+
+const hospitalityAudience = [
+  "trabajadores de hostelería",
+  "personas que trabajan muchas horas de pie",
+];
+
 export const servicesCatalog: Service[] = [
   {
     id: "pilgrim-massage",
@@ -23,24 +40,36 @@ export const servicesCatalog: Service[] = [
     },
     benefits: [
       {
-        es: "Alivio de la sensación de sobrecarga en piernas, pies y espalda",
-        gl: "Alivio da sensación de sobrecarga en pernas, pés e costas",
-        en: "Relief from the feeling of overload in legs, feet and back",
+        title: {
+          es: "Alivio de la sensación de sobrecarga en piernas, pies y espalda",
+          gl: "Alivio da sensación de sobrecarga en pernas, pés e costas",
+          en: "Relief from the feeling of overload in legs, feet and back",
+        },
+        description: { es: "", gl: "", en: "" },
       },
       {
-        es: "Sensación de ligereza y descanso",
-        gl: "Sensación de lixeireza e descanso",
-        en: "A sense of lightness and rest",
+        title: {
+          es: "Sensación de ligereza y descanso",
+          gl: "Sensación de lixeireza e descanso",
+          en: "A sense of lightness and rest",
+        },
+        description: { es: "", gl: "", en: "" },
       },
       {
-        es: "Cuidado de zona lumbar y hombros",
-        gl: "Coidado da zona lumbar e ombros",
-        en: "Care for the lower back and shoulders",
+        title: {
+          es: "Cuidado de zona lumbar y hombros",
+          gl: "Coidado da zona lumbar e ombros",
+          en: "Care for the lower back and shoulders",
+        },
+        description: { es: "", gl: "", en: "" },
       },
       {
-        es: "Recuperación y bienestar tras el Camino",
-        gl: "Recuperación e benestar tras o Camiño",
-        en: "Recovery and wellbeing after the Camino",
+        title: {
+          es: "Recuperación y bienestar tras el Camino",
+          gl: "Recuperación e benestar tras o Camiño",
+          en: "Recovery and wellbeing after the Camino",
+        },
+        description: { es: "", gl: "", en: "" },
       },
     ],
     durations: [
@@ -57,10 +86,15 @@ export const servicesCatalog: Service[] = [
     slug: { es: "drenaje-linfatico", gl: "drenaxe-linfatica", en: "lymphatic-drainage" },
     category: "massages",
     name: { es: "Drenaje Linfático", gl: "Drenaxe Linfática", en: "Lymphatic Drainage Massage" },
+    intro: {
+      es: "El Drenaje Linfático Manual es una técnica suave, rítmica y profundamente relajante pensada para favorecer el movimiento natural de la linfa y proporcionar una agradable sensación de ligereza, especialmente cuando existe pesadez o retención de líquidos.",
+      gl: "A Drenaxe Linfática Manual é unha técnica suave, rítmica e profundamente relaxante pensada para favorecer o movemento natural da linfa e proporcionar unha agradable sensación de lixeireza, especialmente cando existe pesadez ou retención de líquidos.",
+      en: "Manual Lymphatic Drainage is a gentle, rhythmic and deeply relaxing technique designed to encourage the natural movement of lymph and provide a pleasant feeling of lightness, especially when there is heaviness or fluid retention.",
+    },
     tagline: {
-      es: "Una sensación de ligereza y bienestar para tu cuerpo",
-      gl: "Unha sensación de lixeireza e benestar para o teu corpo",
-      en: "A feeling of lightness and wellbeing for your body",
+      es: "Un impulso de ligereza y bienestar para tu cuerpo",
+      gl: "Un impulso de lixeireza e benestar para o teu corpo",
+      en: "A lift of lightness and wellbeing for your body",
     },
     shortDescription: {
       es: "Terapia manual suave y rítmica orientada a favorecer la sensación de ligereza corporal.",
@@ -68,25 +102,70 @@ export const servicesCatalog: Service[] = [
       en: "A gentle, rhythmic manual technique designed to promote a feeling of lightness and overall wellbeing.",
     },
     description: {
-      es: "Terapia manual suave y rítmica orientada a favorecer la sensación de ligereza y bienestar mediante maniobras y presiones ligeras. Un tratamiento pensado para quienes buscan relajarse y cuidar el cuerpo con un enfoque delicado.",
-      gl: "Terapia manual suave e rítmica orientada a favorecer a sensación de lixeireza e benestar mediante maniobras e presións lixeiras. Un tratamento pensado para quen busca relaxarse e coidar o corpo cun enfoque delicado.",
-      en: "A gentle, rhythmic manual therapy designed to promote a feeling of lightness and wellbeing through light movements and gentle pressure. A treatment for those seeking relaxation and body care with a delicate approach.",
+      es: "Mediante maniobras precisas y presiones ligeras, esta técnica acompaña el funcionamiento natural del sistema linfático y favorece una sensación de descanso y bienestar corporal.",
+      gl: "Mediante manobras precisas e presións lixeiras, esta técnica acompaña o funcionamento natural do sistema linfático e favorece unha sensación de descanso e benestar corporal.",
+      en: "Through precise movements and light pressure, this technique supports the natural working of the lymphatic system and encourages a feeling of rest and bodily wellbeing.",
     },
+    paragraphs: [
+      {
+        es: "Mediante maniobras precisas y presiones ligeras, esta técnica acompaña el funcionamiento natural del sistema linfático y favorece una sensación de descanso y bienestar corporal.",
+        gl: "Mediante manobras precisas e presións lixeiras, esta técnica acompaña o funcionamento natural do sistema linfático e favorece unha sensación de descanso e benestar corporal.",
+        en: "Through precise movements and light pressure, this technique supports the natural working of the lymphatic system and encourages a feeling of rest and bodily wellbeing.",
+      },
+      {
+        es: "Es una opción especialmente agradable para quienes sienten pesadez en las extremidades, hinchazón o simplemente buscan un tratamiento suave y profundamente relajante.",
+        gl: "É unha opción especialmente agradable para quen sente pesadez nas extremidades, inchazón ou simplemente busca un tratamento suave e profundamente relaxante.",
+        en: "It is an especially pleasant option for anyone who feels heaviness in the limbs, swelling, or is simply looking for a gentle, deeply relaxing treatment.",
+      },
+    ],
     benefits: [
       {
-        es: "Sensación de piernas más ligeras",
-        gl: "Sensación de pernas máis lixeiras",
-        en: "A feeling of lighter legs",
+        title: {
+          es: "Sensación de ligereza",
+          gl: "Sensación de lixeireza",
+          en: "A feeling of lightness",
+        },
+        description: {
+          es: "Ayuda a aliviar la sensación de pesadez e hinchazón, especialmente en las piernas.",
+          gl: "Axuda a aliviar a sensación de pesadez e inchazón, especialmente nas pernas.",
+          en: "It helps ease the feeling of heaviness and swelling, especially in the legs.",
+        },
       },
       {
-        es: "Ayuda a aliviar la sensación de hinchazón",
-        gl: "Axuda a aliviar a sensación de inchazo",
-        en: "Helps ease the feeling of puffiness",
+        title: {
+          es: "Bienestar corporal",
+          gl: "Benestar corporal",
+          en: "Bodily wellbeing",
+        },
+        description: {
+          es: "Las maniobras suaves y rítmicas favorecen una sensación general de equilibrio y descanso.",
+          gl: "As manobras suaves e rítmicas favorecen unha sensación xeral de equilibrio e descanso.",
+          en: "The gentle, rhythmic movements encourage an overall sense of balance and rest.",
+        },
       },
       {
-        es: "Relajación y bienestar corporal",
-        gl: "Relaxación e benestar corporal",
-        en: "Relaxation and bodily wellbeing",
+        title: {
+          es: "Relajación profunda",
+          gl: "Relaxación profunda",
+          en: "Deep relaxation",
+        },
+        description: {
+          es: "El ritmo pausado del tratamiento invita a desconectar y disfrutar de un estado de calma.",
+          gl: "O ritmo pausado do tratamento convida a desconectar e gozar dun estado de calma.",
+          en: "The unhurried pace of the treatment invites you to switch off and enjoy a state of calm.",
+        },
+      },
+      {
+        title: {
+          es: "Cuidado personalizado",
+          gl: "Coidado personalizado",
+          en: "Personalised care",
+        },
+        description: {
+          es: "La sesión se adapta a las necesidades y sensaciones de cada persona.",
+          gl: "A sesión adáptase ás necesidades e sensacións de cada persoa.",
+          en: "The session is adapted to each person's needs and sensations.",
+        },
       },
     ],
     durations: [{ minutes: 30, price: 35, bookingId: 8 }],
@@ -97,6 +176,11 @@ export const servicesCatalog: Service[] = [
     slug: { es: "masaje-relajante", gl: "masaxe-relaxante", en: "relaxing-massage" },
     category: "massages",
     name: { es: "Masaje Relajante", gl: "Masaxe Relaxante", en: "Relaxing Massage" },
+    intro: {
+      es: "El Masaje Relajante es un tratamiento holístico pensado para inducir un estado de serenidad, calmar el ritmo del día a día y liberar suavemente la tensión acumulada.",
+      gl: "A Masaxe Relaxante é un tratamento holístico pensado para inducir un estado de serenidade, calmar o ritmo do día a día e liberar suavemente a tensión acumulada.",
+      en: "The Relaxing Massage is a holistic treatment designed to bring about a state of serenity, calm the pace of daily life and gently release accumulated tension.",
+    },
     tagline: {
       es: "Un refugio de calma para tu bienestar",
       gl: "Un refuxio de calma para o teu benestar",
@@ -108,30 +192,70 @@ export const servicesCatalog: Service[] = [
       en: "A gentle, enveloping massage with oils designed to promote relaxation and release accumulated tension.",
     },
     description: {
-      es: "Masaje realizado mediante pases suaves, lentos y envolventes, acompañado de aceites, orientado a favorecer la relajación y liberar la tensión acumulada durante el día. Especial atención a cuello, hombros y espalda.",
-      gl: "Masaxe realizado mediante pasos suaves, lentos e envolventes, acompañado de aceites, orientado a favorecer a relaxación e liberar a tensión acumulada durante o día. Atención especial a pescozo, ombros e costas.",
-      en: "A massage performed with soft, slow, enveloping strokes, accompanied by oils, designed to promote relaxation and release tension accumulated during the day. Special attention to the neck, shoulders and back.",
+      es: "A través de pases suaves, lentos y envolventes combinados con aceites, esta sesión permite desconectar la mente y devolver una agradable sensación de armonía al cuerpo.",
+      gl: "A través de pases suaves, lentos e envolventes combinados con aceites, esta sesión permite desconectar a mente e devolver unha agradable sensación de harmonía ao corpo.",
+      en: "Through soft, slow, enveloping strokes combined with oils, this session lets the mind switch off and brings a pleasant sense of harmony back to the body.",
     },
+    paragraphs: [
+      {
+        es: "A través de pases suaves, lentos y envolventes combinados con aceites, esta sesión permite desconectar la mente y devolver una agradable sensación de armonía al cuerpo.",
+        gl: "A través de pases suaves, lentos e envolventes combinados con aceites, esta sesión permite desconectar a mente e devolver unha agradable sensación de harmonía ao corpo.",
+        en: "Through soft, slow, enveloping strokes combined with oils, this session lets the mind switch off and brings a pleasant sense of harmony back to the body.",
+      },
+      {
+        es: "Es una experiencia ideal para dejar atrás el estrés cotidiano y regalarte una pausa de puro cuidado personal.",
+        gl: "É unha experiencia ideal para deixar atrás o estrés cotián e agasallarte cunha pausa de puro coidado persoal.",
+        en: "It is an ideal experience for leaving everyday stress behind and giving yourself a pause of pure self-care.",
+      },
+    ],
     benefits: [
       {
-        es: "Relajación profunda",
-        gl: "Relaxación profunda",
-        en: "Deep relaxation",
+        title: {
+          es: "Reducción de la sensación de estrés",
+          gl: "Redución da sensación de estrés",
+          en: "Less feeling of stress",
+        },
+        description: {
+          es: "Invita a bajar el ritmo, desconectar de la agitación diaria y disfrutar de un momento de calma.",
+          gl: "Convida a baixar o ritmo, desconectar da axitación diaria e gozar dun momento de calma.",
+          en: "It invites you to slow down, step away from the bustle of the day and enjoy a moment of calm.",
+        },
       },
       {
-        es: "Disminución de la sensación de tensión",
-        gl: "Diminución da sensación de tensión",
-        en: "Reduced sensation of tension",
+        title: {
+          es: "Alivio corporal suave",
+          gl: "Alivio corporal suave",
+          en: "Gentle bodily relief",
+        },
+        description: {
+          es: "Trabaja cuello, hombros y espalda mediante maniobras agradables y adaptadas a cada persona.",
+          gl: "Traballa pescozo, ombros e costas mediante manobras agradables e adaptadas a cada persoa.",
+          en: "It works the neck, shoulders and back with pleasant movements adapted to each person.",
+        },
       },
       {
-        es: "Cuidado de cuello, hombros y espalda",
-        gl: "Coidado de pescozo, ombros e costas",
-        en: "Care for neck, shoulders and back",
+        title: {
+          es: "Nutrición e hidratación",
+          gl: "Nutrición e hidratación",
+          en: "Nourishment and hydration",
+        },
+        description: {
+          es: "La aplicación de aceites ayuda a dejar la piel suave, flexible e hidratada.",
+          gl: "A aplicación de aceites axuda a deixar a pel suave, flexible e hidratada.",
+          en: "Applying oils helps leave the skin soft, supple and hydrated.",
+        },
       },
       {
-        es: "Sensación de descanso y desconexión",
-        gl: "Sensación de descanso e desconexión",
-        en: "A sense of rest and disconnection",
+        title: {
+          es: "Descanso profundo",
+          gl: "Descanso profundo",
+          en: "Deep rest",
+        },
+        description: {
+          es: "Favorece una sensación general de bienestar y relajación que puede ayudar a prepararnos para un mejor descanso.",
+          gl: "Favorece unha sensación xeral de benestar e relaxación que pode axudar a prepararnos para un mellor descanso.",
+          en: "It encourages an overall feeling of wellbeing and relaxation that can help prepare us for better rest.",
+        },
       },
     ],
     durations: [
@@ -146,10 +270,15 @@ export const servicesCatalog: Service[] = [
     slug: { es: "masaje-craneofacial", gl: "masaxe-craneofacial", en: "craniofacial-massage" },
     category: "massages",
     name: { es: "Masaje Craneofacial", gl: "Masaxe Craneofacial", en: "Craniofacial Massage" },
+    intro: {
+      es: "El Masaje Craneofacial es un tratamiento enfocado en liberar la tensión acumulada en el rostro, el cuero cabelludo, el cuello y los hombros mediante presiones y pases suaves y profundos.",
+      gl: "A Masaxe Craneofacial é un tratamento enfocado en liberar a tensión acumulada no rostro, o couro cabeludo, o pescozo e os ombros mediante presións e pases suaves e profundos.",
+      en: "The Craniofacial Massage is a treatment focused on releasing the tension held in the face, scalp, neck and shoulders through gentle yet deep pressure and strokes.",
+    },
     tagline: {
       es: "Mente despejada y rostro renovado",
       gl: "Mente despexada e rostro renovado",
-      en: "A clear mind and refreshed face",
+      en: "A clear mind and a refreshed face",
     },
     shortDescription: {
       es: "Tratamiento centrado en rostro, cuero cabelludo, cuello y hombros.",
@@ -157,30 +286,70 @@ export const servicesCatalog: Service[] = [
       en: "Focused on the face, scalp, neck and shoulders to help release tension and provide a pleasant feeling of rest and relaxation.",
     },
     description: {
-      es: "Tratamiento centrado en rostro, cuero cabelludo, cuello, hombros y zona mandibular mediante presiones y pases suaves. Especialmente apropiado para personas que buscan desconectar después de muchas horas frente a pantallas o que acumulan tensión en la zona superior del cuerpo.",
-      gl: "Tratamento centrado en rostro, couro cabeludo, pescozo, ombros e zona mandibular mediante presións e pasos suaves. Especialmente apropiado para persoas que buscan desconectar despois de moitas horas diante de pantallas ou que acumulan tensión na zona superior do corpo.",
-      en: "A treatment focused on the face, scalp, neck, shoulders and jaw area through gentle pressure and strokes. Especially suited for those looking to unwind after long hours in front of screens or who carry tension in the upper body.",
+      es: "La sesión trabaja especialmente las zonas de la parte superior del cuerpo donde solemos acumular tensión.",
+      gl: "A sesión traballa especialmente as zonas da parte superior do corpo onde adoitamos acumular tensión.",
+      en: "The session focuses especially on the areas of the upper body where we tend to hold tension.",
     },
+    paragraphs: [
+      {
+        es: "La sesión trabaja especialmente las zonas de la parte superior del cuerpo donde solemos acumular tensión.",
+        gl: "A sesión traballa especialmente as zonas da parte superior do corpo onde adoitamos acumular tensión.",
+        en: "The session focuses especially on the areas of the upper body where we tend to hold tension.",
+      },
+      {
+        es: "Es una opción ideal para quienes pasan muchas horas frente a pantallas, sienten cansancio en la zona facial o mandibular o simplemente buscan un momento de profunda desconexión.",
+        gl: "É unha opción ideal para quen pasa moitas horas diante de pantallas, sente cansazo na zona facial ou mandibular ou simplemente busca un momento de profunda desconexión.",
+        en: "It is an ideal option for anyone who spends long hours in front of screens, feels tiredness in the face or jaw, or is simply looking for a moment of deep disconnection.",
+      },
+    ],
     benefits: [
       {
-        es: "Liberación de tensión facial y mandibular",
-        gl: "Liberación de tensión facial e mandibular",
-        en: "Release of facial and jaw tension",
+        title: {
+          es: "Descanso craneofacial",
+          gl: "Descanso craneofacial",
+          en: "Craniofacial rest",
+        },
+        description: {
+          es: "Las maniobras sobre sienes, cuero cabelludo y rostro ayudan a proporcionar una agradable sensación de alivio y descanso.",
+          gl: "As manobras sobre as tempas, o couro cabeludo e o rostro axudan a proporcionar unha agradable sensación de alivio e descanso.",
+          en: "Work on the temples, scalp and face helps provide a pleasant feeling of relief and rest.",
+        },
       },
       {
-        es: "Relajación de cuero cabelludo, cuello y hombros",
-        gl: "Relaxación de couro cabeludo, pescozo e ombros",
-        en: "Relaxation of scalp, neck and shoulders",
+        title: {
+          es: "Liberación de tensión mandibular",
+          gl: "Liberación da tensión mandibular",
+          en: "Jaw tension release",
+        },
+        description: {
+          es: "El trabajo suave sobre la zona mandibular puede ayudar a relajar la tensión acumulada por el estrés cotidiano.",
+          gl: "O traballo suave sobre a zona mandibular pode axudar a relaxar a tensión acumulada polo estrés cotián.",
+          en: "Gentle work on the jaw area can help relax the tension built up by everyday stress.",
+        },
       },
       {
-        es: "Sensación de descanso",
-        gl: "Sensación de descanso",
-        en: "A sense of rest",
+        title: {
+          es: "Luminosidad y cuidado facial",
+          gl: "Luminosidade e coidado facial",
+          en: "Radiance and facial care",
+        },
+        description: {
+          es: "El masaje favorece la estimulación superficial de los tejidos y aporta una sensación de rostro descansado y revitalizado.",
+          gl: "A masaxe favorece a estimulación superficial dos tecidos e achega unha sensación de rostro descansado e revitalizado.",
+          en: "The massage encourages gentle surface stimulation of the tissues and brings a feeling of a rested, revitalised face.",
+        },
       },
       {
-        es: "Cuidado y estimulación facial",
-        gl: "Coidado e estimulación facial",
-        en: "Facial care and stimulation",
+        title: {
+          es: "Descanso y desconexión",
+          gl: "Descanso e desconexión",
+          en: "Rest and disconnection",
+        },
+        description: {
+          es: "El tratamiento invita a relajar la zona cervical, facial y ocular y a disfrutar de una pausa de calma.",
+          gl: "O tratamento convida a relaxar a zona cervical, facial e ocular e a gozar dunha pausa de calma.",
+          en: "The treatment invites you to relax the neck, face and eye area and enjoy a pause of calm.",
+        },
       },
     ],
     durations: [{ minutes: 30, price: 30, bookingId: 5 }],
@@ -191,6 +360,11 @@ export const servicesCatalog: Service[] = [
     slug: { es: "masaje-express", gl: "masaxe-express", en: "express-massage" },
     category: "massages",
     name: { es: "Masaje Express", gl: "Masaxe Express", en: "Express Massage" },
+    intro: {
+      es: "El Masaje Express es la opción ideal para quienes disponen de poco tiempo pero necesitan dedicar atención a una zona concreta donde sienten tensión o sobrecarga.",
+      gl: "A Masaxe Express é a opción ideal para quen dispón de pouco tempo pero necesita dedicar atención a unha zona concreta onde sente tensión ou sobrecarga.",
+      en: "The Express Massage is the ideal option for anyone with little time who still needs to give attention to a specific area where they feel tension or strain.",
+    },
     tagline: {
       es: "Alivio concentrado en solo 30 minutos",
       gl: "Alivio concentrado en só 30 minutos",
@@ -202,30 +376,58 @@ export const servicesCatalog: Service[] = [
       en: "A short, focused session for the area that needs the most attention, such as the back, neck, legs or craniofacial area.",
     },
     description: {
-      es: "Sesión focalizada para personas con poco tiempo que desean concentrar el masaje en una zona específica. Áreas disponibles: espalda y cuello, piernas cansadas o zona craneofacial.",
-      gl: "Sesión focalizada para persoas con pouco tempo que desexan concentrar a masaxe nunha zona específica. Áreas dispoñibles: costas e pescozo, pernas cansadas ou zona craneofacial.",
-      en: "A focused session for those with little time who want to concentrate the massage on a specific area. Available areas: back and neck, tired legs or the craniofacial zone.",
+      es: "Esta sesión focalizada se centra directamente en el área que más lo necesita.",
+      gl: "Esta sesión focalizada céntrase directamente na área que máis o necesita.",
+      en: "This focused session goes straight to the area that needs it most.",
     },
+    paragraphs: [
+      {
+        es: "Esta sesión focalizada se centra directamente en el área que más lo necesita.",
+        gl: "Esta sesión focalizada céntrase directamente na área que máis o necesita.",
+        en: "This focused session goes straight to the area that needs it most.",
+      },
+      {
+        es: "Mediante técnicas adaptadas a cada persona, trabajamos exclusivamente la zona elegida para liberar tensión y devolver una agradable sensación de movilidad y descanso.",
+        gl: "Mediante técnicas adaptadas a cada persoa, traballamos exclusivamente a zona elixida para liberar tensión e devolver unha agradable sensación de mobilidade e descanso.",
+        en: "Using techniques adapted to each person, we work solely on the chosen area to release tension and restore a pleasant sense of mobility and rest.",
+      },
+    ],
     benefits: [
       {
-        es: "Tratamiento focalizado",
-        gl: "Tratamento focalizado",
-        en: "Focused treatment",
+        title: {
+          es: "Enfoque personalizado",
+          gl: "Enfoque personalizado",
+          en: "Personalised focus",
+        },
+        description: {
+          es: "Tú eliges el área prioritaria: Espalda y Cuello, Piernas Cansadas o Zona Craneofacial.",
+          gl: "Ti elixes a área prioritaria: Costas e Pescozo, Pernas Cansadas ou Zona Craneofacial.",
+          en: "You choose the priority area: Back and Neck, Tired Legs or the Craniofacial Area.",
+        },
       },
       {
-        es: "Formato rápido de 30 minutos",
-        gl: "Formato rápido de 30 minutos",
-        en: "Quick 30-minute format",
+        title: {
+          es: "Trabajo focalizado",
+          gl: "Traballo focalizado",
+          en: "Focused work",
+        },
+        description: {
+          es: "Toda la sesión se concentra en la zona seleccionada para aprovechar al máximo los 30 minutos.",
+          gl: "Toda a sesión concéntrase na zona seleccionada para aproveitar ao máximo os 30 minutos.",
+          en: "The whole session concentrates on the selected area to make the most of the 30 minutes.",
+        },
       },
       {
-        es: "Liberación de tensión en la zona elegida",
-        gl: "Liberación de tensión na zona elixida",
-        en: "Release of tension in the chosen area",
-      },
-      {
-        es: "Adaptable a espalda, piernas o zona craneofacial",
-        gl: "Adaptable a costas, pernas ou zona craneofacial",
-        en: "Adaptable to back, legs or craniofacial area",
+        title: {
+          es: "Ideal para tu rutina",
+          gl: "Ideal para a túa rutina",
+          en: "Ideal for your routine",
+        },
+        description: {
+          es: "Perfecto para hacer una pausa durante el día o complementar sesiones más largas.",
+          gl: "Perfecto para facer unha pausa durante o día ou complementar sesións máis longas.",
+          en: "Perfect for taking a break during the day or complementing longer sessions.",
+        },
       },
     ],
     durations: [{ minutes: 30, price: 35, bookingId: 9 }],
@@ -236,6 +438,11 @@ export const servicesCatalog: Service[] = [
     slug: { es: "ritual-alma", gl: "ritual-alma", en: "soul-ritual" },
     category: "rituals",
     name: { es: "Ritual Alma", gl: "Ritual Alma", en: "Soul Ritual" },
+    intro: {
+      es: "Ritual Alma combina una limpieza facial con un Masaje Craneofacial para crear una experiencia integral de cuidado del rostro y profunda desconexión.",
+      gl: "Ritual Alma combina unha limpeza facial cunha Masaxe Craneofacial para crear unha experiencia integral de coidado do rostro e profunda desconexión.",
+      en: "The Soul Ritual combines a facial cleanse with a Craniofacial Massage to create a complete experience of facial care and deep disconnection.",
+    },
     tagline: {
       es: "Revela la luz de tu piel y despeja tu mente",
       gl: "Revela a luz da túa pel e despexa a túa mente",
@@ -247,30 +454,70 @@ export const servicesCatalog: Service[] = [
       en: "A facial ritual combining cleansing and craniofacial massage for a relaxing moment of care and wellbeing.",
     },
     description: {
-      es: "Experiencia que combina limpieza facial y masaje craneofacial. El tratamiento une cuidado de la piel con técnicas de relajación sobre sienes, mandíbula, cuello y cuero cabelludo para favorecer una sensación de desconexión y bienestar.",
-      gl: "Experiencia que combina limpeza facial e masaxe craneofacial. O tratamento une coidado da pel con técnicas de relaxación sobre fontanelas, mandíbula, pescozo e couro cabeludo para favorecer unha sensación de desconexión e benestar.",
-      en: "An experience that combines facial cleansing and craniofacial massage. The treatment brings together skincare with relaxation techniques on the temples, jaw, neck and scalp to promote a sense of disconnection and wellbeing.",
+      es: "Un protocolo pensado para devolver una sensación de vitalidad al rostro mientras trabajamos la tensión acumulada en sienes, mandíbula, cuello y cuero cabelludo.",
+      gl: "Un protocolo pensado para devolver unha sensación de vitalidade ao rostro mentres traballamos a tensión acumulada en tempas, mandíbula, pescozo e couro cabeludo.",
+      en: "A protocol designed to bring a sense of vitality back to the face while we work on the tension held in the temples, jaw, neck and scalp.",
     },
+    paragraphs: [
+      {
+        es: "Un protocolo pensado para devolver una sensación de vitalidad al rostro mientras trabajamos la tensión acumulada en sienes, mandíbula, cuello y cuero cabelludo.",
+        gl: "Un protocolo pensado para devolver unha sensación de vitalidade ao rostro mentres traballamos a tensión acumulada en tempas, mandíbula, pescozo e couro cabeludo.",
+        en: "A protocol designed to bring a sense of vitality back to the face while we work on the tension held in the temples, jaw, neck and scalp.",
+      },
+      {
+        es: "Mediante productos cosméticos adaptados al tipo de piel y maniobras de masaje precisas, combinamos cuidado estético y bienestar en una misma experiencia.",
+        gl: "Mediante produtos cosméticos adaptados ao tipo de pel e manobras de masaxe precisas, combinamos coidado estético e benestar nunha mesma experiencia.",
+        en: "With cosmetic products suited to your skin type and precise massage movements, we bring together aesthetic care and wellbeing in a single experience.",
+      },
+    ],
     benefits: [
       {
-        es: "Limpieza y exfoliación facial",
-        gl: "Limpeza e exfoliación facial",
-        en: "Facial cleansing and exfoliation",
+        title: {
+          es: "Piel limpia y radiante",
+          gl: "Pel limpa e radiante",
+          en: "Clean, radiant skin",
+        },
+        description: {
+          es: "La limpieza, exfoliación e hidratación ayudan a dejar el rostro fresco, uniforme y cuidado.",
+          gl: "A limpeza, a exfoliación e a hidratación axudan a deixar o rostro fresco, uniforme e coidado.",
+          en: "Cleansing, exfoliation and hydration help leave the face fresh, even and cared for.",
+        },
       },
       {
-        es: "Hidratación y cuidado de la piel",
-        gl: "Hidratación e cuidado da pel",
-        en: "Hydration and skin care",
+        title: {
+          es: "Liberación de tensión",
+          gl: "Liberación de tensión",
+          en: "Tension release",
+        },
+        description: {
+          es: "El masaje trabaja especialmente mandíbula, sienes, cuello y cuero cabelludo, zonas donde suele acumularse el estrés cotidiano.",
+          gl: "A masaxe traballa especialmente mandíbula, tempas, pescozo e couro cabeludo, zonas onde adoita acumularse o estrés cotián.",
+          en: "The massage works especially on the jaw, temples, neck and scalp, the areas where everyday stress tends to gather.",
+        },
       },
       {
-        es: "Relajación craneofacial",
-        gl: "Relaxación craneofacial",
-        en: "Craniofacial relaxation",
+        title: {
+          es: "Efecto buena cara",
+          gl: "Efecto boa cara",
+          en: "A fresh-faced glow",
+        },
+        description: {
+          es: "El masaje facial aporta una agradable sensación de frescura y ayuda a que el rostro se vea descansado y luminoso.",
+          gl: "A masaxe facial achega unha agradable sensación de frescura e axuda a que o rostro se vexa descansado e luminoso.",
+          en: "The facial massage brings a pleasant feeling of freshness and helps the face look rested and bright.",
+        },
       },
       {
-        es: "Sensación de luminosidad y desconexión",
-        gl: "Sensación de luminosidade e desconexión",
-        en: "A sense of radiance and disconnection",
+        title: {
+          es: "Experiencia desconectante",
+          gl: "Experiencia desconectante",
+          en: "A switch-off experience",
+        },
+        description: {
+          es: "Un momento para relajarte mentalmente mientras cuidamos de tu piel.",
+          gl: "Un momento para relaxarte mentalmente mentres coidamos da túa pel.",
+          en: "A moment to relax mentally while we take care of your skin.",
+        },
       },
     ],
     durations: [{ minutes: 45, price: 55, bookingId: 10 }],
@@ -282,10 +529,15 @@ export const servicesCatalog: Service[] = [
     slug: { es: "ritual-pies-ligeros", gl: "ritual-pes-lixeiros", en: "light-feet-ritual" },
     category: "rituals",
     name: { es: "Ritual Pies Ligeros", gl: "Ritual Pés Lixeiros", en: "Light Feet Ritual" },
+    intro: {
+      es: "Ritual Pies Ligeros combina un Spa de Pies con Masaje de Piernas para proporcionar descanso, cuidado y una agradable sensación de ligereza en las extremidades inferiores.",
+      gl: "Ritual Pés Lixeiros combina un Spa de Pés con Masaxe de Pernas para proporcionar descanso, coidado e unha agradable sensación de lixeireza nas extremidades inferiores.",
+      en: "The Light Feet Ritual combines a Foot Spa with a Leg Massage to bring rest, care and a pleasant feeling of lightness to the lower limbs.",
+    },
     tagline: {
-      es: "Descanso y bienestar para tus pasos",
-      gl: "Descanso e benestar para os teus pasos",
-      en: "Rest and wellbeing for your steps",
+      es: "Alivio y descanso para tus pasos",
+      gl: "Alivio e descanso para os teus pasos",
+      en: "Relief and rest for every step",
     },
     shortDescription: {
       es: "Spa de pies y masaje de piernas para quienes acumulan fatiga al caminar o estar de pie.",
@@ -293,30 +545,70 @@ export const servicesCatalog: Service[] = [
       en: "A foot and leg care experience combining a foot spa and massage to restore a pleasant feeling of rest and lightness.",
     },
     description: {
-      es: "Experiencia que combina spa de pies y masaje de piernas. Incluye baño con sales, exfoliación y masaje desde los pies hacia las piernas, con especial atención a las zonas más cargadas. Orientado a peregrinos, deportistas y personas que pasan muchas horas de pie.",
-      gl: "Experiencia que combina spa de pés e masaxe de pernas. Inclúe baño con sales, exfoliación e masaxe desde os pés cara ás pernas, con especial atención ás zonas máis cargadas. Orientado a peregrinos, deportistas e persoas que pasan moitas horas de pé.",
-      en: "An experience that combines a foot spa and leg massage. It includes a salt bath, exfoliation and massage from the feet up through the legs, with special attention to the areas that carry the most strain. Designed for pilgrims, athletes and people who spend long hours on their feet.",
+      es: "El protocolo comienza con un agradable baño de pies con sales y continúa con un masaje desde la planta de los pies hasta las piernas.",
+      gl: "O protocolo comeza cun agradable baño de pés con sales e continúa cunha masaxe desde a planta dos pés ata as pernas.",
+      en: "The protocol begins with a pleasant salt foot bath and continues with a massage that works from the soles of the feet up through the legs.",
     },
+    paragraphs: [
+      {
+        es: "El protocolo comienza con un agradable baño de pies con sales y continúa con un masaje desde la planta de los pies hasta las piernas.",
+        gl: "O protocolo comeza cun agradable baño de pés con sales e continúa cunha masaxe desde a planta dos pés ata as pernas.",
+        en: "The protocol begins with a pleasant salt foot bath and continues with a massage that works from the soles of the feet up through the legs.",
+      },
+      {
+        es: "Es una opción ideal para peregrinos, deportistas, personas que pasan muchas horas de pie o cualquiera que quiera regalar descanso a unos pies cansados.",
+        gl: "É unha opción ideal para peregrinos, deportistas, persoas que pasan moitas horas de pé ou calquera que queira agasallar descanso a uns pés cansados.",
+        en: "It is an ideal option for pilgrims, athletes, people who spend long hours on their feet, or anyone who wants to give tired feet a rest.",
+      },
+    ],
     benefits: [
       {
-        es: "Descanso de pies y piernas",
-        gl: "Descanso de pés e pernas",
-        en: "Rest for feet and legs",
+        title: {
+          es: "Baño de sales y exfoliación",
+          gl: "Baño de sales e exfoliación",
+          en: "Salt bath and exfoliation",
+        },
+        description: {
+          es: "Prepara y suaviza la piel mientras proporciona una agradable sensación de descanso en los pies.",
+          gl: "Prepara e suaviza a pel mentres proporciona unha agradable sensación de descanso nos pés.",
+          en: "It prepares and softens the skin while giving the feet a pleasant feeling of rest.",
+        },
       },
       {
-        es: "Masaje de gemelos y planta del pie",
-        gl: "Masaxe de xemelgos e planta do pé",
-        en: "Massage of calves and soles",
+        title: {
+          es: "Descanso muscular",
+          gl: "Descanso muscular",
+          en: "Muscular rest",
+        },
+        description: {
+          es: "El masaje trabaja pies y piernas, especialmente las zonas donde suele acumularse la sensación de sobrecarga.",
+          gl: "A masaxe traballa pés e pernas, especialmente as zonas onde adoita acumularse a sensación de sobrecarga.",
+          en: "The massage works the feet and legs, especially the areas where that overloaded feeling tends to build up.",
+        },
       },
       {
-        es: "Sensación de ligereza",
-        gl: "Sensación de lixeireza",
-        en: "A sense of lightness",
+        title: {
+          es: "Sensación de ligereza",
+          gl: "Sensación de lixeireza",
+          en: "A feeling of lightness",
+        },
+        description: {
+          es: "Las maniobras del masaje favorecen una agradable sensación de descanso en piernas y tobillos.",
+          gl: "As manobras da masaxe favorecen unha agradable sensación de descanso en pernas e nocellos.",
+          en: "The massage movements encourage a pleasant sense of rest in the legs and ankles.",
+        },
       },
       {
-        es: "Cuidado de pies fatigados",
-        gl: "Coidado de pés fatigados",
-        en: "Care for tired feet",
+        title: {
+          es: "Cuidado para tus pasos",
+          gl: "Coidado para os teus pasos",
+          en: "Care for every step",
+        },
+        description: {
+          es: "Una experiencia pensada para que pies y piernas se sientan descansados después de largas jornadas.",
+          gl: "Unha experiencia pensada para que pés e pernas se sintan descansados despois de longas xornadas.",
+          en: "An experience designed so your feet and legs feel rested after long days.",
+        },
       },
     ],
     durations: [{ minutes: 45, price: 55, bookingId: 6 }],
@@ -329,10 +621,15 @@ export const servicesCatalog: Service[] = [
     slug: { es: "ritual-serenity-spa", gl: "ritual-serenity-spa", en: "serenity-spa-ritual" },
     category: "spa",
     name: { es: "Ritual Serenity Spa", gl: "Ritual Serenity Spa", en: "Serenity Spa Ritual" },
+    intro: {
+      es: "El estrés diario, las pantallas y la fatiga suelen sentirse especialmente en la zona de la cabeza, el cuello y las cervicales.",
+      gl: "O estrés diario, as pantallas e a fatiga adoitan sentirse especialmente na zona da cabeza, o pescozo e as cervicais.",
+      en: "Everyday stress, screens and fatigue are usually felt most in the head, neck and cervical area.",
+    },
     tagline: {
-      es: "Un reset para mente y cabello",
-      gl: "Un reset para mente e cabelo",
-      en: "A reset for mind and hair",
+      es: 'Un "reset" profundo para mente y cabello',
+      gl: 'Un "reset" profundo para mente e cabelo',
+      en: 'A deep "reset" for mind and hair',
     },
     shortDescription: {
       es: "Tratamiento capilar que combina cuidado del cuero cabelludo, hidroterapia y masaje craneofacial.",
@@ -340,30 +637,65 @@ export const servicesCatalog: Service[] = [
       en: "A wellbeing ritual for the scalp, face, neck and cervical area using Head Spa techniques, water and botanical care.",
     },
     description: {
-      es: "Tratamiento de bienestar capilar que combina cuidado del cuero cabelludo, hidroterapia, masaje craneofacial y cervical, y tratamiento botánico. Incluye valoración inicial, hidroterapia, masaje craneofacial y cervical, y cuidado botánico capilar.",
-      gl: "Tratamento de benestar capilar que combina coidado do couro cabeludo, hidroterapia, masaxe craneofacial e cervical, e tratamento botánico. Inclúe valoración inicial, hidroterapia, masaxe craneofacial e cervical, e cuidado botánico capilar.",
-      en: "A hair wellbeing treatment that combines scalp care, hydrotherapy, craniofacial and cervical massage, and botanical treatment. Includes an initial assessment, hydrotherapy, craniofacial and cervical massage, and botanical hair care.",
+      es: "Ritual Serenity Spa combina cuidado capilar, agua, masaje craneofacial y técnicas de relajación para ofrecer una experiencia de profunda desconexión.",
+      gl: "Ritual Serenity Spa combina coidado capilar, auga, masaxe craneofacial e técnicas de relaxación para ofrecer unha experiencia de profunda desconexión.",
+      en: "The Serenity Spa Ritual combines hair care, water, craniofacial massage and relaxation techniques to offer an experience of deep disconnection.",
     },
+    paragraphs: [
+      {
+        es: "Ritual Serenity Spa combina cuidado capilar, agua, masaje craneofacial y técnicas de relajación para ofrecer una experiencia de profunda desconexión.",
+        gl: "Ritual Serenity Spa combina coidado capilar, auga, masaxe craneofacial e técnicas de relaxación para ofrecer unha experiencia de profunda desconexión.",
+        en: "The Serenity Spa Ritual combines hair care, water, craniofacial massage and relaxation techniques to offer an experience of deep disconnection.",
+      },
+    ],
     benefits: [
       {
-        es: "Relajación y desconexión",
-        gl: "Relaxación e desconexión",
-        en: "Relaxation and disconnection",
+        title: {
+          es: "Valoración capilar personalizada",
+          gl: "Valoración capilar personalizada",
+          en: "Personalised hair assessment",
+        },
+        description: {
+          es: "Observamos las necesidades del cuero cabelludo —como sensibilidad, sequedad, exceso de grasa o descamación— para seleccionar los productos botánicos y cuidados más adecuados.",
+          gl: "Observamos as necesidades do couro cabeludo —como sensibilidade, sequidade, exceso de graxa ou descamación— para seleccionar os produtos botánicos e coidados máis axeitados.",
+          en: "We look at what the scalp needs — sensitivity, dryness, excess oil or flaking — in order to select the most suitable botanical products and care.",
+        },
       },
       {
-        es: "Cuidado del cuero cabelludo",
-        gl: "Coidado do couro cabeludo",
-        en: "Scalp care",
+        title: {
+          es: "Circuito de hidroterapia",
+          gl: "Circuíto de hidroterapia",
+          en: "Hydrotherapy circuit",
+        },
+        description: {
+          es: "Arcos de agua a temperatura agradable envuelven el cuero cabelludo creando una experiencia relajante mientras acompañan el proceso de limpieza y cuidado capilar.",
+          gl: "Arcos de auga a temperatura agradable envolven o couro cabeludo creando unha experiencia relaxante mentres acompañan o proceso de limpeza e coidado capilar.",
+          en: "Arcs of pleasantly warm water envelop the scalp, creating a relaxing experience as they accompany the cleansing and hair care process.",
+        },
       },
       {
-        es: "Hidratación capilar",
-        gl: "Hidratación capilar",
-        en: "Hair hydration",
+        title: {
+          es: "Masaje craneofacial y cervical",
+          gl: "Masaxe craneofacial e cervical",
+          en: "Craniofacial and cervical massage",
+        },
+        description: {
+          es: "Maniobras y presiones sobre cuero cabelludo, rostro, cuello y zona cervical para ayudar a liberar la tensión acumulada y favorecer una sensación de descanso.",
+          gl: "Manobras e presións sobre couro cabeludo, rostro, pescozo e zona cervical para axudar a liberar a tensión acumulada e favorecer unha sensación de descanso.",
+          en: "Movements and pressure across the scalp, face, neck and cervical area to help release accumulated tension and encourage a feeling of rest.",
+        },
       },
       {
-        es: "Sensación de bienestar integral",
-        gl: "Sensación de benestar integral",
-        en: "A sense of overall wellbeing",
+        title: {
+          es: "Tratamiento botánico",
+          gl: "Tratamento botánico",
+          en: "Botanical treatment",
+        },
+        description: {
+          es: "Cuidados de nutrición e hidratación seleccionados para ayudar a devolver suavidad, brillo y una agradable sensación de equilibrio al cabello.",
+          gl: "Coidados de nutrición e hidratación seleccionados para axudar a devolver suavidade, brillo e unha agradable sensación de equilibrio ao cabelo.",
+          en: "Nourishing and hydrating care selected to help restore softness, shine and a pleasant sense of balance to the hair.",
+        },
       },
     ],
     durations: [
@@ -378,55 +710,73 @@ export const servicesCatalog: Service[] = [
     slug: { es: "reseteo-hostelero", gl: "reseteo-hostelero", en: "hospitality-reset" },
     category: "specials",
     name: { es: "Reseteo Hostelero", gl: "Reseteo Hostelero", en: "Hospitality Reset" },
-    tagline: {
-      es: "Vuelve a conectar con tu bienestar entre turno y turno",
-      gl: "Volve a conectar co teu benestar entre quenda e quenda",
-      en: "Reconnect with your wellbeing between shifts",
+    intro: {
+      es: "Vuelve a conectar con tu bienestar entre turno y turno.",
+      gl: "Volve conectar co teu benestar entre quenda e quenda.",
+      en: "Reconnect with your wellbeing between shifts.",
     },
     shortDescription: {
       es: "Masaje pensado para quienes trabajan en hostelería y pasan muchas horas de pie.",
-      gl: "Masaxe pensado para quen traballa en hostelería e pasa moitas horas de pé.",
+      gl: "Masaxe pensada para quen traballa na hostalaría e pasa moitas horas de pé.",
       en: "A special treatment for people who live in Santiago or work in hospitality, focusing on areas most affected by long working days.",
     },
     description: {
-      es: "Masaje especialmente pensado para personas que trabajan en hostelería y pasan muchas horas de pie, cargando peso o manteniendo un ritmo de trabajo intenso. Trabajo principal sobre espalda, cuello, brazos y planta de los pies.",
-      gl: "Masaxe especialmente pensado para persoas que traballan en hostelería e pasan moitas horas de pé, cargando peso ou mantendo un ritmo de traballo intenso. Traballo principal sobre costas, pescozo, brazos e planta dos pés.",
-      en: "A massage designed especially for people who work in hospitality and spend long hours on their feet, carrying weight or maintaining an intense work pace. Main focus on the back, neck, arms and soles of the feet.",
+      es: "Sabemos lo que es estar horas de pie, cargar con bandejas, mantener el ritmo bajo presión y acumular tensión en las lumbares, el cuello y los hombros.",
+      gl: "Sabemos o que é estar horas de pé, cargar con bandexas, manter o ritmo baixo presión e acumular tensión nas lumbares, o pescozo e os ombros.",
+      en: "We know what it's like to spend hours on your feet, carry trays, keep up the pace under pressure and build up tension in the lower back, neck and shoulders.",
     },
-    benefits: [
+    paragraphs: [
       {
-        es: "Liberación de tensión acumulada",
-        gl: "Liberación de tensión acumulada",
-        en: "Release of accumulated tension",
+        es: "Sabemos lo que es estar horas de pie, cargar con bandejas, mantener el ritmo bajo presión y acumular tensión en las lumbares, el cuello y los hombros.",
+        gl: "Sabemos o que é estar horas de pé, cargar con bandexas, manter o ritmo baixo presión e acumular tensión nas lumbares, o pescozo e os ombros.",
+        en: "We know what it's like to spend hours on your feet, carry trays, keep up the pace under pressure and build up tension in the lower back, neck and shoulders.",
       },
       {
-        es: "Descanso después del trabajo",
-        gl: "Descanso despois do traballo",
-        en: "Rest after work",
+        es: "La hostelería es pura entrega, pero tu cuerpo también necesita parar.",
+        gl: "A hostalaría é pura entrega, pero o teu corpo tamén necesita parar.",
+        en: "Hospitality is all about giving, but your body needs to stop too.",
       },
       {
-        es: "Sensación de ligereza",
-        gl: "Sensación de lixeireza",
-        en: "A sense of lightness",
-      },
-      {
-        es: "Recuperación física y desconexión",
-        gl: "Recuperación física e desconexión",
-        en: "Physical recovery and disconnection",
+        es: "En Ritual Essences hemos creado Reseteo Hostelero, un masaje específico pensado para devolver una sensación de ligereza a tu musculatura y dejar atrás la tensión acumulada durante la semana.",
+        gl: "En Ritual Essences creamos o Reseteo Hostelero, unha masaxe específica pensada para devolver unha sensación de lixeireza á túa musculatura e deixar atrás a tensión acumulada durante a semana.",
+        en: "At Ritual Essences we created the Hospitality Reset, a specific massage designed to bring a feeling of lightness back to your muscles and leave behind the tension built up over the week.",
       },
     ],
+    benefits: [
+      {
+        title: {
+          es: "Qué trabajamos",
+          gl: "Que traballamos",
+          en: "What we work on",
+        },
+        description: {
+          es: "Nos centramos especialmente en las zonas más castigadas por largas jornadas: espalda, cuello, brazos y planta de los pies.",
+          gl: "Centrámonos especialmente nas zonas máis castigadas polas longas xornadas: costas, pescozo, brazos e planta dos pés.",
+          en: "We focus especially on the areas that suffer most from long shifts: the back, neck, arms and soles of the feet.",
+        },
+      },
+      {
+        title: {
+          es: "Qué buscamos",
+          gl: "Que buscamos",
+          en: "What we're aiming for",
+        },
+        description: {
+          es: "Ayudarte a desconectar de la fatiga física, relajar el cuerpo y recargar energías antes de volver al ritmo del día a día.",
+          gl: "Axudarte a desconectar da fatiga física, relaxar o corpo e recargar enerxías antes de volver ao ritmo do día a día.",
+          en: "To help you switch off from physical fatigue, relax your body and recharge before going back to the daily pace.",
+        },
+      },
+    ],
+    closing: {
+      es: "Porque cuidar de los demás empieza por cuidarte a ti. Regálate esa pausa que te mereces.",
+      gl: "Porque coidar dos demais empeza por coidarte a ti. Regálate esa pausa que mereces.",
+      en: "Because looking after others starts with looking after yourself. Give yourself the pause you deserve.",
+    },
     durations: [{ minutes: 45, price: 38, bookingId: 12 }],
-    audience: ["trabajadores de hostelería", "personas que trabajan muchas horas de pie"],
-    badge: {
-      es: "Especial hostelería",
-      gl: "Especial hostalaría",
-      en: "Hospitality special",
-    },
-    note: {
-      es: "Tarifa especial para trabajadores/as de hostelería.",
-      gl: "Tarifa especial para traballadores/as de hostalaría.",
-      en: "Special rate for people who live in Santiago de Compostela or work in the hospitality sector.",
-    },
+    audience: hospitalityAudience,
+    badge: hospitalityBadge,
+    note: hospitalityNote,
     image: "/images/hospitality-reset.jpg",
   },
   {
@@ -442,10 +792,10 @@ export const servicesCatalog: Service[] = [
       gl: "Reseteo Hostelero Premium",
       en: "Hospitality Reset Premium",
     },
-    tagline: {
-      es: "La desconexión completa después de una semana intensa",
-      gl: "A desconexión completa despois dunha semana intensa",
-      en: "Complete disconnection after an intense week",
+    intro: {
+      es: "La desconexión total que tu cuerpo pide a gritos.",
+      gl: "A desconexión total que o teu corpo pide a berros.",
+      en: "The complete switch-off your body has been asking for.",
     },
     shortDescription: {
       es: "Versión completa del Reseteo Hostelero con baño de pies, masaje corporal y craneofacial.",
@@ -453,44 +803,84 @@ export const servicesCatalog: Service[] = [
       en: "A more complete version of Hospitality Reset combining foot care, body massage and craniofacial massage.",
     },
     description: {
-      es: "Versión completa del Reseteo Hostelero que combina varios momentos de bienestar: baño de pies con sales aromáticas, masaje enfocado en las zonas de mayor carga física y masaje craneofacial.",
-      gl: "Versión completa do Reseteo Hostelero que combina varios momentos de benestar: baño de pés con sales aromáticas, masaxe enfocado nas zonas de maior carga física e masaxe craneofacial.",
-      en: "The full version of Hospitality Reset, combining several moments of wellbeing: an aromatic salt foot bath, massage focused on areas of greatest physical strain, and craniofacial massage.",
+      es: "Si buscas ir un paso más allá del alivio muscular y regalarle a tu cuerpo un paréntesis de calma absoluta, Reseteo Hostelero Premium es nuestro ritual más completo para quienes necesitan parar.",
+      gl: "Se buscas ir un paso máis alá do alivio muscular e agasallarlle ao teu corpo un paréntese de calma absoluta, Reseteo Hostelero Premium é o noso ritual máis completo para quen necesita parar.",
+      en: "If you want to go a step beyond muscular relief and give your body a parenthesis of absolute calm, the Hospitality Reset Premium is our most complete ritual for those who need to stop.",
     },
-    benefits: [
+    paragraphs: [
       {
-        es: "Descanso de pies",
-        gl: "Descanso de pés",
-        en: "Rest for the feet",
+        es: "Si buscas ir un paso más allá del alivio muscular y regalarle a tu cuerpo un paréntesis de calma absoluta, Reseteo Hostelero Premium es nuestro ritual más completo para quienes necesitan parar.",
+        gl: "Se buscas ir un paso máis alá do alivio muscular e agasallarlle ao teu corpo un paréntese de calma absoluta, Reseteo Hostelero Premium é o noso ritual máis completo para quen necesita parar.",
+        en: "If you want to go a step beyond muscular relief and give your body a parenthesis of absolute calm, the Hospitality Reset Premium is our most complete ritual for those who need to stop.",
       },
       {
-        es: "Relajación muscular",
-        gl: "Relaxación muscular",
-        en: "Muscular relaxation",
+        es: "Hemos diseñado esta experiencia para transformar una jornada intensa en un momento de bienestar, combinando cuidado corporal y desconexión mental.",
+        gl: "Deseñamos esta experiencia para transformar unha xornada intensa nun momento de benestar, combinando coidado corporal e desconexión mental.",
+        en: "We designed this experience to turn an intense working day into a moment of wellbeing, combining body care and mental disconnection.",
       },
       {
-        es: "Desconexión y masaje facial",
-        gl: "Desconexión e masaxe facial",
-        en: "Disconnection and facial massage",
+        es: "El ritual comienza con un baño de pies en sales aromáticas y agua caliente: un primer momento para dejar atrás el cansancio acumulado tras horas de pie y preparar el cuerpo para relajarse.",
+        gl: "O ritual comeza cun baño de pés en sales aromáticas e auga quente: un primeiro momento para deixar atrás o cansazo acumulado tras horas de pé e preparar o corpo para relaxarse.",
+        en: "The ritual begins with a foot bath of aromatic salts and hot water: a first moment to leave behind the tiredness built up after hours on your feet and prepare the body to relax.",
       },
       {
-        es: "Experiencia integral de bienestar",
-        gl: "Experiencia integral de benestar",
-        en: "A complete wellbeing experience",
+        es: "A continuación, nos centramos en trabajar la tensión de la espalda y la musculatura cargada.",
+        gl: "A continuación, centrámonos en traballar a tensión das costas e a musculatura cargada.",
+        en: "Next, we focus on working the tension in the back and the muscles carrying the most load.",
+      },
+      {
+        es: "La experiencia culmina con un masaje craneofacial pensado para relajar mandíbula, cuero cabelludo y rostro y permitirte cerrar los ojos y desconectar de todo.",
+        gl: "A experiencia culmina cunha masaxe craneofacial pensada para relaxar mandíbula, couro cabeludo e rostro e permitirche pechar os ollos e desconectar de todo.",
+        en: "The experience ends with a craniofacial massage designed to relax the jaw, scalp and face so you can close your eyes and switch off from everything.",
       },
     ],
+    benefits: [
+      {
+        title: {
+          es: "Inmersión relajante",
+          gl: "Inmersión relaxante",
+          en: "A relaxing immersion",
+        },
+        description: {
+          es: "Baño de pies con sales aromáticas para comenzar la experiencia y dejar atrás el ritmo del día.",
+          gl: "Baño de pés con sales aromáticas para comezar a experiencia e deixar atrás o ritmo do día.",
+          en: "An aromatic salt foot bath to begin the experience and leave the pace of the day behind.",
+        },
+      },
+      {
+        title: {
+          es: "Libertad muscular",
+          gl: "Liberdade muscular",
+          en: "Muscular freedom",
+        },
+        description: {
+          es: "Masaje profundo enfocado especialmente en las zonas que acumulan mayor carga física.",
+          gl: "Masaxe profunda enfocada especialmente nas zonas que acumulan maior carga física.",
+          en: "A deep massage focused especially on the areas that carry the greatest physical load.",
+        },
+      },
+      {
+        title: {
+          es: "Paz profunda",
+          gl: "Paz profunda",
+          en: "Deep peace",
+        },
+        description: {
+          es: "Masaje craneofacial para proporcionar descanso a rostro, mandíbula y cuero cabelludo.",
+          gl: "Masaxe craneofacial para proporcionar descanso a rostro, mandíbula e couro cabeludo.",
+          en: "A craniofacial massage to bring rest to the face, jaw and scalp.",
+        },
+      },
+    ],
+    closing: {
+      es: "Es el momento de devolverle a tu cuerpo parte de todo el esfuerzo que haces cada día. Te lo has ganado.",
+      gl: "É o momento de devolverlle ao teu corpo parte de todo o esforzo que fas cada día. Gañáchelo.",
+      en: "It's time to give your body back some of the effort you put in every single day. You've earned it.",
+    },
     durations: [{ minutes: 90, price: 75, bookingId: 13 }],
-    audience: ["trabajadores de hostelería", "personas que trabajan muchas horas de pie"],
-    badge: {
-      es: "Especial hostelería",
-      gl: "Especial hostalaría",
-      en: "Hospitality special",
-    },
-    note: {
-      es: "Tarifa especial para trabajadores/as de hostelería.",
-      gl: "Tarifa especial para traballadores/as de hostalaría.",
-      en: "Special rate for people who live in Santiago de Compostela or work in the hospitality sector.",
-    },
+    audience: hospitalityAudience,
+    badge: hospitalityBadge,
+    note: hospitalityNote,
     image: "/images/hospitality-reset.jpg",
   },
 ];

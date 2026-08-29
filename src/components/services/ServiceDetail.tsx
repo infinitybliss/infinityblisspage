@@ -37,6 +37,13 @@ export function ServiceDetail({
         })
       : null;
 
+  const bodyParagraphs =
+    localized.paragraphs.length > 0
+      ? localized.paragraphs
+      : localized.description
+        ? [localized.description]
+        : [];
+
   return (
     <main id="contenido">
       <Container className="py-14 sm:py-16 lg:py-20">
@@ -51,40 +58,60 @@ export function ServiceDetail({
             <h1 className="mt-4 font-serif text-4xl leading-tight text-foreground sm:text-5xl lg:text-[3.25rem]">
               {localized.name}
             </h1>
+
+            {localized.intro && (
+              <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
+                {localized.intro}
+              </p>
+            )}
+
             {localized.tagline && (
-              <p className="mt-4 text-lg leading-snug text-primary sm:text-xl">
+              <p className="mt-5 font-serif text-xl leading-snug text-primary sm:text-2xl">
                 {localized.tagline}
               </p>
             )}
-            <p className="mt-6 text-base leading-relaxed text-muted sm:text-lg">
-              {localized.description}
-            </p>
+
+            {bodyParagraphs.map((paragraph, index) => (
+              <p
+                key={`${service.id}-p-${index}`}
+                className="mt-5 text-base leading-relaxed text-muted sm:text-lg"
+              >
+                {paragraph}
+              </p>
+            ))}
 
             {localized.benefits.length > 0 && (
-              <section aria-labelledby="service-benefits" className="mt-10">
+              <section aria-labelledby="service-benefits" className="mt-12">
                 <h2
                   id="service-benefits"
                   className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"
                 >
                   {dictionary.services.benefitsTitle}
                 </h2>
-                <ul className="mt-4 space-y-2.5">
+                <ul className="mt-6 space-y-5">
                   {localized.benefits.map((benefit) => (
-                    <li
-                      key={benefit}
-                      className="flex gap-2.5 text-[0.9375rem] leading-relaxed text-muted sm:text-base"
-                    >
-                      <span aria-hidden="true" className="text-primary">
-                        ·
-                      </span>
-                      <span>{benefit}</span>
+                    <li key={benefit.title} className="max-w-xl">
+                      <p className="font-medium text-foreground">
+                        {benefit.title}
+                      </p>
+                      {benefit.description && (
+                        <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-muted sm:text-base">
+                          {benefit.description}
+                        </p>
+                      )}
                     </li>
                   ))}
                 </ul>
               </section>
             )}
 
-            <section aria-labelledby="service-durations" className="mt-10">
+            {localized.closing && (
+              <p className="mt-10 max-w-xl font-serif text-lg leading-relaxed text-foreground sm:text-xl">
+                {localized.closing}
+              </p>
+            )}
+
+            <section aria-labelledby="service-durations" className="mt-12">
               <h2
                 id="service-durations"
                 className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"

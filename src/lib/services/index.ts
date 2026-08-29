@@ -18,8 +18,15 @@ export function localizeService(service: Service, locale: Locale): LocalizedServ
     name: service.name[locale],
     tagline: service.tagline?.[locale],
     shortDescription: service.shortDescription[locale],
+    intro: service.intro?.[locale],
     description: service.description[locale],
-    benefits: service.benefits?.map((item) => item[locale]) ?? [],
+    paragraphs: service.paragraphs?.map((item) => item[locale]) ?? [],
+    benefits:
+      service.benefits?.map((item) => ({
+        title: item.title[locale],
+        description: item.description[locale],
+      })) ?? [],
+    closing: service.closing?.[locale],
     durations: service.durations,
     featured: service.featured,
     pilgrimFeatured: service.pilgrimFeatured,

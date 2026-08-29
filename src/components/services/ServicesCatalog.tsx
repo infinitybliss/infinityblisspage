@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { ServiceCard } from "@/components/services/ServiceCard";
@@ -8,7 +7,6 @@ import {
   getPilgrimFeaturedServices,
   getServicesByCategory,
 } from "@/lib/services";
-import { getBookingHref } from "@/lib/i18n/paths";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
 
@@ -96,15 +94,6 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
         })}
 
         <UpcomingServices locale={locale} dictionary={dictionary} />
-
-        <div className="mt-16 text-center">
-          <Link
-            href={getBookingHref(locale)}
-            className="text-sm font-medium text-primary underline-offset-4 transition-colors duration-200 hover:underline"
-          >
-            {dictionary.services.bookCta}
-          </Link>
-        </div>
       </Container>
     </main>
   );
