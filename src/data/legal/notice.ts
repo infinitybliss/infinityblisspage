@@ -7,38 +7,7 @@ const es: LegalDocumentContent = {
     "Aviso legal de Infinity Bliss – Nails & Massage. Información identificativa y condiciones de uso del sitio web.",
   sections: [
     {
-      title: "1. Datos identificativos",
-      blocks: [
-        {
-          type: "p",
-          text: "En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, se informa de que el presente sitio web es titularidad de:",
-        },
-        {
-          type: "fields",
-          items: [
-            {
-              label: "Nombre comercial",
-              value: "Infinity Bliss – Nails & Massage",
-            },
-            {
-              label: "Titular / Razón social",
-              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
-            },
-            { label: "NIF/CIF", value: "[NIF/CIF]" },
-            { label: "Domicilio", value: "[DIRECCIÓN COMPLETA]" },
-            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Teléfono", value: "[TELÉFONO]" },
-            { label: "Sitio web", value: "[DOMINIO DEFINITIVO]" },
-          ],
-        },
-        {
-          type: "p",
-          text: "En adelante, “Infinity Bliss”.",
-        },
-      ],
-    },
-    {
-      title: "2. Objeto del sitio web",
+      title: "1. Objeto del sitio web",
       blocks: [
         {
           type: "p",
@@ -51,7 +20,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "3. Condiciones de utilización",
+      title: "2. Condiciones de utilización",
       blocks: [
         {
           type: "p",
@@ -79,7 +48,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "4. Propiedad intelectual e industrial",
+      title: "3. Propiedad intelectual e industrial",
       blocks: [
         {
           type: "p",
@@ -96,7 +65,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "5. Responsabilidad",
+      title: "4. Responsabilidad",
       blocks: [
         {
           type: "p",
@@ -113,7 +82,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "6. Enlaces y servicios de terceros",
+      title: "5. Enlaces y servicios de terceros",
       blocks: [
         {
           type: "p",
@@ -130,7 +99,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "7. Legislación aplicable",
+      title: "6. Legislación aplicable",
       blocks: [
         {
           type: "p",
@@ -151,38 +120,7 @@ const gl: LegalDocumentContent = {
     "Aviso legal de Infinity Bliss – Nails & Massage. Información identificativa e condicións de uso do sitio web.",
   sections: [
     {
-      title: "1. Datos identificativos",
-      blocks: [
-        {
-          type: "p",
-          text: "En cumprimento da Lei 34/2002, do 11 de xullo, de Servizos da Sociedade da Información e do Comercio Electrónico, infórmase de que o presente sitio web é titularidade de:",
-        },
-        {
-          type: "fields",
-          items: [
-            {
-              label: "Nome comercial",
-              value: "Infinity Bliss – Nails & Massage",
-            },
-            {
-              label: "Titular / Razón social",
-              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
-            },
-            { label: "NIF/CIF", value: "[NIF/CIF]" },
-            { label: "Domicilio", value: "[DIRECCIÓN COMPLETA]" },
-            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Teléfono", value: "[TELÉFONO]" },
-            { label: "Sitio web", value: "[DOMINIO DEFINITIVO]" },
-          ],
-        },
-        {
-          type: "p",
-          text: "No sucesivo, “Infinity Bliss”.",
-        },
-      ],
-    },
-    {
-      title: "2. Obxecto do sitio web",
+      title: "1. Obxecto do sitio web",
       blocks: [
         {
           type: "p",
@@ -195,7 +133,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "3. Condicións de utilización",
+      title: "2. Condicións de utilización",
       blocks: [
         {
           type: "p",
@@ -223,7 +161,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "4. Propiedade intelectual e industrial",
+      title: "3. Propiedade intelectual e industrial",
       blocks: [
         {
           type: "p",
@@ -240,7 +178,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "5. Responsabilidade",
+      title: "4. Responsabilidade",
       blocks: [
         {
           type: "p",
@@ -257,7 +195,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "6. Ligazóns e servizos de terceiros",
+      title: "5. Ligazóns e servizos de terceiros",
       blocks: [
         {
           type: "p",
@@ -274,7 +212,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "7. Lexislación aplicable",
+      title: "6. Lexislación aplicable",
       blocks: [
         {
           type: "p",
@@ -295,38 +233,7 @@ const en: LegalDocumentContent = {
     "Legal notice of Infinity Bliss – Nails & Massage. Identifying information and terms of use of the website.",
   sections: [
     {
-      title: "1. Identifying information",
-      blocks: [
-        {
-          type: "p",
-          text: "In compliance with Law 34/2002, of 11 July, on Information Society Services and Electronic Commerce, you are informed that this website is owned by:",
-        },
-        {
-          type: "fields",
-          items: [
-            {
-              label: "Trade name",
-              value: "Infinity Bliss – Nails & Massage",
-            },
-            {
-              label: "Owner / Legal name",
-              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
-            },
-            { label: "NIF/CIF", value: "[NIF/CIF]" },
-            { label: "Address", value: "[DIRECCIÓN COMPLETA]" },
-            { label: "Email", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Phone", value: "[TELÉFONO]" },
-            { label: "Website", value: "[DOMINIO DEFINITIVO]" },
-          ],
-        },
-        {
-          type: "p",
-          text: "Hereinafter, “Infinity Bliss”.",
-        },
-      ],
-    },
-    {
-      title: "2. Purpose of the website",
+      title: "1. Purpose of the website",
       blocks: [
         {
           type: "p",
@@ -339,7 +246,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "3. Terms of use",
+      title: "2. Terms of use",
       blocks: [
         {
           type: "p",
@@ -367,7 +274,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "4. Intellectual and industrial property",
+      title: "3. Intellectual and industrial property",
       blocks: [
         {
           type: "p",
@@ -384,7 +291,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "5. Liability",
+      title: "4. Liability",
       blocks: [
         {
           type: "p",
@@ -401,7 +308,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "6. Links and third-party services",
+      title: "5. Links and third-party services",
       blocks: [
         {
           type: "p",
@@ -418,7 +325,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "7. Applicable law",
+      title: "6. Applicable law",
       blocks: [
         {
           type: "p",

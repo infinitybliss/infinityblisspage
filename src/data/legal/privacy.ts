@@ -7,33 +7,7 @@ const es: LegalDocumentContent = {
     "Política de privacidad de Infinity Bliss. Información sobre el tratamiento de datos personales y reservas.",
   sections: [
     {
-      title: "1. Responsable del tratamiento",
-      blocks: [
-        {
-          type: "fields",
-          items: [
-            {
-              label: "Responsable",
-              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
-            },
-            {
-              label: "Nombre comercial",
-              value: "Infinity Bliss – Nails & Massage",
-            },
-            { label: "NIF/CIF", value: "[NIF/CIF]" },
-            { label: "Dirección", value: "[DIRECCIÓN]" },
-            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Teléfono", value: "[TELÉFONO]" },
-          ],
-        },
-        {
-          type: "p",
-          text: "Infinity Bliss es responsable del tratamiento de los datos personales utilizados para gestionar las relaciones con clientes y las reservas realizadas en el centro.",
-        },
-      ],
-    },
-    {
-      title: "2. Qué datos personales podemos tratar",
+      title: "1. Qué datos personales podemos tratar",
       blocks: [
         {
           type: "p",
@@ -63,7 +37,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "3. Para qué utilizamos tus datos",
+      title: "2. Para qué utilizamos tus datos",
       blocks: [
         {
           type: "p",
@@ -119,7 +93,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "4. Sistema de reservas SimplyBook.me",
+      title: "3. Sistema de reservas SimplyBook.me",
       blocks: [
         {
           type: "p",
@@ -144,7 +118,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "5. Comunicaciones relacionadas con la reserva",
+      title: "4. Comunicaciones relacionadas con la reserva",
       blocks: [
         {
           type: "p",
@@ -171,7 +145,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "6. Destinatarios de los datos",
+      title: "5. Destinatarios de los datos",
       blocks: [
         {
           type: "p",
@@ -201,7 +175,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "7. Transferencias internacionales",
+      title: "6. Transferencias internacionales",
       blocks: [
         {
           type: "p",
@@ -218,7 +192,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "8. Plazo de conservación",
+      title: "7. Plazo de conservación",
       blocks: [
         {
           type: "p",
@@ -235,7 +209,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "9. Derechos de las personas interesadas",
+      title: "8. Derechos de las personas interesadas",
       blocks: [
         {
           type: "p",
@@ -277,7 +251,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "10. Seguridad",
+      title: "9. Seguridad",
       blocks: [
         {
           type: "p",
@@ -290,7 +264,7 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "11. Cambios en esta política",
+      title: "10. Cambios en esta política",
       blocks: [
         {
           type: "p",
@@ -299,10 +273,6 @@ const es: LegalDocumentContent = {
         {
           type: "p",
           text: "La versión vigente será siempre la publicada en este sitio web.",
-        },
-        {
-          type: "fields",
-          items: [{ label: "Última actualización", value: "[FECHA]" }],
         },
       ],
     },
@@ -315,33 +285,7 @@ const gl: LegalDocumentContent = {
     "Política de privacidade de Infinity Bliss. Información sobre o tratamento de datos persoais e reservas.",
   sections: [
     {
-      title: "1. Responsable do tratamento",
-      blocks: [
-        {
-          type: "fields",
-          items: [
-            {
-              label: "Responsable",
-              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
-            },
-            {
-              label: "Nome comercial",
-              value: "Infinity Bliss – Nails & Massage",
-            },
-            { label: "NIF/CIF", value: "[NIF/CIF]" },
-            { label: "Dirección", value: "[DIRECCIÓN]" },
-            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Teléfono", value: "[TELÉFONO]" },
-          ],
-        },
-        {
-          type: "p",
-          text: "Infinity Bliss é responsable do tratamento dos datos persoais utilizados para xestionar as relacións con clientes e as reservas realizadas no centro.",
-        },
-      ],
-    },
-    {
-      title: "2. Que datos persoais podemos tratar",
+      title: "1. Que datos persoais podemos tratar",
       blocks: [
         {
           type: "p",
@@ -371,7 +315,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "3. Para que utilizamos os teus datos",
+      title: "2. Para que utilizamos os teus datos",
       blocks: [
         {
           type: "p",
@@ -427,7 +371,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "4. Sistema de reservas SimplyBook.me",
+      title: "3. Sistema de reservas SimplyBook.me",
       blocks: [
         {
           type: "p",
@@ -452,7 +396,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "5. Comunicacións relacionadas coa reserva",
+      title: "4. Comunicacións relacionadas coa reserva",
       blocks: [
         {
           type: "p",
@@ -479,7 +423,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "6. Destinatarios dos datos",
+      title: "5. Destinatarios dos datos",
       blocks: [
         {
           type: "p",
@@ -509,7 +453,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "7. Transferencias internacionais",
+      title: "6. Transferencias internacionais",
       blocks: [
         {
           type: "p",
@@ -526,7 +470,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "8. Prazo de conservación",
+      title: "7. Prazo de conservación",
       blocks: [
         {
           type: "p",
@@ -543,7 +487,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "9. Dereitos das persoas interesadas",
+      title: "8. Dereitos das persoas interesadas",
       blocks: [
         {
           type: "p",
@@ -585,7 +529,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "10. Seguridade",
+      title: "9. Seguridade",
       blocks: [
         {
           type: "p",
@@ -598,7 +542,7 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "11. Cambios nesta política",
+      title: "10. Cambios nesta política",
       blocks: [
         {
           type: "p",
@@ -607,10 +551,6 @@ const gl: LegalDocumentContent = {
         {
           type: "p",
           text: "A versión vixente será sempre a publicada neste sitio web.",
-        },
-        {
-          type: "fields",
-          items: [{ label: "Última actualización", value: "[FECHA]" }],
         },
       ],
     },
@@ -623,33 +563,7 @@ const en: LegalDocumentContent = {
     "Privacy policy of Infinity Bliss. Information about the processing of personal data and bookings.",
   sections: [
     {
-      title: "1. Data controller",
-      blocks: [
-        {
-          type: "fields",
-          items: [
-            {
-              label: "Controller",
-              value: "[NOMBRE COMPLETO O RAZÓN SOCIAL]",
-            },
-            {
-              label: "Trade name",
-              value: "Infinity Bliss – Nails & Massage",
-            },
-            { label: "NIF/CIF", value: "[NIF/CIF]" },
-            { label: "Address", value: "[DIRECCIÓN]" },
-            { label: "Email", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Phone", value: "[TELÉFONO]" },
-          ],
-        },
-        {
-          type: "p",
-          text: "Infinity Bliss is responsible for processing the personal data used to manage customer relationships and bookings made at the centre.",
-        },
-      ],
-    },
-    {
-      title: "2. What personal data we may process",
+      title: "1. What personal data we may process",
       blocks: [
         {
           type: "p",
@@ -679,7 +593,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "3. How we use your data",
+      title: "2. How we use your data",
       blocks: [
         {
           type: "p",
@@ -735,7 +649,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "4. SimplyBook.me booking system",
+      title: "3. SimplyBook.me booking system",
       blocks: [
         {
           type: "p",
@@ -760,7 +674,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "5. Booking-related communications",
+      title: "4. Booking-related communications",
       blocks: [
         {
           type: "p",
@@ -787,7 +701,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "6. Data recipients",
+      title: "5. Data recipients",
       blocks: [
         {
           type: "p",
@@ -817,7 +731,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "7. International transfers",
+      title: "6. International transfers",
       blocks: [
         {
           type: "p",
@@ -834,7 +748,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "8. Retention period",
+      title: "7. Retention period",
       blocks: [
         {
           type: "p",
@@ -851,7 +765,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "9. Rights of data subjects",
+      title: "8. Rights of data subjects",
       blocks: [
         {
           type: "p",
@@ -893,7 +807,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "10. Security",
+      title: "9. Security",
       blocks: [
         {
           type: "p",
@@ -906,7 +820,7 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "11. Changes to this policy",
+      title: "10. Changes to this policy",
       blocks: [
         {
           type: "p",
@@ -915,10 +829,6 @@ const en: LegalDocumentContent = {
         {
           type: "p",
           text: "The current version will always be the one published on this website.",
-        },
-        {
-          type: "fields",
-          items: [{ label: "Last updated", value: "[FECHA]" }],
         },
       ],
     },

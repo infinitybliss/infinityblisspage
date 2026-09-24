@@ -1,3 +1,4 @@
+import { site } from "@/data/site";
 import type { LegalDocumentContent } from "@/types/legal";
 import type { Locale } from "@/types/locale";
 
@@ -160,10 +161,6 @@ const es: LegalDocumentContent = {
           text: "Los precios publicados en la web son los aplicables a los servicios indicados salvo error manifiesto o modificación debidamente comunicada.",
         },
         {
-          type: "note",
-          text: "[CONFIRMAR CON MAR: añadir “Todos los precios incluyen los impuestos legalmente aplicables” si corresponde.]",
-        },
-        {
           type: "p",
           text: "Los precios y servicios podrán actualizarse para futuras reservas.",
         },
@@ -183,10 +180,6 @@ const es: LegalDocumentContent = {
         {
           type: "p",
           text: "El pago se efectuará en el establecimiento utilizando los medios de pago que Infinity Bliss tenga disponibles.",
-        },
-        {
-          type: "note",
-          text: "[CONFIRMAR CON MAR: efectivo / tarjeta / Bizum / otros.]",
         },
       ],
     },
@@ -247,9 +240,9 @@ const es: LegalDocumentContent = {
         {
           type: "fields",
           items: [
-            { label: "Teléfono", value: "[TELÉFONO]" },
-            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Dirección", value: "[DIRECCIÓN]" },
+            { label: "Teléfono", value: site.contact.phone! },
+            { label: "Correo electrónico", value: site.contact.email! },
+            { label: "Dirección", value: site.contact.address! },
           ],
         },
       ],
@@ -416,10 +409,6 @@ const gl: LegalDocumentContent = {
           text: "Os prezos publicados na web son os aplicables aos servizos indicados salvo erro manifesto ou modificación debidamente comunicada.",
         },
         {
-          type: "note",
-          text: "[CONFIRMAR CON MAR: engadir “Todos os prezos inclúen os impostos legalmente aplicables” se corresponde.]",
-        },
-        {
           type: "p",
           text: "Os prezos e servizos poderán actualizarse para futuras reservas.",
         },
@@ -439,10 +428,6 @@ const gl: LegalDocumentContent = {
         {
           type: "p",
           text: "O pagamento efectuarase no establecemento utilizando os medios de pagamento que Infinity Bliss teña dispoñibles.",
-        },
-        {
-          type: "note",
-          text: "[CONFIRMAR CON MAR: efectivo / tarxeta / Bizum / outros.]",
         },
       ],
     },
@@ -503,9 +488,9 @@ const gl: LegalDocumentContent = {
         {
           type: "fields",
           items: [
-            { label: "Teléfono", value: "[TELÉFONO]" },
-            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Dirección", value: "[DIRECCIÓN]" },
+            { label: "Teléfono", value: site.contact.phone! },
+            { label: "Correo electrónico", value: site.contact.email! },
+            { label: "Dirección", value: site.contact.address! },
           ],
         },
       ],
@@ -672,10 +657,6 @@ const en: LegalDocumentContent = {
           text: "Prices published on the website apply to the services indicated unless there is an obvious error or a duly communicated change.",
         },
         {
-          type: "note",
-          text: "[CONFIRMAR CON MAR: añadir “Todos los precios incluyen los impuestos legalmente aplicables” si corresponde.]",
-        },
-        {
           type: "p",
           text: "Prices and services may be updated for future bookings.",
         },
@@ -695,10 +676,6 @@ const en: LegalDocumentContent = {
         {
           type: "p",
           text: "Payment will be made at the premises using the payment methods available at Infinity Bliss.",
-        },
-        {
-          type: "note",
-          text: "[CONFIRMAR CON MAR: efectivo / tarjeta / Bizum / otros.]",
         },
       ],
     },
@@ -759,9 +736,9 @@ const en: LegalDocumentContent = {
         {
           type: "fields",
           items: [
-            { label: "Phone", value: "[TELÉFONO]" },
-            { label: "Email", value: "Infinitybliss.santiago@gmail.com" },
-            { label: "Address", value: "[DIRECCIÓN]" },
+            { label: "Phone", value: site.contact.phone! },
+            { label: "Email", value: site.contact.email! },
+            { label: "Address", value: site.contact.address! },
           ],
         },
       ],
