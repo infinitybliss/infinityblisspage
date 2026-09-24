@@ -45,7 +45,7 @@ export function About({ locale, dictionary }: AboutProps) {
               <li key={point.title}>
                 <span
                   aria-hidden="true"
-                  className={`mb-3 inline-block h-px w-7 ${index % 2 === 0 ? "bg-secondary" : "bg-muted"}`}
+                  className={`mb-3 inline-block h-px w-7 ${index % 2 === 0 ? "bg-accent" : "bg-primary/50"}`}
                 />
                 <h3 className="font-serif text-[1.375rem] leading-snug text-foreground sm:text-2xl">
                   {point.title}

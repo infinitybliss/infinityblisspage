@@ -1,45 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand palette */
-  --brand-charcoal: #262626;
-  --brand-copper: #ad7d5b;
-  --brand-sand: #d9bc9a;
-  --brand-sage: #797d75;
-  --brand-taupe: #736258;
+  /* Brand palette — Infinity Bliss Light Gold */
+  --brand-ivory: #fffefc;
+  --brand-cream: #f8f5ef;
+  --brand-cacao: #302820;
+  --brand-champagne: #c5a16d;
+  --brand-deep-gold: #8b683c; /* slightly deeper than #9A7344 for WCAG AA with white text */
+  --brand-arena: #eae0d2;
+  --brand-taupe: #725b43;
+  --brand-available: #dce8d9;
 
   /* Semantic tokens */
-  --background: #f7f3ee;
-  --foreground: var(--brand-charcoal);
+  --background: var(--brand-ivory);
+  --background-alt: var(--brand-cream);
+  --foreground: var(--brand-cacao);
   --surface: #ffffff;
-  --primary: var(--brand-copper);
-  --primary-hover: #9a6b4d;
-  --secondary: var(--brand-sage);
+  --surface-alt: var(--brand-arena);
+  --primary: var(--brand-deep-gold);
+  --primary-hover: #745630;
+  --on-primary: #ffffff;
+  --secondary: var(--brand-champagne);
   --muted: var(--brand-taupe);
-  --accent: var(--brand-sand);
+  --accent: var(--brand-champagne);
+  --accent-hover: #b08d58;
+  --available: var(--brand-available);
 
   /* Derived surfaces & borders */
-  --sand-soft: color-mix(in srgb, var(--brand-sand) 22%, var(--background));
-  --sage-soft: color-mix(in srgb, var(--brand-sage) 14%, var(--background));
-  --border: color-mix(in srgb, var(--brand-charcoal) 10%, transparent);
-  --border-subtle: color-mix(in srgb, var(--brand-charcoal) 6%, transparent);
-  --placeholder-copper: color-mix(in srgb, var(--brand-copper) 12%, transparent);
-  --placeholder-sage: color-mix(in srgb, var(--brand-sage) 22%, transparent);
+  --sand-soft: var(--brand-cream);
+  --sage-soft: color-mix(in srgb, var(--brand-available) 55%, var(--background));
+  --border: var(--brand-arena);
+  --border-subtle: color-mix(in srgb, var(--brand-arena) 72%, transparent);
+  --placeholder-copper: color-mix(in srgb, var(--brand-champagne) 16%, transparent);
+  --placeholder-sage: color-mix(in srgb, var(--brand-available) 40%, transparent);
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
   --color-primary: var(--primary);
   --color-primary-hover: var(--primary-hover);
+  --color-on-primary: var(--on-primary);
   --color-secondary: var(--secondary);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
-  --color-brand-charcoal: var(--brand-charcoal);
-  --color-brand-copper: var(--brand-copper);
-  --color-brand-sand: var(--brand-sand);
-  --color-brand-sage: var(--brand-sage);
+  --color-accent-hover: var(--accent-hover);
+  --color-available: var(--available);
+  --color-brand-cacao: var(--brand-cacao);
+  --color-brand-champagne: var(--brand-champagne);
+  --color-brand-deep-gold: var(--brand-deep-gold);
+  --color-brand-ivory: var(--brand-ivory);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-arena: var(--brand-arena);
   --color-brand-taupe: var(--brand-taupe);
   --color-sand-soft: var(--sand-soft);
   --color-sage-soft: var(--sage-soft);
@@ -108,7 +123,7 @@ body {
   width: 0.45rem;
   height: 0.45rem;
   border-radius: 9999px;
-  background: var(--brand-copper);
+  background: var(--brand-champagne);
   animation: bookingBreath 2.4s ease-in-out infinite;
 }
 

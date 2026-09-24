@@ -26,8 +26,10 @@ export function localizeService(service: Service, locale: Locale): LocalizedServ
         title: item.title[locale],
         description: item.description[locale],
       })) ?? [],
+    benefitsHeading: service.benefitsHeading?.[locale],
     closing: service.closing?.[locale],
     durations: service.durations,
+    pricingLabel: service.pricingLabel?.[locale],
     featured: service.featured,
     pilgrimFeatured: service.pilgrimFeatured,
     audience: service.audience,
@@ -35,6 +37,13 @@ export function localizeService(service: Service, locale: Locale): LocalizedServ
     badge: service.badge?.[locale],
     note: service.note?.[locale],
   };
+}
+
+/** True when at least one duration has a confirmed SimplyBook bookingId. */
+export function isOnlineBookingEnabled(service: Service): boolean {
+  return service.durations.some(
+    (duration) => typeof duration.bookingId === "number" && duration.bookingId > 0,
+  );
 }
 
 export function getServiceById(id: ServiceId): Service | undefined {

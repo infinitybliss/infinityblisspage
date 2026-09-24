@@ -4,14 +4,14 @@ import type { Locale } from "@/types/locale";
 const es: LegalDocumentContent = {
   title: "Condiciones de reserva y cancelación",
   description:
-    "Condiciones de reserva y cancelación de Ritual Essences. Antelación, modificación, grupos y tarifas especiales.",
+    "Condiciones de reserva y cancelación de Infinity Bliss. Antelación, modificación, grupos y tarifas especiales.",
   sections: [
     {
       title: "1. Reservas",
       blocks: [
         {
           type: "p",
-          text: "Las citas de Ritual Essences pueden reservarse mediante el sistema de reservas online disponible en la web.",
+          text: "Las citas de Infinity Bliss pueden reservarse mediante el sistema de reservas online disponible en la web.",
         },
         {
           type: "p",
@@ -49,7 +49,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Si la persona usuaria no puede realizar el cambio desde la plataforma o tiene cualquier duda, podrá ponerse en contacto con Ritual Essences por teléfono.",
+          text: "Si la persona usuaria no puede realizar el cambio desde la plataforma o tiene cualquier duda, podrá ponerse en contacto con Infinity Bliss por teléfono.",
         },
         {
           type: "p",
@@ -66,7 +66,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "También podrá solicitarse ayuda contactando directamente con Ritual Essences.",
+          text: "También podrá solicitarse ayuda contactando directamente con Infinity Bliss.",
         },
         {
           type: "p",
@@ -74,7 +74,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences agradece que cualquier cancelación se comunique con la mayor antelación posible para permitir que la franja horaria pueda ser utilizada por otra persona.",
+          text: "Infinity Bliss agradece que cualquier cancelación se comunique con la mayor antelación posible para permitir que la franja horaria pueda ser utilizada por otra persona.",
         },
       ],
     },
@@ -87,7 +87,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "En caso de retraso por parte del cliente, Ritual Essences intentará prestar el servicio siempre que exista disponibilidad y resulte compatible con las reservas posteriores.",
+          text: "En caso de retraso por parte del cliente, Infinity Bliss intentará prestar el servicio siempre que exista disponibilidad y resulte compatible con las reservas posteriores.",
         },
         {
           type: "p",
@@ -112,7 +112,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Las reservas para varias personas o grupos deberán gestionarse directamente con Ritual Essences por teléfono.",
+          text: "Las reservas para varias personas o grupos deberán gestionarse directamente con Infinity Bliss por teléfono.",
         },
         {
           type: "p",
@@ -120,7 +120,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "La solicitud de una reserva de grupo no se considerará confirmada hasta recibir confirmación expresa de Ritual Essences.",
+          text: "La solicitud de una reserva de grupo no se considerará confirmada hasta recibir confirmación expresa de Infinity Bliss.",
         },
       ],
     },
@@ -144,7 +144,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences podrá solicitar una acreditación razonable que permita comprobar el cumplimiento de alguna de estas condiciones.",
+          text: "Infinity Bliss podrá solicitar una acreditación razonable que permita comprobar el cumplimiento de alguna de estas condiciones.",
         },
         {
           type: "p",
@@ -178,11 +178,11 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Actualmente Ritual Essences no realiza cobros online mediante esta página web.",
+          text: "Actualmente Infinity Bliss no realiza cobros online mediante esta página web.",
         },
         {
           type: "p",
-          text: "El pago se efectuará en el establecimiento utilizando los medios de pago que Ritual Essences tenga disponibles.",
+          text: "El pago se efectuará en el establecimiento utilizando los medios de pago que Infinity Bliss tenga disponibles.",
         },
         {
           type: "note",
@@ -199,7 +199,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences organizará internamente el equipo necesario para prestar el servicio reservado.",
+          text: "Infinity Bliss organizará internamente el equipo necesario para prestar el servicio reservado.",
         },
       ],
     },
@@ -216,11 +216,11 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences podrá recomendar no realizar o adaptar un servicio cuando considere que no puede prestarse de forma adecuada o segura.",
+          text: "Infinity Bliss podrá recomendar no realizar o adaptar un servicio cuando considere que no puede prestarse de forma adecuada o segura.",
         },
         {
           type: "p",
-          text: "Los servicios ofrecidos por Ritual Essences tienen finalidad de bienestar y no sustituyen el diagnóstico, seguimiento o tratamiento proporcionado por profesionales sanitarios cuando este sea necesario.",
+          text: "Los servicios ofrecidos por Infinity Bliss tienen finalidad de bienestar y no sustituyen el diagnóstico, seguimiento o tratamiento proporcionado por profesionales sanitarios cuando este sea necesario.",
         },
       ],
     },
@@ -229,7 +229,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences podrá proponer la modificación o reprogramación de una cita cuando concurran circunstancias excepcionales que hagan imposible prestar el servicio reservado.",
+          text: "Infinity Bliss podrá proponer la modificación o reprogramación de una cita cuando concurran circunstancias excepcionales que hagan imposible prestar el servicio reservado.",
         },
         {
           type: "p",
@@ -242,13 +242,13 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Para cualquier duda relacionada con una reserva, modificación, cancelación o servicio puedes contactar con Ritual Essences:",
+          text: "Para cualquier duda relacionada con una reserva, modificación, cancelación o servicio puedes contactar con Infinity Bliss:",
         },
         {
           type: "fields",
           items: [
             { label: "Teléfono", value: "[TELÉFONO]" },
-            { label: "Correo electrónico", value: "[EMAIL]" },
+            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Dirección", value: "[DIRECCIÓN]" },
           ],
         },
@@ -260,14 +260,14 @@ const es: LegalDocumentContent = {
 const gl: LegalDocumentContent = {
   title: "Condicións de reserva e cancelación",
   description:
-    "Condicións de reserva e cancelación de Ritual Essences. Antelación, modificación, grupos e tarifas especiais.",
+    "Condicións de reserva e cancelación de Infinity Bliss. Antelación, modificación, grupos e tarifas especiais.",
   sections: [
     {
       title: "1. Reservas",
       blocks: [
         {
           type: "p",
-          text: "As citas de Ritual Essences poden reservarse mediante o sistema de reservas en liña dispoñible na web.",
+          text: "As citas de Infinity Bliss poden reservarse mediante o sistema de reservas en liña dispoñible na web.",
         },
         {
           type: "p",
@@ -305,7 +305,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Se a persoa usuaria non pode realizar o cambio desde a plataforma ou ten calquera dúbida, poderá poñerse en contacto con Ritual Essences por teléfono.",
+          text: "Se a persoa usuaria non pode realizar o cambio desde a plataforma ou ten calquera dúbida, poderá poñerse en contacto con Infinity Bliss por teléfono.",
         },
         {
           type: "p",
@@ -322,7 +322,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Tamén poderá solicitarse axuda contactando directamente con Ritual Essences.",
+          text: "Tamén poderá solicitarse axuda contactando directamente con Infinity Bliss.",
         },
         {
           type: "p",
@@ -330,7 +330,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences agradece que calquera cancelación se comunique coa maior antelación posible para permitir que a franxa horaria poida ser utilizada por outra persoa.",
+          text: "Infinity Bliss agradece que calquera cancelación se comunique coa maior antelación posible para permitir que a franxa horaria poida ser utilizada por outra persoa.",
         },
       ],
     },
@@ -343,7 +343,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "En caso de retraso por parte do cliente, Ritual Essences intentará prestar o servizo sempre que exista dispoñibilidade e resulte compatible coas reservas posteriores.",
+          text: "En caso de retraso por parte do cliente, Infinity Bliss intentará prestar o servizo sempre que exista dispoñibilidade e resulte compatible coas reservas posteriores.",
         },
         {
           type: "p",
@@ -368,7 +368,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "As reservas para varias persoas ou grupos deberán xestionarse directamente con Ritual Essences por teléfono.",
+          text: "As reservas para varias persoas ou grupos deberán xestionarse directamente con Infinity Bliss por teléfono.",
         },
         {
           type: "p",
@@ -376,7 +376,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "A solicitude dunha reserva de grupo non se considerará confirmada ata recibir confirmación expresa de Ritual Essences.",
+          text: "A solicitude dunha reserva de grupo non se considerará confirmada ata recibir confirmación expresa de Infinity Bliss.",
         },
       ],
     },
@@ -400,7 +400,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences poderá solicitar unha acreditación razoable que permita comprobar o cumprimento dalgunha destas condicións.",
+          text: "Infinity Bliss poderá solicitar unha acreditación razoable que permita comprobar o cumprimento dalgunha destas condicións.",
         },
         {
           type: "p",
@@ -434,11 +434,11 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Actualmente Ritual Essences non realiza cobros en liña mediante esta páxina web.",
+          text: "Actualmente Infinity Bliss non realiza cobros en liña mediante esta páxina web.",
         },
         {
           type: "p",
-          text: "O pagamento efectuarase no establecemento utilizando os medios de pagamento que Ritual Essences teña dispoñibles.",
+          text: "O pagamento efectuarase no establecemento utilizando os medios de pagamento que Infinity Bliss teña dispoñibles.",
         },
         {
           type: "note",
@@ -455,7 +455,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences organizará internamente o equipo necesario para prestar o servizo reservado.",
+          text: "Infinity Bliss organizará internamente o equipo necesario para prestar o servizo reservado.",
         },
       ],
     },
@@ -472,11 +472,11 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences poderá recomendar non realizar ou adaptar un servizo cando considere que non pode prestarse de forma adecuada ou segura.",
+          text: "Infinity Bliss poderá recomendar non realizar ou adaptar un servizo cando considere que non pode prestarse de forma adecuada ou segura.",
         },
         {
           type: "p",
-          text: "Os servizos ofrecidos por Ritual Essences teñen finalidade de benestar e non substitúen o diagnóstico, seguimento ou tratamento proporcionado por profesionais sanitarios cando este sexa necesario.",
+          text: "Os servizos ofrecidos por Infinity Bliss teñen finalidade de benestar e non substitúen o diagnóstico, seguimento ou tratamento proporcionado por profesionais sanitarios cando este sexa necesario.",
         },
       ],
     },
@@ -485,7 +485,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences poderá propoñer a modificación ou reprogramación dunha cita cando concorran circunstancias excepcionais que fagan imposible prestar o servizo reservado.",
+          text: "Infinity Bliss poderá propoñer a modificación ou reprogramación dunha cita cando concorran circunstancias excepcionais que fagan imposible prestar o servizo reservado.",
         },
         {
           type: "p",
@@ -498,13 +498,13 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Para calquera dúbida relacionada cunha reserva, modificación, cancelación ou servizo podes contactar con Ritual Essences:",
+          text: "Para calquera dúbida relacionada cunha reserva, modificación, cancelación ou servizo podes contactar con Infinity Bliss:",
         },
         {
           type: "fields",
           items: [
             { label: "Teléfono", value: "[TELÉFONO]" },
-            { label: "Correo electrónico", value: "[EMAIL]" },
+            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Dirección", value: "[DIRECCIÓN]" },
           ],
         },
@@ -516,14 +516,14 @@ const gl: LegalDocumentContent = {
 const en: LegalDocumentContent = {
   title: "Booking and Cancellation Terms",
   description:
-    "Booking and cancellation terms of Ritual Essences. Advance notice, modification, groups and special rates.",
+    "Booking and cancellation terms of Infinity Bliss. Advance notice, modification, groups and special rates.",
   sections: [
     {
       title: "1. Bookings",
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences appointments can be booked through the online booking system available on the website.",
+          text: "Infinity Bliss appointments can be booked through the online booking system available on the website.",
         },
         {
           type: "p",
@@ -561,7 +561,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "If the user cannot make the change from the platform or has any questions, they may contact Ritual Essences by phone.",
+          text: "If the user cannot make the change from the platform or has any questions, they may contact Infinity Bliss by phone.",
         },
         {
           type: "p",
@@ -578,7 +578,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Assistance may also be requested by contacting Ritual Essences directly.",
+          text: "Assistance may also be requested by contacting Infinity Bliss directly.",
         },
         {
           type: "p",
@@ -586,7 +586,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences appreciates any cancellation being communicated as far in advance as possible so that the time slot may be used by another person.",
+          text: "Infinity Bliss appreciates any cancellation being communicated as far in advance as possible so that the time slot may be used by another person.",
         },
       ],
     },
@@ -599,7 +599,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "In the event of late arrival by the customer, Ritual Essences will try to provide the service whenever availability allows and it is compatible with subsequent bookings.",
+          text: "In the event of late arrival by the customer, Infinity Bliss will try to provide the service whenever availability allows and it is compatible with subsequent bookings.",
         },
         {
           type: "p",
@@ -624,7 +624,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Bookings for several people or groups must be managed directly with Ritual Essences by phone.",
+          text: "Bookings for several people or groups must be managed directly with Infinity Bliss by phone.",
         },
         {
           type: "p",
@@ -632,7 +632,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "A group booking request will not be considered confirmed until express confirmation is received from Ritual Essences.",
+          text: "A group booking request will not be considered confirmed until express confirmation is received from Infinity Bliss.",
         },
       ],
     },
@@ -656,7 +656,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences may request reasonable proof to verify compliance with one of these conditions.",
+          text: "Infinity Bliss may request reasonable proof to verify compliance with one of these conditions.",
         },
         {
           type: "p",
@@ -690,11 +690,11 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences does not currently collect online payments through this website.",
+          text: "Infinity Bliss does not currently collect online payments through this website.",
         },
         {
           type: "p",
-          text: "Payment will be made at the premises using the payment methods available at Ritual Essences.",
+          text: "Payment will be made at the premises using the payment methods available at Infinity Bliss.",
         },
         {
           type: "note",
@@ -711,7 +711,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences will internally organise the team necessary to provide the booked service.",
+          text: "Infinity Bliss will internally organise the team necessary to provide the booked service.",
         },
       ],
     },
@@ -728,11 +728,11 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences may recommend not performing or adapting a service when it considers that it cannot be provided adequately or safely.",
+          text: "Infinity Bliss may recommend not performing or adapting a service when it considers that it cannot be provided adequately or safely.",
         },
         {
           type: "p",
-          text: "Services offered by Ritual Essences are for wellness purposes and do not replace diagnosis, monitoring or treatment provided by healthcare professionals when this is necessary.",
+          text: "Services offered by Infinity Bliss are for wellness purposes and do not replace diagnosis, monitoring or treatment provided by healthcare professionals when this is necessary.",
         },
       ],
     },
@@ -741,7 +741,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences may propose modifying or rescheduling an appointment when exceptional circumstances make it impossible to provide the booked service.",
+          text: "Infinity Bliss may propose modifying or rescheduling an appointment when exceptional circumstances make it impossible to provide the booked service.",
         },
         {
           type: "p",
@@ -754,13 +754,13 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "For any questions related to a booking, modification, cancellation or service, you can contact Ritual Essences:",
+          text: "For any questions related to a booking, modification, cancellation or service, you can contact Infinity Bliss:",
         },
         {
           type: "fields",
           items: [
             { label: "Phone", value: "[TELÉFONO]" },
-            { label: "Email", value: "[EMAIL]" },
+            { label: "Email", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Address", value: "[DIRECCIÓN]" },
           ],
         },

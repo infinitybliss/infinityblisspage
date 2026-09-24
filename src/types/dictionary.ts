@@ -48,6 +48,9 @@ export type Dictionary = {
     bookDuration: string;
     benefitsTitle: string;
     durationsTitle: string;
+    pricingInfoTitle: string;
+    askAvailability: string;
+    availabilityPending: string;
   };
   upcoming: {
     eyebrow: string;
@@ -112,6 +115,7 @@ export type Dictionary = {
     address: string;
     phone: string;
     whatsapp: string;
+    email: string;
     hours: string;
     pending: string;
     mapLabel: string;

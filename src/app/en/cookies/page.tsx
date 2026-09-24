@@ -8,7 +8,7 @@ const dictionary = getDictionary("en");
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Cookie policy | Ritual Essences",
+    absolute: "Cookie policy | Infinity Bliss",
   },
   description: dictionary.legal.cookies.description,
   ...getRouteAlternates("en", "cookies"),

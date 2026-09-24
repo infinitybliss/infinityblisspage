@@ -63,7 +63,7 @@ export function BookingWidgetLoader({
             href={fallbackUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 inline-flex rounded-full border border-border-subtle bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="mt-5 inline-flex rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             {fallbackLabel}
           </a>

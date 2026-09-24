@@ -6,9 +6,11 @@ import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { ServiceBadge } from "@/components/services/ServiceBadge";
 import { ServicePriceNote } from "@/components/services/ServicePriceNote";
 import { categoryLabels } from "@/data/categories";
+import { site } from "@/data/site";
+import { getTelHref } from "@/lib/format";
 import { formatDurationOption } from "@/lib/services/format";
 import { getBookingHref } from "@/lib/i18n/paths";
-import { localizeService } from "@/lib/services";
+import { isOnlineBookingEnabled, localizeService } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
 import type { Locale } from "@/types/locale";
 import type { Service } from "@/types/service";
@@ -27,15 +29,24 @@ export function ServiceDetail({
   const localized = localizeService(service, locale);
   const categoryLabel = categoryLabels[service.category][locale];
   const hasNote = Boolean(localized.note);
-  const hasMultipleDurations = localized.durations.length > 1;
-  const singleDuration = localized.durations[0];
-  const singleBookHref =
-    !hasMultipleDurations && singleDuration
-      ? getBookingHref(locale, {
-          serviceId: service.id,
-          durationMinutes: singleDuration.minutes,
-        })
+  const bookingEnabled = isOnlineBookingEnabled(service);
+  const hasDurationInfo = localized.durations.length > 0;
+  const hasMultipleDurations = bookingEnabled && localized.durations.length > 1;
+  const singleDuration =
+    bookingEnabled && localized.durations.length === 1
+      ? localized.durations[0]
       : null;
+  const singleBookHref = singleDuration
+    ? getBookingHref(locale, {
+        serviceId: service.id,
+        durationMinutes: singleDuration.minutes,
+      })
+    : null;
+  /** General booking page while SimplyBook service IDs are remapped. */
+  const generalBookHref = getBookingHref(locale);
+  const availabilityHref = getTelHref(site.contact.phone);
+  const showPricingSection =
+    bookingEnabled || Boolean(localized.pricingLabel) || hasDurationInfo;
 
   const bodyParagraphs =
     localized.paragraphs.length > 0
@@ -49,7 +60,7 @@ export function ServiceDetail({
       <Container className="py-14 sm:py-16 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-16">
           <div>
-            <Eyebrow>{categoryLabel}</Eyebrow>
+            <Eyebrow className="text-primary">{categoryLabel}</Eyebrow>
             {localized.badge && (
               <div className="mt-3">
                 <ServiceBadge label={localized.badge} />
@@ -86,7 +97,7 @@ export function ServiceDetail({
                   id="service-benefits"
                   className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"
                 >
-                  {dictionary.services.benefitsTitle}
+                  {localized.benefitsHeading ?? dictionary.services.benefitsTitle}
                 </h2>
                 <ul className="mt-6 space-y-5">
                   {localized.benefits.map((benefit) => (
@@ -111,59 +122,89 @@ export function ServiceDetail({
               </p>
             )}
 
-            <section aria-labelledby="service-durations" className="mt-12">
-              <h2
-                id="service-durations"
-                className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"
-              >
-                {dictionary.services.durationsTitle}
-              </h2>
-              {hasMultipleDurations ? (
-                <ul className="mt-5 space-y-0">
-                  {localized.durations.map((duration) => (
-                    <li
-                      key={`${duration.minutes}-${duration.price}`}
-                      className="flex items-center justify-between gap-4 border-b border-border-subtle py-4 last:border-b-0"
-                    >
-                      <span className="text-base font-medium text-foreground sm:text-lg">
-                        {formatDurationOption(duration, locale, hasNote)}
-                      </span>
-                      <Button
-                        href={getBookingHref(locale, {
-                          serviceId: service.id,
-                          durationMinutes: duration.minutes,
-                        })}
-                        className="min-w-[7.5rem] shrink-0 px-5 py-2.5 text-sm sm:min-w-[8rem]"
+            {showPricingSection && (
+              <section aria-labelledby="service-durations" className="mt-12">
+                <h2
+                  id="service-durations"
+                  className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted sm:text-sm"
+                >
+                  {bookingEnabled
+                    ? dictionary.services.durationsTitle
+                    : dictionary.services.pricingInfoTitle}
+                </h2>
+                {hasMultipleDurations ? (
+                  <ul className="mt-5 space-y-0">
+                    {localized.durations.map((duration) => (
+                      <li
+                        key={`${duration.minutes}-${duration.price}`}
+                        className="flex items-center justify-between gap-4 border-b border-border-subtle py-4 last:border-b-0"
                       >
-                        {dictionary.services.bookDuration}
-                      </Button>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <ul className="mt-4 space-y-2">
-                  {localized.durations.map((duration) => (
-                    <li
-                      key={`${duration.minutes}-${duration.price}`}
-                      className="text-base font-medium text-foreground sm:text-lg"
-                    >
-                      {formatDurationOption(duration, locale, hasNote)}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {localized.note && (
-                <div className="mt-3">
-                  <ServicePriceNote note={localized.note} />
-                </div>
-              )}
-            </section>
+                        <span className="text-base font-medium text-foreground sm:text-lg">
+                          {formatDurationOption(duration, locale, hasNote)}
+                        </span>
+                        <Button
+                          href={getBookingHref(locale, {
+                            serviceId: service.id,
+                            durationMinutes: duration.minutes,
+                          })}
+                          className="min-w-[7.5rem] shrink-0 px-5 py-2.5 text-sm sm:min-w-[8rem]"
+                        >
+                          {dictionary.services.bookDuration}
+                        </Button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : localized.pricingLabel ? (
+                  <p className="mt-4 text-base font-medium text-foreground sm:text-lg">
+                    {localized.pricingLabel}
+                  </p>
+                ) : (
+                  <ul className="mt-4 space-y-2">
+                    {localized.durations.map((duration) => (
+                      <li
+                        key={`${duration.minutes}-${duration.price}`}
+                        className="text-base font-medium text-foreground sm:text-lg"
+                      >
+                        {formatDurationOption(duration, locale, hasNote)}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {localized.note && (
+                  <div className="mt-3">
+                    <ServicePriceNote note={localized.note} />
+                  </div>
+                )}
+              </section>
+            )}
 
             {singleBookHref && (
               <div className="mt-9">
                 <Button href={singleBookHref}>
                   {dictionary.services.bookThisTreatment}
                 </Button>
+              </div>
+            )}
+
+            {!bookingEnabled && hasDurationInfo && (
+              <div className="mt-9">
+                <Button href={generalBookHref}>
+                  {dictionary.services.bookThisTreatment}
+                </Button>
+              </div>
+            )}
+
+            {!bookingEnabled && !hasDurationInfo && (
+              <div className="mt-9">
+                {availabilityHref ? (
+                  <Button href={availabilityHref}>
+                    {dictionary.services.askAvailability}
+                  </Button>
+                ) : (
+                  <p className="max-w-xl text-base leading-relaxed text-muted sm:text-lg">
+                    {dictionary.services.availabilityPending}
+                  </p>
+                )}
               </div>
             )}
           </div>

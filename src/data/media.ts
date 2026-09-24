@@ -21,9 +21,9 @@ export const siteImages = {
   about: {
     src: "/images/facial-mask.jpg",
     alt: {
-      es: "Tratamiento facial con mascarilla en Ritual Essences",
-      gl: "Tratamento facial con máscara en Ritual Essences",
-      en: "Facial treatment with mask at Ritual Essences",
+      es: "Tratamiento facial con mascarilla en Infinity Bliss",
+      gl: "Tratamento facial con máscara en Infinity Bliss",
+      en: "Facial treatment with mask at Infinity Bliss",
     },
     width: 562,
     height: 354,

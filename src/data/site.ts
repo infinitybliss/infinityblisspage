@@ -1,7 +1,7 @@
 export type ContactField = string | null;
 
 export const site = {
-  name: "Ritual Essences",
+  name: "Infinity Bliss",
   city: "Santiago de Compostela",
   /**
    * Replace with the real production domain when it is confirmed.
@@ -9,22 +9,28 @@ export const site = {
    */
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   contact: {
-    address: "Calle Gómez Ulla 4, Bajo" as ContactField,
+    address: "Calle Gómez Ulla 4, Bajo, 15702 Santiago de Compostela" as ContactField,
     phone: "+34 600 62 28 07" as ContactField,
     whatsapp: "+34 600 62 28 07" as ContactField,
-    email: null as ContactField,
+    email: "Infinitybliss.santiago@gmail.com" as ContactField,
     hours: "9:00 – 20:00" as ContactField,
   },
   /**
    * Public SimplyBook.me booking URL (widget + fallback link).
+   * Company login: `infinitybliss`
    */
   bookingUrl:
     process.env.NEXT_PUBLIC_SIMPLYBOOK_URL ??
-    "https://ritualessences.simplybook.it",
+    "https://infinitybliss.simplybook.it",
   /**
-   * Replace with the Google Maps embed URL when the address is confirmed.
+   * Google Maps embed for Calle Gómez Ulla 4, Santiago de Compostela.
+   * Coordinates from OpenStreetMap (building nº 4).
    */
-  mapsEmbedUrl: null as string | null,
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=Calle+G%C3%B3mez+Ulla+4,+15702+Santiago+de+Compostela&hl=es&z=17&output=embed" as string | null,
+  /** Opens the location in Google Maps (new tab). */
+  mapsDirectionsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Calle+G%C3%B3mez+Ulla+4,+15702+Santiago+de+Compostela",
 } as const;
 
 /** Official SimplyBook.me widget script. */
@@ -39,28 +45,28 @@ export const simplyBookWidgetScriptSrc =
  */
 export const simplyBookWidgetConfig = {
   widget_type: "iframe",
-  url: "https://ritualessences.simplybook.it",
+  url: "https://infinitybliss.simplybook.it",
   theme: "simple_beauty_theme",
   theme_settings: {
-    sb_base_color: "#ad7d5b",
-    header_color: "#f7f3ee",
+    sb_base_color: "#c5a16d",
+    header_color: "#fffefc",
     timeline_hide_unavailable: "1",
     hide_past_days: "0",
     timeline_show_end_time: "0",
     timeline_modern_display: "as_slots",
     display_item_mode: "block",
-    body_bg_color: "#f7f3ee",
-    sb_review_image: "8",
+    body_bg_color: "#f8f5ef",
+    sb_review_image: "1",
     sb_review_image_preview:
-      "/uploads/ritualessences/image_files/preview/d752aa529cb12296e9f5c297ad12ab5f.png",
-    dark_font_color: "#262626",
-    light_font_color: "#f7f3ee",
-    btn_color_1: "#ad7d5b",
-    sb_company_label_color: "#262626",
+      "/uploads/infinitybliss/image_files/preview/92142aad4a8c07f2a01eb74d6bdfb7bb.png",
+    dark_font_color: "#302820",
+    light_font_color: "#ffffff",
+    btn_color_1: "#9a7344",
+    sb_company_label_color: "#302820",
     hide_img_mode: "0",
     show_sidebar: "1",
-    sb_busy: "#d9bc9a",
-    sb_available: "#797d75",
+    sb_busy: "#eae0d2",
+    sb_available: "#dce8d9",
   },
   timeline: "modern",
   datepicker: "top_calendar",

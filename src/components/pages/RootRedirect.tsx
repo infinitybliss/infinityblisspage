@@ -19,7 +19,7 @@ export function RootRedirect() {
       </p>
       <Link
         href="/es"
-        className="mt-6 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-medium text-foreground transition-colors duration-200 hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        className="mt-6 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-medium text-on-primary transition-colors duration-200 hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         {es.notFound.cta}
       </Link>

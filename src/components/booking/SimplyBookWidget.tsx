@@ -304,7 +304,7 @@ export function SimplyBookWidget({
             <button
               type="button"
               onClick={handleRetry}
-              className="inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="inline-flex rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-on-primary transition-colors duration-200 hover:bg-primary-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {retryLabel}
             </button>
@@ -312,7 +312,7 @@ export function SimplyBookWidget({
               href={fallbackUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex rounded-full border border-border-subtle bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              className="inline-flex rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-colors duration-200 hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               {errorLinkLabel}
             </a>

@@ -8,7 +8,7 @@ const SIMPLYBOOK_COOKIE_POLICY_URL =
 const es: LegalDocumentContent = {
   title: "Política de Cookies",
   description:
-    "Información sobre las cookies y tecnologías utilizadas en la web y el sistema de reservas de Ritual Essences.",
+    "Información sobre las cookies y tecnologías utilizadas en la web y el sistema de reservas de Infinity Bliss.",
   sections: [
     {
       title: "1. ¿Qué son las cookies?",
@@ -28,11 +28,11 @@ const es: LegalDocumentContent = {
       ],
     },
     {
-      title: "2. ¿Qué cookies utiliza Ritual Essences?",
+      title: "2. ¿Qué cookies utiliza Infinity Bliss?",
       blocks: [
         {
           type: "p",
-          text: "La web de Ritual Essences no utiliza actualmente cookies publicitarias ni herramientas propias de seguimiento o analítica.",
+          text: "La web de Infinity Bliss no utiliza actualmente cookies publicitarias ni herramientas propias de seguimiento o analítica.",
         },
         {
           type: "p",
@@ -70,7 +70,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "table",
-          caption: "Cookies técnicas de SimplyBook.me detectadas en Ritual Essences",
+          caption: "Cookies técnicas de SimplyBook.me detectadas en Infinity Bliss",
           headers: ["Cookie", "Proveedor", "Finalidad", "Duración"],
           rows: [
             [
@@ -80,19 +80,19 @@ const es: LegalDocumentContent = {
               "Sesión",
             ],
             [
-              "sb_line_token_ritualessences",
+              "sb_line_token_infinitybliss",
               "SimplyBook.me",
               "Gestión técnica de sesión, cola y protección del sistema",
               "Sesión",
             ],
             [
-              "sb_token_ritualessences",
+              "sb_token_infinitybliss",
               "SimplyBook.me",
               "Gestión técnica de la sesión de reserva",
               "Sesión",
             ],
             [
-              "sess_user_publicv2_ritualessences",
+              "sess_user_publicv2_infinitybliss",
               "SimplyBook.me",
               "Mantener la sesión pública durante el proceso de reserva",
               "Sesión",
@@ -134,7 +134,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Si en el futuro Ritual Essences incorpora herramientas de analítica, publicidad, seguimiento o cualquier otra tecnología que requiera consentimiento, se implementará el correspondiente sistema de gestión de consentimiento antes de activar dichas tecnologías.",
+          text: "Si en el futuro Infinity Bliss incorpora herramientas de analítica, publicidad, seguimiento o cualquier otra tecnología que requiera consentimiento, se implementará el correspondiente sistema de gestión de consentimiento antes de activar dichas tecnologías.",
         },
       ],
     },
@@ -143,7 +143,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences utiliza SimplyBook.me para gestionar las reservas online.",
+          text: "Infinity Bliss utiliza SimplyBook.me para gestionar las reservas online.",
         },
         {
           type: "p",
@@ -178,7 +178,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences podrá actualizar esta Política de Cookies si:",
+          text: "Infinity Bliss podrá actualizar esta Política de Cookies si:",
         },
         {
           type: "ul",
@@ -210,7 +210,7 @@ const es: LegalDocumentContent = {
 const gl: LegalDocumentContent = {
   title: "Política de cookies",
   description:
-    "Información sobre as cookies e tecnoloxías utilizadas na web e no sistema de reservas de Ritual Essences.",
+    "Información sobre as cookies e tecnoloxías utilizadas na web e no sistema de reservas de Infinity Bliss.",
   sections: [
     {
       title: "1. Que son as cookies?",
@@ -230,11 +230,11 @@ const gl: LegalDocumentContent = {
       ],
     },
     {
-      title: "2. Que cookies utiliza Ritual Essences?",
+      title: "2. Que cookies utiliza Infinity Bliss?",
       blocks: [
         {
           type: "p",
-          text: "A web de Ritual Essences non utiliza actualmente cookies publicitarias nin ferramentas propias de seguimento ou analítica.",
+          text: "A web de Infinity Bliss non utiliza actualmente cookies publicitarias nin ferramentas propias de seguimento ou analítica.",
         },
         {
           type: "p",
@@ -272,7 +272,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "table",
-          caption: "Cookies técnicas de SimplyBook.me detectadas en Ritual Essences",
+          caption: "Cookies técnicas de SimplyBook.me detectadas en Infinity Bliss",
           headers: ["Cookie", "Provedor", "Finalidade", "Duración"],
           rows: [
             [
@@ -282,19 +282,19 @@ const gl: LegalDocumentContent = {
               "Sesión",
             ],
             [
-              "sb_line_token_ritualessences",
+              "sb_line_token_infinitybliss",
               "SimplyBook.me",
               "Xestión técnica de sesión, cola e protección do sistema",
               "Sesión",
             ],
             [
-              "sb_token_ritualessences",
+              "sb_token_infinitybliss",
               "SimplyBook.me",
               "Xestión técnica da sesión de reserva",
               "Sesión",
             ],
             [
-              "sess_user_publicv2_ritualessences",
+              "sess_user_publicv2_infinitybliss",
               "SimplyBook.me",
               "Manter a sesión pública durante o proceso de reserva",
               "Sesión",
@@ -336,7 +336,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Se no futuro Ritual Essences incorpora ferramentas de analítica, publicidade, seguimento ou calquera outra tecnoloxía que requira consentimento, implementarase o correspondente sistema de xestión de consentimento antes de activar ditas tecnoloxías.",
+          text: "Se no futuro Infinity Bliss incorpora ferramentas de analítica, publicidade, seguimento ou calquera outra tecnoloxía que requira consentimento, implementarase o correspondente sistema de xestión de consentimento antes de activar ditas tecnoloxías.",
         },
       ],
     },
@@ -345,7 +345,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences utiliza SimplyBook.me para xestionar as reservas en liña.",
+          text: "Infinity Bliss utiliza SimplyBook.me para xestionar as reservas en liña.",
         },
         {
           type: "p",
@@ -380,7 +380,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences poderá actualizar esta Política de cookies se:",
+          text: "Infinity Bliss poderá actualizar esta Política de cookies se:",
         },
         {
           type: "ul",
@@ -412,7 +412,7 @@ const gl: LegalDocumentContent = {
 const en: LegalDocumentContent = {
   title: "Cookie Policy",
   description:
-    "Information about the cookies and technologies used on the Ritual Essences website and booking system.",
+    "Information about the cookies and technologies used on the Infinity Bliss website and booking system.",
   sections: [
     {
       title: "1. What are cookies?",
@@ -432,11 +432,11 @@ const en: LegalDocumentContent = {
       ],
     },
     {
-      title: "2. What cookies does Ritual Essences use?",
+      title: "2. What cookies does Infinity Bliss use?",
       blocks: [
         {
           type: "p",
-          text: "The Ritual Essences website does not currently use advertising cookies or its own tracking or analytics tools.",
+          text: "The Infinity Bliss website does not currently use advertising cookies or its own tracking or analytics tools.",
         },
         {
           type: "p",
@@ -474,7 +474,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "table",
-          caption: "SimplyBook.me technical cookies detected on Ritual Essences",
+          caption: "SimplyBook.me technical cookies detected on Infinity Bliss",
           headers: ["Cookie", "Provider", "Purpose", "Duration"],
           rows: [
             [
@@ -484,19 +484,19 @@ const en: LegalDocumentContent = {
               "Session",
             ],
             [
-              "sb_line_token_ritualessences",
+              "sb_line_token_infinitybliss",
               "SimplyBook.me",
               "Technical management of session, queue and system protection",
               "Session",
             ],
             [
-              "sb_token_ritualessences",
+              "sb_token_infinitybliss",
               "SimplyBook.me",
               "Technical management of the booking session",
               "Session",
             ],
             [
-              "sess_user_publicv2_ritualessences",
+              "sess_user_publicv2_infinitybliss",
               "SimplyBook.me",
               "Maintaining the public session during the booking process",
               "Session",
@@ -538,7 +538,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "If in the future Ritual Essences incorporates analytics, advertising, tracking or any other technology requiring consent, the corresponding consent management system will be implemented before activating such technologies.",
+          text: "If in the future Infinity Bliss incorporates analytics, advertising, tracking or any other technology requiring consent, the corresponding consent management system will be implemented before activating such technologies.",
         },
       ],
     },
@@ -547,7 +547,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences uses SimplyBook.me to manage online bookings.",
+          text: "Infinity Bliss uses SimplyBook.me to manage online bookings.",
         },
         {
           type: "p",
@@ -582,7 +582,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences may update this Cookie Policy if:",
+          text: "Infinity Bliss may update this Cookie Policy if:",
         },
         {
           type: "ul",

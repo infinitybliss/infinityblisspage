@@ -34,10 +34,10 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
     >
       <Container className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div className="max-w-2xl">
-          <Eyebrow className="text-secondary">{dictionary.pilgrims.eyebrow}</Eyebrow>
+          <Eyebrow className="text-accent">{dictionary.pilgrims.eyebrow}</Eyebrow>
           <h2
             id={titleId}
-            className="mt-3 font-serif text-3xl leading-tight text-accent sm:text-4xl lg:text-5xl"
+            className="mt-3 font-serif text-3xl leading-tight text-background sm:text-4xl lg:text-5xl"
           >
             {dictionary.pilgrims.title}
           </h2>
@@ -54,12 +54,12 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
               return (
                 <li
                   key={service.id}
-                  className="rounded-2xl border border-secondary/25 bg-background/5 p-5 sm:p-6"
+                  className="rounded-2xl border border-accent/30 bg-surface p-5 sm:p-6"
                 >
-                  <p className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-secondary">
+                  <p className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-primary">
                     {categoryLabels[service.category][locale]}
                   </p>
-                  <h3 className="mt-2.5 font-serif text-xl text-accent sm:text-2xl">
+                  <h3 className="mt-2.5 font-serif text-xl text-foreground sm:text-2xl">
                     <Link
                       href={getServiceHref(locale, service)}
                       className="transition-colors duration-200 hover:text-primary"
@@ -67,11 +67,11 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
                       {localized.name}
                     </Link>
                   </h3>
-                  <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-background/85 sm:text-base">
+                  <p className="mt-2.5 text-[0.9375rem] leading-relaxed text-muted sm:text-base">
                     {localized.shortDescription}
                   </p>
                   {meta && (
-                    <p className="mt-2.5 text-[0.9375rem] font-medium text-background sm:text-base">
+                    <p className="mt-2.5 text-[0.9375rem] font-medium text-foreground sm:text-base">
                       {meta}
                     </p>
                   )}
@@ -80,12 +80,15 @@ export function Pilgrims({ locale, dictionary }: PilgrimsProps) {
             })}
           </ul>
           <div className="mt-10">
-            <Button href={`${getServicesHref(locale)}#peregrinos`}>
+            <Button
+              href={`${getServicesHref(locale)}#peregrinos`}
+              variant="on-dark"
+            >
               {dictionary.pilgrims.cta}
             </Button>
           </div>
         </div>
-        <div className="overflow-hidden rounded-2xl border border-secondary/30">
+        <div className="overflow-hidden rounded-2xl border border-accent/30">
           <MediaImage
             image={siteImages.pilgrims}
             locale={locale}

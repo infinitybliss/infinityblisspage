@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { brandAssets } from "@/data/brand";
 
 type BrandMarkProps = {
   size?: "sm" | "md" | "lg";
@@ -21,7 +22,7 @@ export function BrandMark({
       aria-hidden="true"
     >
       <Image
-        src="/brand/imagotipo.png"
+        src={brandAssets.isotipo}
         alt=""
         width={112}
         height={112}

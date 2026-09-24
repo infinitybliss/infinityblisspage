@@ -3,12 +3,12 @@ import type { ReactNode } from "react";
 
 const variants = {
   primary:
-    "bg-primary text-foreground hover:bg-primary-hover",
+    "bg-primary text-on-primary hover:bg-primary-hover",
   secondary:
-    "border border-border-subtle bg-transparent text-foreground hover:border-primary hover:text-primary",
+    "border border-border bg-transparent text-foreground hover:border-primary hover:text-primary",
   ghost: "text-foreground hover:text-primary",
   "on-dark":
-    "bg-primary text-foreground hover:bg-primary-hover",
+    "bg-accent text-foreground hover:bg-accent-hover",
 } as const;
 
 type ButtonVariant = keyof typeof variants;

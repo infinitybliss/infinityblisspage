@@ -21,7 +21,7 @@ export function Hero({ locale, dictionary }: HeroProps) {
         <div className="max-w-xl">
           <span
             aria-hidden="true"
-            className="mb-5 inline-block h-px w-10 bg-secondary"
+            className="mb-5 inline-block h-px w-10 bg-accent"
           />
           <h1
             id="hero-title"

@@ -27,7 +27,7 @@ export function Header({ locale, dictionary }: HeaderProps) {
 
   return (
     <header className="relative sticky top-0 z-50 border-b border-border-subtle bg-background/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 w-full min-w-0 max-w-6xl items-center justify-between gap-2 px-3 sm:h-[4.5rem] sm:gap-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 w-full min-w-0 max-w-6xl items-center justify-between gap-2 px-3 sm:h-[4.75rem] sm:gap-4 sm:px-6 md:h-20 lg:h-[5.25rem] lg:px-8">
         <div className="shrink-0">
           <Logo locale={locale} title={dictionary.brand.name} compact />
         </div>

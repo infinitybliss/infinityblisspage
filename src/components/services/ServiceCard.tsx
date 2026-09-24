@@ -32,14 +32,20 @@ export function ServiceCard({
   const href = getServiceHref(locale, service);
   const categoryLabel = categoryLabels[service.category][locale];
   const hasNote = Boolean(localized.note);
-  const meta = formatServiceMeta(service.durations, locale, {
-    from: dictionary.services.fromPrice,
-  }, hasNote);
+  const meta = formatServiceMeta(
+    service.durations,
+    locale,
+    {
+      from: dictionary.services.fromPrice,
+    },
+    hasNote,
+    localized.pricingLabel,
+  );
   const accentBarClass =
     accent === "primary" ? "bg-primary" : "bg-secondary";
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border-subtle bg-surface transition-colors duration-300 hover:border-primary/30">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface transition-colors duration-300 hover:border-primary/35">
       <div className={`h-0.5 w-full ${accentBarClass}`} aria-hidden="true" />
       {!compact &&
         (service.image ? (
@@ -60,7 +66,7 @@ export function ServiceCard({
           />
         ))}
       <div className="flex flex-1 flex-col gap-3.5 p-5 sm:p-6">
-        <p className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-muted">
+        <p className="text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-primary">
           {categoryLabel}
         </p>
         {localized.badge && <ServiceBadge label={localized.badge} />}

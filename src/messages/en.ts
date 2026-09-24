@@ -2,13 +2,13 @@ import type { Dictionary } from "@/types/dictionary";
 
 export const en: Dictionary = {
   meta: {
-    title: "Ritual Essences | Massage & Wellbeing in Santiago de Compostela",
+    title: "Infinity Bliss | Nails & Massage in Santiago de Compostela",
     description:
       "Massage, wellbeing rituals and spa treatments in Santiago de Compostela, including treatments designed for pilgrims walking the Camino de Santiago.",
   },
   brand: {
-    name: "Ritual Essences",
-    tagline: "Wellbeing Centre",
+    name: "Infinity Bliss",
+    tagline: "Nails & Massage",
   },
   skipToContent: "Skip to content",
   nav: {
@@ -34,7 +34,7 @@ export const en: Dictionary = {
   intro: {
     eyebrow: "Santiago de Compostela",
     title: "A space to pause and care for your body",
-    text: "Ritual Essences is a massage and wellbeing centre in Santiago, created for those arriving after the Camino as well as for anyone looking for regular care close to home.",
+    text: "Infinity Bliss is a massage and wellbeing centre in Santiago, created for those arriving after the Camino as well as for anyone looking for regular care close to home.",
   },
   services: {
     eyebrow: "Care",
@@ -53,10 +53,14 @@ export const en: Dictionary = {
     bookDuration: "Book",
     benefitsTitle: "Benefits",
     durationsTitle: "Durations and prices",
+    pricingInfoTitle: "Price",
+    askAvailability: "Ask about availability",
+    availabilityPending:
+      "Online booking for this treatment will be available soon. Please contact us to ask about availability.",
   },
   upcoming: {
     eyebrow: "What's new",
-    title: "Coming soon to Ritual Essences",
+    title: "Coming soon to Infinity Bliss",
     text: "We're preparing new ways to take care of you. These services will be available soon.",
     homeTitle: "Coming soon",
     homeText:
@@ -67,7 +71,7 @@ export const en: Dictionary = {
   pilgrims: {
     eyebrow: "Camino de Santiago",
     title: "Help your body recover after the Camino",
-    text: "After walking for days, your body needs rest. At Ritual Essences you will find treatments focused on tired legs, overloaded feet and recovery after the stages of the Camino de Santiago.",
+    text: "After walking for days, your body needs rest. At Infinity Bliss you will find treatments focused on tired legs, overloaded feet and recovery after the stages of the Camino de Santiago.",
     cta: "View treatments for pilgrims",
   },
   about: {
@@ -93,7 +97,7 @@ export const en: Dictionary = {
       },
     },
     imageLabel: "The centre",
-    imageAlt: "Placeholder for a photograph of the interior of Ritual Essences",
+    imageAlt: "Placeholder for a photograph of the interior of Infinity Bliss",
   },
   reviews: {
     eyebrow: "Reviews",
@@ -125,17 +129,18 @@ export const en: Dictionary = {
     groupCta: "Contact via WhatsApp",
     selectionLabel: "You're booking",
     changeTreatment: "Change treatment",
-    metaTitle: "Booking | Ritual Essences",
+    metaTitle: "Booking | Infinity Bliss",
     metaDescription:
-      "Book massages and wellbeing treatments at Ritual Essences, Santiago de Compostela.",
+      "Book massages and wellbeing treatments at Infinity Bliss, Santiago de Compostela.",
   },
   contact: {
     eyebrow: "Visit us",
     title: "Location and contact",
-    text: "We are on Calle Gómez Ulla in Santiago de Compostela. You can call us or message us on WhatsApp to book your appointment.",
+    text: "We are at Calle Gómez Ulla 4 in Santiago de Compostela. You can call us or message us on WhatsApp to book your appointment.",
     address: "Address",
     phone: "Phone",
     whatsapp: "WhatsApp",
+    email: "Email",
     hours: "Opening hours",
     pending: "To be confirmed",
     mapLabel: "Location map",
@@ -155,22 +160,22 @@ export const en: Dictionary = {
     notice: {
       title: "Legal notice",
       description:
-        "Legal notice for Ritual Essences – Wellbeing Centre. Identifying information and website terms of use.",
+        "Legal notice for Infinity Bliss – Wellbeing Centre. Identifying information and website terms of use.",
     },
     privacy: {
       title: "Privacy policy",
       description:
-        "Privacy policy for Ritual Essences. Information on personal data processing and bookings.",
+        "Privacy policy for Infinity Bliss. Information on personal data processing and bookings.",
     },
     cookies: {
       title: "Cookie policy",
       description:
-        "Information about cookies and technologies used on the website and booking system of Ritual Essences.",
+        "Information about cookies and technologies used on the website and booking system of Infinity Bliss.",
     },
     bookingTerms: {
       title: "Booking and cancellation terms",
       description:
-        "Booking and cancellation terms for Ritual Essences. Notice periods, changes, groups and special rates.",
+        "Booking and cancellation terms for Infinity Bliss. Notice periods, changes, groups and special rates.",
     },
   },
   notFound: {

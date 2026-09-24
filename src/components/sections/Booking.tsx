@@ -18,7 +18,7 @@ export function Booking({ locale, dictionary }: BookingProps) {
     <Section
       id={getSectionId(locale, "booking")}
       ariaLabelledBy={titleId}
-      className="bg-sand-soft py-20 sm:py-24 lg:py-28"
+      className="bg-background-alt py-20 sm:py-24 lg:py-28"
     >
       <Container className="max-w-2xl text-center">
         <Eyebrow>{dictionary.booking.eyebrow}</Eyebrow>

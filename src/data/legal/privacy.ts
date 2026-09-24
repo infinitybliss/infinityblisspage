@@ -4,7 +4,7 @@ import type { Locale } from "@/types/locale";
 const es: LegalDocumentContent = {
   title: "Política de privacidad",
   description:
-    "Política de privacidad de Ritual Essences. Información sobre el tratamiento de datos personales y reservas.",
+    "Política de privacidad de Infinity Bliss. Información sobre el tratamiento de datos personales y reservas.",
   sections: [
     {
       title: "1. Responsable del tratamiento",
@@ -18,17 +18,17 @@ const es: LegalDocumentContent = {
             },
             {
               label: "Nombre comercial",
-              value: "Ritual Essences – Centro de Bienestar",
+              value: "Infinity Bliss – Nails & Massage",
             },
             { label: "NIF/CIF", value: "[NIF/CIF]" },
             { label: "Dirección", value: "[DIRECCIÓN]" },
-            { label: "Correo electrónico", value: "[EMAIL]" },
+            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Teléfono", value: "[TELÉFONO]" },
           ],
         },
         {
           type: "p",
-          text: "Ritual Essences es responsable del tratamiento de los datos personales utilizados para gestionar las relaciones con clientes y las reservas realizadas en el centro.",
+          text: "Infinity Bliss es responsable del tratamiento de los datos personales utilizados para gestionar las relaciones con clientes y las reservas realizadas en el centro.",
         },
       ],
     },
@@ -37,7 +37,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Dependiendo de la forma en que interactúes con Ritual Essences, podemos tratar:",
+          text: "Dependiendo de la forma en que interactúes con Infinity Bliss, podemos tratar:",
         },
         {
           type: "ul",
@@ -114,7 +114,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "La base jurídica será el interés legítimo de Ritual Essences en proteger su actividad y sus sistemas, siempre respetando los derechos y libertades de las personas interesadas.",
+          text: "La base jurídica será el interés legítimo de Infinity Bliss en proteger su actividad y sus sistemas, siempre respetando los derechos y libertades de las personas interesadas.",
         },
       ],
     },
@@ -123,7 +123,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences utiliza SimplyBook.me como plataforma tecnológica para gestionar las reservas online.",
+          text: "Infinity Bliss utiliza SimplyBook.me como plataforma tecnológica para gestionar las reservas online.",
         },
         {
           type: "p",
@@ -131,7 +131,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "A efectos del Reglamento General de Protección de Datos, Ritual Essences actúa como responsable del tratamiento de los datos de sus clientes y SimplyBook.me actúa como encargado del tratamiento en los términos establecidos en su Acuerdo de Tratamiento de Datos.",
+          text: "A efectos del Reglamento General de Protección de Datos, Infinity Bliss actúa como responsable del tratamiento de los datos de sus clientes y SimplyBook.me actúa como encargado del tratamiento en los términos establecidos en su Acuerdo de Tratamiento de Datos.",
         },
         {
           type: "p",
@@ -166,7 +166,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Si en el futuro Ritual Essences desea enviar promociones, novedades u ofertas comerciales no relacionadas directamente con una reserva existente, se solicitará el consentimiento correspondiente cuando resulte necesario.",
+          text: "Si en el futuro Infinity Bliss desea enviar promociones, novedades u ofertas comerciales no relacionadas directamente con una reserva existente, se solicitará el consentimiento correspondiente cuando resulte necesario.",
         },
       ],
     },
@@ -175,7 +175,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Los datos podrán ser tratados por proveedores que resulten necesarios para prestar los servicios de Ritual Essences, tales como:",
+          text: "Los datos podrán ser tratados por proveedores que resulten necesarios para prestar los servicios de Infinity Bliss, tales como:",
         },
         {
           type: "ul",
@@ -262,7 +262,7 @@ const es: LegalDocumentContent = {
           items: [
             {
               label: "Email",
-              value: "[EMAIL DE PRIVACIDAD O GENERAL]",
+              value: "Infinitybliss.santiago@gmail.com",
             },
           ],
         },
@@ -281,7 +281,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences adopta medidas razonables para proteger los datos personales frente a accesos no autorizados, pérdidas, alteraciones o usos indebidos.",
+          text: "Infinity Bliss adopta medidas razonables para proteger los datos personales frente a accesos no autorizados, pérdidas, alteraciones o usos indebidos.",
         },
         {
           type: "p",
@@ -312,7 +312,7 @@ const es: LegalDocumentContent = {
 const gl: LegalDocumentContent = {
   title: "Política de privacidade",
   description:
-    "Política de privacidade de Ritual Essences. Información sobre o tratamento de datos persoais e reservas.",
+    "Política de privacidade de Infinity Bliss. Información sobre o tratamento de datos persoais e reservas.",
   sections: [
     {
       title: "1. Responsable do tratamento",
@@ -326,17 +326,17 @@ const gl: LegalDocumentContent = {
             },
             {
               label: "Nome comercial",
-              value: "Ritual Essences – Centro de Benestar",
+              value: "Infinity Bliss – Nails & Massage",
             },
             { label: "NIF/CIF", value: "[NIF/CIF]" },
             { label: "Dirección", value: "[DIRECCIÓN]" },
-            { label: "Correo electrónico", value: "[EMAIL]" },
+            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Teléfono", value: "[TELÉFONO]" },
           ],
         },
         {
           type: "p",
-          text: "Ritual Essences é responsable do tratamento dos datos persoais utilizados para xestionar as relacións con clientes e as reservas realizadas no centro.",
+          text: "Infinity Bliss é responsable do tratamento dos datos persoais utilizados para xestionar as relacións con clientes e as reservas realizadas no centro.",
         },
       ],
     },
@@ -345,7 +345,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Dependendo da forma en que interactúes con Ritual Essences, podemos tratar:",
+          text: "Dependendo da forma en que interactúes con Infinity Bliss, podemos tratar:",
         },
         {
           type: "ul",
@@ -422,7 +422,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "A base xurídica será o interese lexítimo de Ritual Essences en protexer a súa actividade e os seus sistemas, sempre respectando os dereitos e liberdades das persoas interesadas.",
+          text: "A base xurídica será o interese lexítimo de Infinity Bliss en protexer a súa actividade e os seus sistemas, sempre respectando os dereitos e liberdades das persoas interesadas.",
         },
       ],
     },
@@ -431,7 +431,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences utiliza SimplyBook.me como plataforma tecnolóxica para xestionar as reservas en liña.",
+          text: "Infinity Bliss utiliza SimplyBook.me como plataforma tecnolóxica para xestionar as reservas en liña.",
         },
         {
           type: "p",
@@ -439,7 +439,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "A efectos do Regulamento Xeral de Protección de Datos, Ritual Essences actúa como responsable do tratamento dos datos dos seus clientes e SimplyBook.me actúa como encargado do tratamento nos termos establecidos no seu Acordo de Tratamento de Datos.",
+          text: "A efectos do Regulamento Xeral de Protección de Datos, Infinity Bliss actúa como responsable do tratamento dos datos dos seus clientes e SimplyBook.me actúa como encargado do tratamento nos termos establecidos no seu Acordo de Tratamento de Datos.",
         },
         {
           type: "p",
@@ -474,7 +474,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Se no futuro Ritual Essences desexa enviar promocións, novidades ou ofertas comerciais non relacionadas directamente cunha reserva existente, solicitarase o consentimento correspondente cando resulte necesario.",
+          text: "Se no futuro Infinity Bliss desexa enviar promocións, novidades ou ofertas comerciais non relacionadas directamente cunha reserva existente, solicitarase o consentimento correspondente cando resulte necesario.",
         },
       ],
     },
@@ -483,7 +483,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Os datos poderán ser tratados por provedores que resulten necesarios para prestar os servizos de Ritual Essences, tales como:",
+          text: "Os datos poderán ser tratados por provedores que resulten necesarios para prestar os servizos de Infinity Bliss, tales como:",
         },
         {
           type: "ul",
@@ -570,7 +570,7 @@ const gl: LegalDocumentContent = {
           items: [
             {
               label: "Email",
-              value: "[EMAIL DE PRIVACIDAD O GENERAL]",
+              value: "Infinitybliss.santiago@gmail.com",
             },
           ],
         },
@@ -589,7 +589,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences adopta medidas razoables para protexer os datos persoais fronte a accesos non autorizados, perdas, alteracións ou usos indebidos.",
+          text: "Infinity Bliss adopta medidas razoables para protexer os datos persoais fronte a accesos non autorizados, perdas, alteracións ou usos indebidos.",
         },
         {
           type: "p",
@@ -620,7 +620,7 @@ const gl: LegalDocumentContent = {
 const en: LegalDocumentContent = {
   title: "Privacy Policy",
   description:
-    "Privacy policy of Ritual Essences. Information about the processing of personal data and bookings.",
+    "Privacy policy of Infinity Bliss. Information about the processing of personal data and bookings.",
   sections: [
     {
       title: "1. Data controller",
@@ -634,17 +634,17 @@ const en: LegalDocumentContent = {
             },
             {
               label: "Trade name",
-              value: "Ritual Essences – Centro de Bienestar",
+              value: "Infinity Bliss – Nails & Massage",
             },
             { label: "NIF/CIF", value: "[NIF/CIF]" },
             { label: "Address", value: "[DIRECCIÓN]" },
-            { label: "Email", value: "[EMAIL]" },
+            { label: "Email", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Phone", value: "[TELÉFONO]" },
           ],
         },
         {
           type: "p",
-          text: "Ritual Essences is responsible for processing the personal data used to manage customer relationships and bookings made at the centre.",
+          text: "Infinity Bliss is responsible for processing the personal data used to manage customer relationships and bookings made at the centre.",
         },
       ],
     },
@@ -653,7 +653,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Depending on how you interact with Ritual Essences, we may process:",
+          text: "Depending on how you interact with Infinity Bliss, we may process:",
         },
         {
           type: "ul",
@@ -730,7 +730,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "The legal basis will be the legitimate interest of Ritual Essences in protecting its activity and systems, always respecting the rights and freedoms of data subjects.",
+          text: "The legal basis will be the legitimate interest of Infinity Bliss in protecting its activity and systems, always respecting the rights and freedoms of data subjects.",
         },
       ],
     },
@@ -739,7 +739,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences uses SimplyBook.me as a technology platform to manage online bookings.",
+          text: "Infinity Bliss uses SimplyBook.me as a technology platform to manage online bookings.",
         },
         {
           type: "p",
@@ -747,7 +747,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "For the purposes of the General Data Protection Regulation, Ritual Essences acts as the data controller of its customers’ data and SimplyBook.me acts as a data processor under the terms set out in its Data Processing Agreement.",
+          text: "For the purposes of the General Data Protection Regulation, Infinity Bliss acts as the data controller of its customers’ data and SimplyBook.me acts as a data processor under the terms set out in its Data Processing Agreement.",
         },
         {
           type: "p",
@@ -782,7 +782,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "If in the future Ritual Essences wishes to send promotions, news or commercial offers not directly related to an existing booking, the corresponding consent will be requested when necessary.",
+          text: "If in the future Infinity Bliss wishes to send promotions, news or commercial offers not directly related to an existing booking, the corresponding consent will be requested when necessary.",
         },
       ],
     },
@@ -791,7 +791,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Data may be processed by providers necessary to deliver Ritual Essences’ services, such as:",
+          text: "Data may be processed by providers necessary to deliver Infinity Bliss’ services, such as:",
         },
         {
           type: "ul",
@@ -878,7 +878,7 @@ const en: LegalDocumentContent = {
           items: [
             {
               label: "Email",
-              value: "[EMAIL DE PRIVACIDAD O GENERAL]",
+              value: "Infinitybliss.santiago@gmail.com",
             },
           ],
         },
@@ -897,7 +897,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences adopts reasonable measures to protect personal data against unauthorised access, loss, alteration or misuse.",
+          text: "Infinity Bliss adopts reasonable measures to protect personal data against unauthorised access, loss, alteration or misuse.",
         },
         {
           type: "p",

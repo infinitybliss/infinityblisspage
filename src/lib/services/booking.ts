@@ -37,7 +37,7 @@ export function getServiceBookingVariant(
     (duration) => duration.minutes === durationMinutes,
   );
 
-  if (!variant) {
+  if (!variant || typeof variant.bookingId !== "number" || variant.bookingId <= 0) {
     return null;
   }
 

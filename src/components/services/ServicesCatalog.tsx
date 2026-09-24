@@ -38,7 +38,7 @@ export function ServicesCatalog({ locale, dictionary }: ServicesCatalogProps) {
         >
           <h2
             id="pilgrims-services-title"
-            className="font-serif text-3xl text-accent sm:text-4xl"
+            className="font-serif text-3xl text-background sm:text-4xl"
           >
             {dictionary.pilgrims.title}
           </h2>

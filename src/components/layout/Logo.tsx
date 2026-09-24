@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { BrandMark } from "@/components/layout/BrandMark";
+import { brandAssets } from "@/data/brand";
 import type { Locale } from "@/types/locale";
 import { getLocalizedHref } from "@/lib/i18n/paths";
 
@@ -9,18 +10,9 @@ type LogoProps = {
   tagline?: string;
   onDark?: boolean;
   showTagline?: boolean;
-  /** Header layout: stacked wordmark from 390px, icon-only below. */
+  /** Header layout: isotipo on narrow screens, full logo from 390px. */
   compact?: boolean;
 };
-
-function splitBrandTitle(title: string): [string, string] | null {
-  const parts = title.trim().split(/\s+/);
-  if (parts.length < 2) {
-    return null;
-  }
-
-  return [parts[0], parts.slice(1).join(" ")];
-}
 
 export function Logo({
   locale,
@@ -30,47 +22,31 @@ export function Logo({
   showTagline = false,
   compact = false,
 }: LogoProps) {
-  const titleClass = onDark
-    ? "text-accent group-hover:text-primary"
-    : "text-foreground group-hover:text-primary";
-  const taglineClass = onDark ? "text-secondary" : "text-muted";
-  const stacked = compact ? splitBrandTitle(title) : null;
+  const taglineClass = onDark ? "text-accent" : "text-muted";
 
   if (compact) {
     return (
       <Link
         href={getLocalizedHref(locale, "home")}
         aria-label={title}
-        className="group inline-flex items-center gap-2 min-[390px]:gap-2.5 md:gap-3"
+        className="group inline-flex max-w-[min(100%,11.5rem)] items-center min-[390px]:max-w-[14rem] sm:max-w-[16rem] md:max-w-[18rem] lg:max-w-[22rem]"
       >
-        <BrandMark
-          size="md"
-          className="!h-9 !w-9 min-[390px]:!h-8 min-[390px]:!w-8 md:!h-10 md:!w-10"
+        <Image
+          src={brandAssets.isotipo}
+          alt=""
+          width={80}
+          height={80}
+          className="h-9 w-9 object-contain min-[390px]:hidden"
+          priority
         />
-        {stacked ? (
-          <>
-            <span
-              className={`hidden min-[390px]:flex flex-col font-serif leading-[1.05] tracking-wide transition-colors duration-200 md:hidden ${titleClass}`}
-              aria-hidden="true"
-            >
-              <span className="text-[1.05rem]">{stacked[0]}</span>
-              <span className="text-[1.05rem]">{stacked[1]}</span>
-            </span>
-            <span
-              className={`hidden font-serif text-[1.375rem] leading-tight tracking-wide transition-colors duration-200 md:inline ${titleClass}`}
-              aria-hidden="true"
-            >
-              {title}
-            </span>
-          </>
-        ) : (
-          <span
-            className={`hidden min-[390px]:inline font-serif text-[1.05rem] leading-tight tracking-wide transition-colors duration-200 md:text-[1.375rem] ${titleClass}`}
-            aria-hidden="true"
-          >
-            {title}
-          </span>
-        )}
+        <Image
+          src={brandAssets.logo}
+          alt=""
+          width={280}
+          height={280}
+          className="hidden h-10 w-auto max-w-full object-contain object-left min-[390px]:block sm:h-12 md:h-14 lg:h-[4.25rem]"
+          priority
+        />
       </Link>
     );
   }
@@ -79,23 +55,23 @@ export function Logo({
     <Link
       href={getLocalizedHref(locale, "home")}
       aria-label={title}
-      className="group inline-flex items-center gap-2.5 sm:gap-3"
+      className="group inline-flex max-w-full flex-col items-center gap-2 sm:items-start"
     >
-      <BrandMark size={showTagline ? "lg" : "md"} />
-      <span className="flex flex-col">
+      <Image
+        src={brandAssets.logo}
+        alt=""
+        width={280}
+        height={280}
+        className="h-[4.25rem] w-auto max-w-[14rem] object-contain object-left sm:h-20 sm:max-w-[16rem]"
+        priority
+      />
+      {showTagline && tagline && (
         <span
-          className={`font-serif text-xl leading-tight tracking-wide transition-colors duration-200 sm:text-[1.375rem] ${titleClass}`}
+          className={`text-[0.6875rem] font-medium uppercase tracking-[0.2em] sm:text-xs ${taglineClass}`}
         >
-          {title}
+          {tagline}
         </span>
-        {showTagline && tagline && (
-          <span
-            className={`mt-1 text-[0.6875rem] font-medium uppercase tracking-[0.2em] sm:text-xs ${taglineClass}`}
-          >
-            {tagline}
-          </span>
-        )}
-      </span>
+      )}
     </Link>
   );
 }

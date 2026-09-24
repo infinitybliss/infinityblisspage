@@ -73,8 +73,8 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [
-      { minutes: 60, price: 60, bookingId: 2 },
-      { minutes: 90, price: 90, bookingId: 3 },
+      { minutes: 60, price: 60 },
+      { minutes: 90, price: 90 },
     ],
     featured: true,
     pilgrimFeatured: true,
@@ -168,7 +168,7 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 30, price: 35, bookingId: 8 }],
+    durations: [{ minutes: 30, price: 35 }],
     image: "/images/lymphatic-drainage.jpg",
   },
   {
@@ -259,8 +259,8 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [
-      { minutes: 60, price: 60, bookingId: 4 },
-      { minutes: 90, price: 90, bookingId: 14 },
+      { minutes: 60, price: 60 },
+      { minutes: 90, price: 90 },
     ],
     featured: true,
     image: "/images/massage-back-ambiance.jpg",
@@ -352,7 +352,7 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 30, price: 30, bookingId: 5 }],
+    durations: [{ minutes: 30, price: 30 }],
     image: "/images/facial-mask.jpg",
   },
   {
@@ -430,7 +430,7 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 30, price: 35, bookingId: 9 }],
+    durations: [{ minutes: 30, price: 35 }],
     image: "/images/massage-back-oil.jpg",
   },
   {
@@ -520,7 +520,7 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 45, price: 55, bookingId: 10 }],
+    durations: [{ minutes: 45, price: 55 }],
     featured: true,
     image: "/images/facial-mask.jpg",
   },
@@ -611,7 +611,7 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 45, price: 55, bookingId: 6 }],
+    durations: [{ minutes: 45, price: 55 }],
     pilgrimFeatured: true,
     audience: ["peregrinos", "deportistas", "personas que trabajan de pie"],
     image: "/images/ritual-light-feet.jpg",
@@ -699,8 +699,8 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [
-      { minutes: 45, price: 55, bookingId: 7 },
-      { minutes: 60, price: 70, bookingId: 11 },
+      { minutes: 45, price: 55 },
+      { minutes: 60, price: 70 },
     ],
     featured: true,
     image: "/images/head-spa.jpg",
@@ -737,9 +737,9 @@ export const servicesCatalog: Service[] = [
         en: "Hospitality is all about giving, but your body needs to stop too.",
       },
       {
-        es: "En Ritual Essences hemos creado Reseteo Hostelero, un masaje específico pensado para devolver una sensación de ligereza a tu musculatura y dejar atrás la tensión acumulada durante la semana.",
-        gl: "En Ritual Essences creamos o Reseteo Hostelero, unha masaxe específica pensada para devolver unha sensación de lixeireza á túa musculatura e deixar atrás a tensión acumulada durante a semana.",
-        en: "At Ritual Essences we created the Hospitality Reset, a specific massage designed to bring a feeling of lightness back to your muscles and leave behind the tension built up over the week.",
+        es: "En Infinity Bliss hemos creado Reseteo Hostelero, un masaje específico pensado para devolver una sensación de ligereza a tu musculatura y dejar atrás la tensión acumulada durante la semana.",
+        gl: "En Infinity Bliss creamos o Reseteo Hostelero, unha masaxe específica pensada para devolver unha sensación de lixeireza á túa musculatura e deixar atrás a tensión acumulada durante a semana.",
+        en: "At Infinity Bliss we created the Hospitality Reset, a specific massage designed to bring a feeling of lightness back to your muscles and leave behind the tension built up over the week.",
       },
     ],
     benefits: [
@@ -773,7 +773,7 @@ export const servicesCatalog: Service[] = [
       gl: "Porque coidar dos demais empeza por coidarte a ti. Regálate esa pausa que mereces.",
       en: "Because looking after others starts with looking after yourself. Give yourself the pause you deserve.",
     },
-    durations: [{ minutes: 45, price: 38, bookingId: 12 }],
+    durations: [{ minutes: 45, price: 38 }],
     audience: hospitalityAudience,
     badge: hospitalityBadge,
     note: hospitalityNote,
@@ -877,10 +877,191 @@ export const servicesCatalog: Service[] = [
       gl: "É o momento de devolverlle ao teu corpo parte de todo o esforzo que fas cada día. Gañáchelo.",
       en: "It's time to give your body back some of the effort you put in every single day. You've earned it.",
     },
-    durations: [{ minutes: 90, price: 75, bookingId: 13 }],
+    durations: [{ minutes: 90, price: 75 }],
     audience: hospitalityAudience,
     badge: hospitalityBadge,
     note: hospitalityNote,
     image: "/images/hospitality-reset.jpg",
+  },
+  {
+    id: "manicura-y-unas",
+    slug: {
+      es: "manicura-y-unas",
+      gl: "manicura-e-unas",
+      en: "manicure-nail-care",
+    },
+    category: "nails",
+    name: {
+      es: "Manicura y uñas",
+      gl: "Manicura e uñas",
+      en: "Manicure & Nail Care",
+    },
+    shortDescription: {
+      es: "En Infinity Bliss cuidamos tus manos y uñas con un servicio personalizado, adaptado a tu estilo y preferencias. Elige entre manicura spa, uñas permanentes, acrílicas, gel y diseños en tendencia.",
+      gl: "En Infinity Bliss coidamos das túas mans e uñas cun servizo personalizado, adaptado ao teu estilo e ás túas preferencias. Escolle entre manicura spa, uñas permanentes, acrílicas, xel e deseños de tendencia.",
+      en: "Personalised hand and nail care tailored to your style and preferences. Choose from spa manicures, long-lasting polish, acrylics, gel nails and on-trend designs.",
+    },
+    intro: {
+      es: "En Infinity Bliss cuidamos tus manos y uñas con un servicio personalizado, adaptado a tu estilo y preferencias.",
+      gl: "En Infinity Bliss coidamos das túas mans e uñas cun servizo personalizado, adaptado ao teu estilo e ás túas preferencias.",
+      en: "At Infinity Bliss we care for your hands and nails with a personalised service adapted to your style and preferences.",
+    },
+    description: {
+      es: "Puedes elegir entre manicura spa, uñas permanentes, uñas acrílicas, uñas en gel y uñas en tendencia. Desde acabados naturales y elegantes hasta propuestas más creativas.",
+      gl: "Podes escoller entre manicura spa, uñas permanentes, uñas acrílicas, uñas en xel e uñas de tendencia. Dende acabados naturais e elegantes ata propostas máis creativas.",
+      en: "You can choose from spa manicures, long-lasting polish, acrylic nails, gel nails and on-trend designs — from natural, elegant finishes to more creative looks.",
+    },
+    paragraphs: [
+      {
+        es: "Puedes elegir entre:",
+        gl: "Podes escoller entre:",
+        en: "You can choose from:",
+      },
+    ],
+    benefitsHeading: {
+      es: "Opciones",
+      gl: "Opcións",
+      en: "Options",
+    },
+    benefits: [
+      {
+        title: { es: "Manicura Spa", gl: "Manicura Spa", en: "Spa manicure" },
+        description: { es: "", gl: "", en: "" },
+      },
+      {
+        title: {
+          es: "Uñas permanentes",
+          gl: "Uñas permanentes",
+          en: "Long-lasting polish",
+        },
+        description: { es: "", gl: "", en: "" },
+      },
+      {
+        title: {
+          es: "Uñas acrílicas",
+          gl: "Uñas acrílicas",
+          en: "Acrylic nails",
+        },
+        description: { es: "", gl: "", en: "" },
+      },
+      {
+        title: { es: "Uñas en gel", gl: "Uñas en xel", en: "Gel nails" },
+        description: { es: "", gl: "", en: "" },
+      },
+      {
+        title: {
+          es: "Uñas en tendencia",
+          gl: "Uñas de tendencia",
+          en: "On-trend designs",
+        },
+        description: { es: "", gl: "", en: "" },
+      },
+    ],
+    closing: {
+      es: "Desde acabados naturales y elegantes hasta propuestas más creativas.",
+      gl: "Dende acabados naturais e elegantes ata propostas máis creativas.",
+      en: "From natural, elegant finishes to more creative looks.",
+    },
+    // Online booking pending — add durations + bookingId when confirmed on the new SimplyBook account.
+    durations: [],
+    pricingLabel: {
+      es: "Precio según servicio y diseño",
+      gl: "Prezo segundo o servizo e o deseño",
+      en: "Price depends on treatment and design",
+    },
+    note: {
+      es: "El precio y la duración son orientativos y dependerán del tipo de uñas, la longitud y la complejidad del diseño elegido. Nuestro equipo contactará contigo para concretar los detalles de tu cita. La duración y el precio definitivos pueden variar según el tipo de uñas y el diseño elegido.",
+      gl: "O prezo e a duración son orientativos e dependerán do tipo de uñas, a lonxitude e a complexidade do deseño escollido. O noso equipo contactará contigo para concretar os detalles da túa cita. A duración e o prezo definitivos poden variar segundo o tipo de uñas e o deseño escollido.",
+      en: "Price and duration are indicative and will depend on the nail treatment, length and design complexity. Our team will contact you to confirm the details of your appointment. The final duration and price may vary depending on the nail treatment and design selected.",
+    },
+    image: "/images/services/nail-care.jpg",
+  },
+  {
+    id: "pedicura-pedi-spa",
+    slug: {
+      es: "pedicura-pedi-spa",
+      gl: "pedicura-pedi-spa",
+      en: "pedicure-pedi-spa",
+    },
+    category: "nails",
+    name: {
+      es: "Pedicura (Pedi Spa)",
+      gl: "Pedicura (Pedi Spa)",
+      en: "Pedicure (Pedi Spa)",
+    },
+    shortDescription: {
+      es: "Una experiencia de cuidado y bienestar para tus pies. Disfruta de una pedicura adaptada a tus necesidades y al acabado que prefieras.",
+      gl: "Unha experiencia de coidado e benestar para os teus pés. Goza dunha pedicura adaptada ás túas necesidades e ao acabado que prefiras.",
+      en: "A relaxing foot-care experience with a pedicure tailored to your needs and preferred finish.",
+    },
+    intro: {
+      es: "Una experiencia de cuidado y bienestar para tus pies. Dedícales un momento de atención y disfruta de una pedicura adaptada a tus necesidades y al acabado que prefieras.",
+      gl: "Unha experiencia de coidado e benestar para os teus pés. Dedícalles un momento de atención e goza dunha pedicura adaptada ás túas necesidades e ao acabado que prefiras.",
+      en: "A caring wellbeing experience for your feet. Give them a moment of attention and enjoy a pedicure tailored to your needs and preferred finish.",
+    },
+    description: {
+      es: "El precio y la duración dependerán del tratamiento y los acabados elegidos. Nuestro equipo podrá confirmar los detalles de tu cita antes del servicio.",
+      gl: "O prezo e a duración dependerán do tratamento e dos acabados escollidos. O noso equipo poderá confirmar os detalles da túa cita antes do servizo.",
+      en: "Price and duration will depend on the treatment and finishes you choose. Our team can confirm the details of your appointment before the service.",
+    },
+    paragraphs: [
+      {
+        es: "El precio y la duración dependerán del tratamiento y los acabados elegidos. Nuestro equipo podrá confirmar los detalles de tu cita antes del servicio.",
+        gl: "O prezo e a duración dependerán do tratamento e dos acabados escollidos. O noso equipo poderá confirmar os detalles da túa cita antes do servizo.",
+        en: "Price and duration will depend on the treatment and finishes you choose. Our team can confirm the details of your appointment before the service.",
+      },
+    ],
+    // Online booking pending — add durations + bookingId when confirmed.
+    durations: [],
+    pricingLabel: {
+      es: "Precio según tratamiento",
+      gl: "Prezo segundo o tratamento",
+      en: "Price depends on treatment",
+    },
+    // No dedicated pedicure image yet — detail page uses placeholder.
+  },
+  {
+    id: "presoterapia",
+    slug: {
+      es: "presoterapia",
+      gl: "presoterapia",
+      en: "pressotherapy",
+    },
+    category: "wellbeing",
+    name: {
+      es: "Presoterapia",
+      gl: "Presoterapia",
+      en: "Pressotherapy",
+    },
+    shortDescription: {
+      es: "Una sesión de compresión neumática suave y controlada, pensada para favorecer la sensación de ligereza y descanso en las piernas.",
+      gl: "Unha sesión de compresión pneumática suave e controlada, pensada para favorecer a sensación de lixeireza e descanso nas pernas.",
+      en: "A gentle, controlled pneumatic compression session designed to promote a feeling of lightness and relaxation in the legs.",
+    },
+    intro: {
+      es: "Disfruta de una sesión de compresión neumática suave y controlada, pensada para favorecer la sensación de ligereza y descanso en las piernas.",
+      gl: "Goza dunha sesión de compresión pneumática suave e controlada, pensada para favorecer a sensación de lixeireza e descanso nas pernas.",
+      en: "Enjoy a gentle, controlled pneumatic compression session designed to promote a feeling of lightness and relaxation in the legs.",
+    },
+    description: {
+      es: "Un momento de bienestar especialmente agradable después de largas jornadas de pie.",
+      gl: "Un momento de benestar especialmente agradable despois de longas xornadas de pé.",
+      en: "A wellbeing moment that feels especially welcome after long days on your feet.",
+    },
+    paragraphs: [
+      {
+        es: "Un momento de bienestar especialmente agradable después de largas jornadas de pie.",
+        gl: "Un momento de benestar especialmente agradable despois de longas xornadas de pé.",
+        en: "A wellbeing moment that feels especially welcome after long days on your feet.",
+      },
+    ],
+    // Online booking pending — add durations + bookingId when confirmed.
+    durations: [],
+    pricingLabel: {
+      es: "Precio y duración por confirmar",
+      gl: "Prezo e duración por confirmar",
+      en: "Price and duration to be confirmed",
+    },
+    image: "/images/services/pressotherapy.jpg",
   },
 ];

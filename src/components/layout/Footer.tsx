@@ -35,7 +35,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
 
   const year = new Date().getFullYear();
   const linkClassName =
-    "text-[0.9375rem] text-background/75 transition-colors duration-200 hover:text-primary";
+    "text-[0.9375rem] text-background/75 transition-colors duration-200 hover:text-accent";
 
   return (
     <footer className="bg-foreground text-background">
@@ -50,9 +50,9 @@ export function Footer({ locale, dictionary }: FooterProps) {
           />
         </div>
 
-        <div className="mt-10 grid gap-10 border-t border-secondary/25 pt-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-3">
+        <div className="mt-10 grid gap-10 border-t border-accent/25 pt-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-3">
           <div>
-            <p className="text-sm font-medium tracking-wide text-background">
+            <p className="text-sm font-medium tracking-wide text-accent">
               {dictionary.footer.nav}
             </p>
             <ul className="mt-4 space-y-2.5">
@@ -67,7 +67,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
 
           <div>
-            <p className="text-sm font-medium tracking-wide text-background">
+            <p className="text-sm font-medium tracking-wide text-accent">
               {dictionary.footer.contact}
             </p>
             <ul className="mt-4 space-y-2.5 text-[0.9375rem] text-background/75">
@@ -88,7 +88,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
 
           <div className="sm:col-span-2 lg:col-span-1">
-            <p className="text-sm font-medium tracking-wide text-background">
+            <p className="text-sm font-medium tracking-wide text-accent">
               {dictionary.footer.legal}
             </p>
             <ul className="mt-4 space-y-2.5">
@@ -104,7 +104,7 @@ export function Footer({ locale, dictionary }: FooterProps) {
         </div>
       </Container>
 
-      <div className="border-t border-secondary/25">
+      <div className="border-t border-accent/25">
         <Container className="flex flex-col gap-2 py-6 text-center text-sm text-background/60 sm:flex-row sm:justify-between sm:text-left">
           <p>
             © {year} {dictionary.brand.name}. {dictionary.footer.rights}

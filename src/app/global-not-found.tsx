@@ -19,7 +19,7 @@ export default function GlobalNotFound() {
         <p className="mt-4 max-w-md text-center text-muted">{es.notFound.text}</p>
         <Link
           href="/es"
-          className="mt-8 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm text-foreground transition-colors duration-200 hover:bg-primary-hover"
+          className="mt-8 inline-flex rounded-full bg-primary px-5 py-2.5 text-sm text-on-primary transition-colors duration-200 hover:bg-primary-hover"
         >
           {es.notFound.cta}
         </Link>

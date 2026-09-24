@@ -2,13 +2,13 @@ import type { Dictionary } from "@/types/dictionary";
 
 export const es: Dictionary = {
   meta: {
-    title: "Ritual Essences | Centro de Bienestar en Santiago de Compostela",
+    title: "Infinity Bliss | Nails & Massage en Santiago de Compostela",
     description:
       "Masajes y tratamientos de bienestar en Santiago de Compostela para peregrinos y clientes locales.",
   },
   brand: {
-    name: "Ritual Essences",
-    tagline: "Centro de Bienestar",
+    name: "Infinity Bliss",
+    tagline: "Nails & Massage",
   },
   skipToContent: "Saltar al contenido",
   nav: {
@@ -34,7 +34,7 @@ export const es: Dictionary = {
   intro: {
     eyebrow: "Santiago de Compostela",
     title: "Un espacio para detenerte y cuidar el cuerpo",
-    text: "Ritual Essences nace como un centro de masajes y bienestar en Santiago, pensado tanto para quien llega después del Camino como para quien busca un cuidado habitual cerca de casa.",
+    text: "Infinity Bliss nace como un centro de masajes y bienestar en Santiago, pensado tanto para quien llega después del Camino como para quien busca un cuidado habitual cerca de casa.",
   },
   services: {
     eyebrow: "Cuidados",
@@ -53,10 +53,14 @@ export const es: Dictionary = {
     bookDuration: "Reservar",
     benefitsTitle: "Beneficios",
     durationsTitle: "Duraciones y precios",
+    pricingInfoTitle: "Precio",
+    askAvailability: "Consultar disponibilidad",
+    availabilityPending:
+      "La reserva online de este tratamiento estará disponible próximamente. Contáctanos para consultar disponibilidad.",
   },
   upcoming: {
     eyebrow: "Novedades",
-    title: "Próximamente en Ritual Essences",
+    title: "Próximamente en Infinity Bliss",
     text: "Seguimos preparando nuevas formas de cuidarte. Estos servicios estarán disponibles próximamente.",
     homeTitle: "Próximamente",
     homeText:
@@ -67,7 +71,7 @@ export const es: Dictionary = {
   pilgrims: {
     eyebrow: "Camino de Santiago",
     title: "Recupera el cuerpo después del Camino",
-    text: "Después de caminar durante días, el cuerpo pide descanso. En Ritual Essences encontrarás tratamientos orientados a piernas cansadas, pies sobrecargados y la recuperación tras las etapas del Camino de Santiago.",
+    text: "Después de caminar durante días, el cuerpo pide descanso. En Infinity Bliss encontrarás tratamientos orientados a piernas cansadas, pies sobrecargados y la recuperación tras las etapas del Camino de Santiago.",
     cta: "Ver tratamientos para peregrinos",
   },
   about: {
@@ -93,7 +97,7 @@ export const es: Dictionary = {
       },
     },
     imageLabel: "El centro",
-    imageAlt: "Espacio reservado para una fotografía del interior de Ritual Essences",
+    imageAlt: "Espacio reservado para una fotografía del interior de Infinity Bliss",
   },
   reviews: {
     eyebrow: "Opiniones",
@@ -125,17 +129,18 @@ export const es: Dictionary = {
     groupCta: "Contactar por WhatsApp",
     selectionLabel: "Estás reservando",
     changeTreatment: "Cambiar tratamiento",
-    metaTitle: "Reservas | Ritual Essences",
+    metaTitle: "Reservas | Infinity Bliss",
     metaDescription:
-      "Reserva masajes y tratamientos de bienestar en Ritual Essences, Santiago de Compostela.",
+      "Reserva masajes y tratamientos de bienestar en Infinity Bliss, Santiago de Compostela.",
   },
   contact: {
     eyebrow: "Visítanos",
     title: "Ubicación y contacto",
-    text: "Estamos en la Calle Gómez Ulla, en Santiago de Compostela. Puedes llamarnos o escribirnos por WhatsApp para reservar tu cita.",
+    text: "Estamos en la Calle Gómez Ulla 4, en Santiago de Compostela. Puedes llamarnos o escribirnos por WhatsApp para reservar tu cita.",
     address: "Dirección",
     phone: "Teléfono",
     whatsapp: "WhatsApp",
+    email: "Correo electrónico",
     hours: "Horario",
     pending: "Por confirmar",
     mapLabel: "Mapa de ubicación",
@@ -155,22 +160,22 @@ export const es: Dictionary = {
     notice: {
       title: "Aviso legal",
       description:
-        "Aviso legal de Ritual Essences – Centro de Bienestar. Información identificativa y condiciones de uso del sitio web.",
+        "Aviso legal de Infinity Bliss – Centro de Bienestar. Información identificativa y condiciones de uso del sitio web.",
     },
     privacy: {
       title: "Política de privacidad",
       description:
-        "Política de privacidad de Ritual Essences. Información sobre el tratamiento de datos personales y reservas.",
+        "Política de privacidad de Infinity Bliss. Información sobre el tratamiento de datos personales y reservas.",
     },
     cookies: {
       title: "Política de Cookies",
       description:
-        "Información sobre las cookies y tecnologías utilizadas en la web y el sistema de reservas de Ritual Essences.",
+        "Información sobre las cookies y tecnologías utilizadas en la web y el sistema de reservas de Infinity Bliss.",
     },
     bookingTerms: {
       title: "Condiciones de reserva y cancelación",
       description:
-        "Condiciones de reserva y cancelación de Ritual Essences. Antelación, modificación, grupos y tarifas especiales.",
+        "Condiciones de reserva y cancelación de Infinity Bliss. Antelación, modificación, grupos y tarifas especiales.",
     },
   },
   notFound: {

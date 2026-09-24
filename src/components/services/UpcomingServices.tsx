@@ -71,7 +71,7 @@ export function UpcomingServices({
       <Section
         id="proximamente"
         ariaLabelledBy={titleId}
-        className="bg-sand-soft/40"
+        className="bg-background-alt/40"
       >
         <Container>{content}</Container>
       </Section>
@@ -82,7 +82,7 @@ export function UpcomingServices({
     <section
       id="proximamente"
       aria-labelledby={titleId}
-      className="mt-20 scroll-mt-24 rounded-2xl bg-sand-soft/50 px-5 py-10 sm:mt-24 sm:px-8 sm:py-12 lg:px-10 lg:py-14"
+      className="mt-20 scroll-mt-24 rounded-2xl bg-background-alt px-5 py-10 sm:mt-24 sm:px-8 sm:py-12 lg:px-10 lg:py-14"
     >
       {content}
     </section>

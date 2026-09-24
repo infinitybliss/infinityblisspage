@@ -4,7 +4,7 @@ import { site } from "@/data/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
-  themeColor: "#F7F3EE",
+  themeColor: "#FFFEFC",
 };
 
 export const metadata: Metadata = {

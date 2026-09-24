@@ -32,6 +32,9 @@ function ContactItem({
           <a
             href={href}
             className="transition-colors duration-200 hover:text-primary"
+            {...(href.startsWith("http")
+              ? { target: "_blank", rel: "noopener noreferrer" }
+              : {})}
           >
             {value}
           </a>
@@ -47,6 +50,7 @@ export function Contact({ locale, dictionary }: ContactProps) {
   const titleId = "contact-title";
   const phoneHref = getTelHref(site.contact.phone);
   const whatsappHref = getWhatsAppHref(site.contact.whatsapp);
+  const addressHref = site.mapsDirectionsUrl;
 
   return (
     <Section
@@ -70,7 +74,7 @@ export function Contact({ locale, dictionary }: ContactProps) {
             <ContactItem
               label={dictionary.contact.address}
               value={site.contact.address}
-              href={null}
+              href={addressHref}
               pendingLabel={dictionary.contact.pending}
             />
             <ContactItem
@@ -86,6 +90,14 @@ export function Contact({ locale, dictionary }: ContactProps) {
               pendingLabel={dictionary.contact.pending}
             />
             <ContactItem
+              label={dictionary.contact.email}
+              value={site.contact.email}
+              href={
+                site.contact.email ? `mailto:${site.contact.email}` : null
+              }
+              pendingLabel={dictionary.contact.pending}
+            />
+            <ContactItem
               label={dictionary.contact.hours}
               value={site.contact.hours}
               href={null}
@@ -94,20 +106,24 @@ export function Contact({ locale, dictionary }: ContactProps) {
           </dl>
         </div>
         <div
-          className="flex min-h-64 items-end rounded-2xl bg-sage-soft p-5"
+          className="relative min-h-64 overflow-hidden rounded-2xl border border-border bg-sage-soft sm:min-h-80 lg:min-h-[22rem]"
           aria-label={dictionary.contact.mapLabel}
         >
           {site.mapsEmbedUrl ? (
             <iframe
               title={dictionary.contact.mapLabel}
               src={site.mapsEmbedUrl}
-              className="h-full min-h-64 w-full rounded-xl border-0"
+              className="absolute inset-0 h-full w-full border-0"
               loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
             />
           ) : (
-            <p className="rounded-full bg-surface/90 px-3 py-1 text-xs text-muted">
-              {dictionary.contact.mapPlaceholder}
-            </p>
+            <div className="flex h-full min-h-64 items-end p-5">
+              <p className="rounded-full bg-surface/90 px-3 py-1 text-xs text-muted">
+                {dictionary.contact.mapPlaceholder}
+              </p>
+            </div>
           )}
         </div>
       </Container>

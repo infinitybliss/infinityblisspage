@@ -47,7 +47,12 @@ export function formatServiceMeta(
   locale: string,
   labels: DurationPriceLabels,
   hasNote = false,
+  pricingLabel?: string,
 ): string {
+  if (pricingLabel) {
+    return pricingLabel;
+  }
+
   const durationText = formatServiceDurationSummary(durations, locale);
   const priceText = formatServicePriceSummary(durations, locale, labels, hasNote);
 

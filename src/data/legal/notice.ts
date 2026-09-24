@@ -4,7 +4,7 @@ import type { Locale } from "@/types/locale";
 const es: LegalDocumentContent = {
   title: "Aviso legal",
   description:
-    "Aviso legal de Ritual Essences – Centro de Bienestar. Información identificativa y condiciones de uso del sitio web.",
+    "Aviso legal de Infinity Bliss – Nails & Massage. Información identificativa y condiciones de uso del sitio web.",
   sections: [
     {
       title: "1. Datos identificativos",
@@ -18,7 +18,7 @@ const es: LegalDocumentContent = {
           items: [
             {
               label: "Nombre comercial",
-              value: "Ritual Essences – Centro de Bienestar",
+              value: "Infinity Bliss – Nails & Massage",
             },
             {
               label: "Titular / Razón social",
@@ -26,14 +26,14 @@ const es: LegalDocumentContent = {
             },
             { label: "NIF/CIF", value: "[NIF/CIF]" },
             { label: "Domicilio", value: "[DIRECCIÓN COMPLETA]" },
-            { label: "Correo electrónico", value: "[EMAIL]" },
+            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Teléfono", value: "[TELÉFONO]" },
             { label: "Sitio web", value: "[DOMINIO DEFINITIVO]" },
           ],
         },
         {
           type: "p",
-          text: "En adelante, “Ritual Essences”.",
+          text: "En adelante, “Infinity Bliss”.",
         },
       ],
     },
@@ -42,7 +42,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "El presente sitio web tiene como finalidad ofrecer información acerca de Ritual Essences, sus servicios de bienestar, masajes y tratamientos, así como facilitar el acceso al sistema de reserva de citas.",
+          text: "El presente sitio web tiene como finalidad ofrecer información acerca de Infinity Bliss, sus servicios de bienestar, masajes y tratamientos, así como facilitar el acceso al sistema de reserva de citas.",
         },
         {
           type: "p",
@@ -69,12 +69,12 @@ const es: LegalDocumentContent = {
             "introducir software malicioso;",
             "interferir en el funcionamiento del sitio o del sistema de reservas;",
             "realizar reservas fraudulentas o con datos falsos;",
-            "utilizar los contenidos del sitio de forma contraria a los derechos de Ritual Essences o de terceros.",
+            "utilizar los contenidos del sitio de forma contraria a los derechos de Infinity Bliss o de terceros.",
           ],
         },
         {
           type: "p",
-          text: "Ritual Essences podrá adoptar las medidas necesarias ante usos abusivos o fraudulentos de la web o del sistema de reservas.",
+          text: "Infinity Bliss podrá adoptar las medidas necesarias ante usos abusivos o fraudulentos de la web o del sistema de reservas.",
         },
       ],
     },
@@ -100,7 +100,7 @@ const es: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences procura mantener actualizada y disponible la información del sitio web, pero no puede garantizar la ausencia absoluta de errores, interrupciones o incidencias técnicas.",
+          text: "Infinity Bliss procura mantener actualizada y disponible la información del sitio web, pero no puede garantizar la ausencia absoluta de errores, interrupciones o incidencias técnicas.",
         },
         {
           type: "p",
@@ -108,7 +108,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences no será responsable de las interrupciones ocasionadas por proveedores tecnológicos externos, redes de comunicaciones o circunstancias ajenas a su control, sin perjuicio de los derechos que correspondan legalmente a las personas consumidoras.",
+          text: "Infinity Bliss no será responsable de las interrupciones ocasionadas por proveedores tecnológicos externos, redes de comunicaciones o circunstancias ajenas a su control, sin perjuicio de los derechos que correspondan legalmente a las personas consumidoras.",
         },
       ],
     },
@@ -125,7 +125,7 @@ const es: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "La utilización de servicios externos no implica que Ritual Essences sea responsable del contenido o funcionamiento de sitios web ajenos, salvo en los casos previstos legalmente.",
+          text: "La utilización de servicios externos no implica que Infinity Bliss sea responsable del contenido o funcionamiento de sitios web ajenos, salvo en los casos previstos legalmente.",
         },
       ],
     },
@@ -148,7 +148,7 @@ const es: LegalDocumentContent = {
 const gl: LegalDocumentContent = {
   title: "Aviso legal",
   description:
-    "Aviso legal de Ritual Essences – Centro de Benestar. Información identificativa e condicións de uso do sitio web.",
+    "Aviso legal de Infinity Bliss – Nails & Massage. Información identificativa e condicións de uso do sitio web.",
   sections: [
     {
       title: "1. Datos identificativos",
@@ -162,7 +162,7 @@ const gl: LegalDocumentContent = {
           items: [
             {
               label: "Nome comercial",
-              value: "Ritual Essences – Centro de Benestar",
+              value: "Infinity Bliss – Nails & Massage",
             },
             {
               label: "Titular / Razón social",
@@ -170,14 +170,14 @@ const gl: LegalDocumentContent = {
             },
             { label: "NIF/CIF", value: "[NIF/CIF]" },
             { label: "Domicilio", value: "[DIRECCIÓN COMPLETA]" },
-            { label: "Correo electrónico", value: "[EMAIL]" },
+            { label: "Correo electrónico", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Teléfono", value: "[TELÉFONO]" },
             { label: "Sitio web", value: "[DOMINIO DEFINITIVO]" },
           ],
         },
         {
           type: "p",
-          text: "No sucesivo, “Ritual Essences”.",
+          text: "No sucesivo, “Infinity Bliss”.",
         },
       ],
     },
@@ -186,7 +186,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "O presente sitio web ten como finalidade ofrecer información acerca de Ritual Essences, os seus servizos de benestar, masaxes e tratamentos, así como facilitar o acceso ao sistema de reserva de citas.",
+          text: "O presente sitio web ten como finalidade ofrecer información acerca de Infinity Bliss, os seus servizos de benestar, masaxes e tratamentos, así como facilitar o acceso ao sistema de reserva de citas.",
         },
         {
           type: "p",
@@ -213,12 +213,12 @@ const gl: LegalDocumentContent = {
             "introducir software malicioso;",
             "interferir no funcionamento do sitio ou do sistema de reservas;",
             "realizar reservas fraudulentas ou con datos falsos;",
-            "utilizar os contidos do sitio de forma contraria aos dereitos de Ritual Essences ou de terceiros.",
+            "utilizar os contidos do sitio de forma contraria aos dereitos de Infinity Bliss ou de terceiros.",
           ],
         },
         {
           type: "p",
-          text: "Ritual Essences poderá adoptar as medidas necesarias ante usos abusivos ou fraudulentos da web ou do sistema de reservas.",
+          text: "Infinity Bliss poderá adoptar as medidas necesarias ante usos abusivos ou fraudulentos da web ou do sistema de reservas.",
         },
       ],
     },
@@ -244,7 +244,7 @@ const gl: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences procura manter actualizada e dispoñible a información do sitio web, pero non pode garantir a ausencia absoluta de erros, interrupcións ou incidencias técnicas.",
+          text: "Infinity Bliss procura manter actualizada e dispoñible a información do sitio web, pero non pode garantir a ausencia absoluta de erros, interrupcións ou incidencias técnicas.",
         },
         {
           type: "p",
@@ -252,7 +252,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences non será responsable das interrupcións ocasionadas por provedores tecnolóxicos externos, redes de comunicacións ou circunstancias alleas ao seu control, sen prexuízo dos dereitos que correspondan legalmente ás persoas consumidoras.",
+          text: "Infinity Bliss non será responsable das interrupcións ocasionadas por provedores tecnolóxicos externos, redes de comunicacións ou circunstancias alleas ao seu control, sen prexuízo dos dereitos que correspondan legalmente ás persoas consumidoras.",
         },
       ],
     },
@@ -269,7 +269,7 @@ const gl: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "A utilización de servizos externos non implica que Ritual Essences sexa responsable do contido ou funcionamento de sitios web alleos, salvo nos casos previstos legalmente.",
+          text: "A utilización de servizos externos non implica que Infinity Bliss sexa responsable do contido ou funcionamento de sitios web alleos, salvo nos casos previstos legalmente.",
         },
       ],
     },
@@ -292,7 +292,7 @@ const gl: LegalDocumentContent = {
 const en: LegalDocumentContent = {
   title: "Legal Notice",
   description:
-    "Legal notice of Ritual Essences – Wellness Centre. Identifying information and terms of use of the website.",
+    "Legal notice of Infinity Bliss – Nails & Massage. Identifying information and terms of use of the website.",
   sections: [
     {
       title: "1. Identifying information",
@@ -306,7 +306,7 @@ const en: LegalDocumentContent = {
           items: [
             {
               label: "Trade name",
-              value: "Ritual Essences – Centro de Bienestar",
+              value: "Infinity Bliss – Nails & Massage",
             },
             {
               label: "Owner / Legal name",
@@ -314,14 +314,14 @@ const en: LegalDocumentContent = {
             },
             { label: "NIF/CIF", value: "[NIF/CIF]" },
             { label: "Address", value: "[DIRECCIÓN COMPLETA]" },
-            { label: "Email", value: "[EMAIL]" },
+            { label: "Email", value: "Infinitybliss.santiago@gmail.com" },
             { label: "Phone", value: "[TELÉFONO]" },
             { label: "Website", value: "[DOMINIO DEFINITIVO]" },
           ],
         },
         {
           type: "p",
-          text: "Hereinafter, “Ritual Essences”.",
+          text: "Hereinafter, “Infinity Bliss”.",
         },
       ],
     },
@@ -330,7 +330,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "The purpose of this website is to provide information about Ritual Essences, its wellness, massage and treatment services, and to facilitate access to the appointment booking system.",
+          text: "The purpose of this website is to provide information about Infinity Bliss, its wellness, massage and treatment services, and to facilitate access to the appointment booking system.",
         },
         {
           type: "p",
@@ -357,12 +357,12 @@ const en: LegalDocumentContent = {
             "introduce malicious software;",
             "interfere with the operation of the website or the booking system;",
             "make fraudulent bookings or use false data;",
-            "use the website’s content in a manner contrary to the rights of Ritual Essences or third parties.",
+            "use the website’s content in a manner contrary to the rights of Infinity Bliss or third parties.",
           ],
         },
         {
           type: "p",
-          text: "Ritual Essences may take the necessary measures in response to abusive or fraudulent use of the website or the booking system.",
+          text: "Infinity Bliss may take the necessary measures in response to abusive or fraudulent use of the website or the booking system.",
         },
       ],
     },
@@ -388,7 +388,7 @@ const en: LegalDocumentContent = {
       blocks: [
         {
           type: "p",
-          text: "Ritual Essences endeavours to keep the information on the website up to date and available, but cannot guarantee the absolute absence of errors, interruptions or technical incidents.",
+          text: "Infinity Bliss endeavours to keep the information on the website up to date and available, but cannot guarantee the absolute absence of errors, interruptions or technical incidents.",
         },
         {
           type: "p",
@@ -396,7 +396,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Ritual Essences shall not be liable for interruptions caused by external technology providers, communication networks or circumstances beyond its control, without prejudice to the rights legally corresponding to consumers.",
+          text: "Infinity Bliss shall not be liable for interruptions caused by external technology providers, communication networks or circumstances beyond its control, without prejudice to the rights legally corresponding to consumers.",
         },
       ],
     },
@@ -413,7 +413,7 @@ const en: LegalDocumentContent = {
         },
         {
           type: "p",
-          text: "Use of external services does not imply that Ritual Essences is responsible for the content or operation of third-party websites, except in cases provided for by law.",
+          text: "Use of external services does not imply that Infinity Bliss is responsible for the content or operation of third-party websites, except in cases provided for by law.",
         },
       ],
     },
