@@ -130,6 +130,7 @@ export type Dictionary = {
     cookies: string;
     bookingTerms: string;
     rights: string;
+    blurb: string;
   };
   legal: {
     notice: { title: string; description: string };

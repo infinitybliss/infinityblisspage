@@ -155,6 +155,7 @@ export const es: Dictionary = {
     cookies: "Cookies",
     bookingTerms: "Condiciones de reserva",
     rights: "Todos los derechos reservados.",
+    blurb: "Centro de bienestar en Santiago de Compostela",
   },
   legal: {
     notice: {

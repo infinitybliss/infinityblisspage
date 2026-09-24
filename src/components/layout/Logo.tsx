@@ -12,6 +12,8 @@ type LogoProps = {
   showTagline?: boolean;
   /** Header layout: isotipo on narrow screens, full logo from 390px. */
   compact?: boolean;
+  /** Footer branding: wider mark so the vertical logo has presence. */
+  size?: "default" | "footer";
 };
 
 export function Logo({
@@ -21,6 +23,7 @@ export function Logo({
   onDark = false,
   showTagline = false,
   compact = false,
+  size = "default",
 }: LogoProps) {
   const taglineClass = onDark ? "text-accent" : "text-muted";
 
@@ -51,18 +54,26 @@ export function Logo({
     );
   }
 
+  const isFooter = size === "footer";
+
   return (
     <Link
       href={getLocalizedHref(locale, "home")}
       aria-label={title}
-      className="group inline-flex max-w-full flex-col items-center gap-2 sm:items-start"
+      className={`group inline-flex max-w-full flex-col gap-2.5 ${
+        isFooter ? "items-center" : "items-center sm:items-start"
+      }`}
     >
       <Image
         src={brandAssets.logo}
         alt=""
         width={280}
         height={280}
-        className="h-[4.25rem] w-auto max-w-[14rem] object-contain object-left sm:h-20 sm:max-w-[16rem]"
+        className={
+          isFooter
+            ? "h-auto w-[11rem] max-w-full object-contain object-center sm:w-[12rem] lg:w-[11.5rem]"
+            : "h-[4.25rem] w-auto max-w-[14rem] object-contain object-left sm:h-20 sm:max-w-[16rem]"
+        }
         priority
       />
       {showTagline && tagline && (

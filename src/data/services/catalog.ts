@@ -73,13 +73,13 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [
-      { minutes: 60, price: 60 },
-      { minutes: 90, price: 90 },
+      { minutes: 60, price: 60, bookingId: 2 },
+      { minutes: 90, price: 90, bookingId: 3 },
     ],
     featured: true,
     pilgrimFeatured: true,
     audience: ["peregrinos"],
-    image: "/images/pilgrim-massage.jpg",
+    image: "/images/services/pilgrim-massage.webp",
   },
   {
     id: "lymphatic-drainage",
@@ -168,8 +168,8 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 30, price: 35 }],
-    image: "/images/lymphatic-drainage.jpg",
+    durations: [{ minutes: 30, price: 35, bookingId: 17 }],
+    image: "/images/services/lymphatic-drainage.webp",
   },
   {
     id: "relaxing-massage",
@@ -259,11 +259,11 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [
-      { minutes: 60, price: 60 },
-      { minutes: 90, price: 90 },
+      { minutes: 60, price: 60, bookingId: 4 },
+      { minutes: 90, price: 90, bookingId: 5 },
     ],
     featured: true,
-    image: "/images/massage-back-ambiance.jpg",
+    image: "/images/services/relaxing-massage.webp",
   },
   {
     id: "craniofacial-massage",
@@ -352,8 +352,8 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 30, price: 30 }],
-    image: "/images/facial-mask.jpg",
+    durations: [{ minutes: 30, price: 30, bookingId: 6 }],
+    image: "/images/services/craniofacial-massage.webp",
   },
   {
     id: "express-massage",
@@ -430,8 +430,8 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 30, price: 35 }],
-    image: "/images/massage-back-oil.jpg",
+    durations: [{ minutes: 30, price: 35, bookingId: 7 }],
+    image: "/images/services/express-massage.webp",
   },
   {
     id: "ritual-alma",
@@ -520,9 +520,9 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 45, price: 55 }],
+    durations: [{ minutes: 45, price: 55, bookingId: 8 }],
     featured: true,
-    image: "/images/facial-mask.jpg",
+    image: "/images/services/ritual-alma.webp",
   },
   {
     id: "ritual-light-feet",
@@ -611,10 +611,10 @@ export const servicesCatalog: Service[] = [
         },
       },
     ],
-    durations: [{ minutes: 45, price: 55 }],
+    durations: [{ minutes: 45, price: 55, bookingId: 9 }],
     pilgrimFeatured: true,
     audience: ["peregrinos", "deportistas", "personas que trabajan de pie"],
-    image: "/images/ritual-light-feet.jpg",
+    image: "/images/services/ritual-light-feet.webp",
   },
   {
     id: "ritual-serenity-spa",
@@ -699,11 +699,11 @@ export const servicesCatalog: Service[] = [
       },
     ],
     durations: [
-      { minutes: 45, price: 55 },
-      { minutes: 60, price: 70 },
+      { minutes: 45, price: 55, bookingId: 10 },
+      { minutes: 60, price: 70, bookingId: 11 },
     ],
     featured: true,
-    image: "/images/head-spa.jpg",
+    image: "/images/services/ritual-serenity-spa.webp",
   },
   {
     id: "hospitality-reset",
@@ -773,11 +773,11 @@ export const servicesCatalog: Service[] = [
       gl: "Porque coidar dos demais empeza por coidarte a ti. Regálate esa pausa que mereces.",
       en: "Because looking after others starts with looking after yourself. Give yourself the pause you deserve.",
     },
-    durations: [{ minutes: 45, price: 38 }],
+    durations: [{ minutes: 45, price: 38, bookingId: 12 }],
     audience: hospitalityAudience,
     badge: hospitalityBadge,
     note: hospitalityNote,
-    image: "/images/hospitality-reset.jpg",
+    image: "/images/services/hospitality-reset.webp",
   },
   {
     id: "hospitality-reset-premium",
@@ -877,11 +877,11 @@ export const servicesCatalog: Service[] = [
       gl: "É o momento de devolverlle ao teu corpo parte de todo o esforzo que fas cada día. Gañáchelo.",
       en: "It's time to give your body back some of the effort you put in every single day. You've earned it.",
     },
-    durations: [{ minutes: 90, price: 75 }],
+    durations: [{ minutes: 90, price: 75, bookingId: 13 }],
     audience: hospitalityAudience,
     badge: hospitalityBadge,
     note: hospitalityNote,
-    image: "/images/hospitality-reset.jpg",
+    image: "/images/services/hospitality-reset-premium.webp",
   },
   {
     id: "manicura-y-unas",
@@ -962,8 +962,8 @@ export const servicesCatalog: Service[] = [
       gl: "Dende acabados naturais e elegantes ata propostas máis creativas.",
       en: "From natural, elegant finishes to more creative looks.",
     },
-    // Online booking pending — add durations + bookingId when confirmed on the new SimplyBook account.
-    durations: [],
+    // bookingId 15 — price/duration vary; pricingLabel is shown instead of 0 €
+    durations: [{ minutes: 60, price: 0, bookingId: 15 }],
     pricingLabel: {
       es: "Precio según servicio y diseño",
       gl: "Prezo segundo o servizo e o deseño",
@@ -974,7 +974,7 @@ export const servicesCatalog: Service[] = [
       gl: "O prezo e a duración son orientativos e dependerán do tipo de uñas, a lonxitude e a complexidade do deseño escollido. O noso equipo contactará contigo para concretar os detalles da túa cita. A duración e o prezo definitivos poden variar segundo o tipo de uñas e o deseño escollido.",
       en: "Price and duration are indicative and will depend on the nail treatment, length and design complexity. Our team will contact you to confirm the details of your appointment. The final duration and price may vary depending on the nail treatment and design selected.",
     },
-    image: "/images/services/nail-care.jpg",
+    image: "/images/services/manicura-y-unas.webp",
   },
   {
     id: "pedicura-pedi-spa",
@@ -1011,14 +1011,14 @@ export const servicesCatalog: Service[] = [
         en: "Price and duration will depend on the treatment and finishes you choose. Our team can confirm the details of your appointment before the service.",
       },
     ],
-    // Online booking pending — add durations + bookingId when confirmed.
-    durations: [],
+    // bookingId 16 — price varies; pricingLabel is shown instead of 0 €
+    durations: [{ minutes: 45, price: 0, bookingId: 16 }],
     pricingLabel: {
       es: "Precio según tratamiento",
       gl: "Prezo segundo o tratamento",
       en: "Price depends on treatment",
     },
-    // No dedicated pedicure image yet — detail page uses placeholder.
+    image: "/images/services/pedicura-pedi-spa.webp",
   },
   {
     id: "presoterapia",
@@ -1055,13 +1055,13 @@ export const servicesCatalog: Service[] = [
         en: "A wellbeing moment that feels especially welcome after long days on your feet.",
       },
     ],
-    // Online booking pending — add durations + bookingId when confirmed.
-    durations: [],
+    // bookingId 14 — price/duration to confirm; pricingLabel is shown instead of 0 €
+    durations: [{ minutes: 30, price: 0, bookingId: 14 }],
     pricingLabel: {
       es: "Precio y duración por confirmar",
       gl: "Prezo e duración por confirmar",
       en: "Price and duration to be confirmed",
     },
-    image: "/images/services/pressotherapy.jpg",
+    image: "/images/services/presoterapia.webp",
   },
 ];

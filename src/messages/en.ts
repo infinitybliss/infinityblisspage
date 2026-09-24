@@ -155,6 +155,7 @@ export const en: Dictionary = {
     cookies: "Cookies",
     bookingTerms: "Booking terms",
     rights: "All rights reserved.",
+    blurb: "Wellbeing centre in Santiago de Compostela",
   },
   legal: {
     notice: {

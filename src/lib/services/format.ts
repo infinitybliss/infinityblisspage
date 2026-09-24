@@ -34,11 +34,16 @@ export function formatServicePriceSummary(
     return "";
   }
 
-  if (durations.length === 1) {
-    return withPriceNote(formatPrice(durations[0].price, locale), hasNote);
+  const priced = durations.filter((item) => item.price > 0);
+  if (priced.length === 0) {
+    return "";
   }
 
-  const minPrice = Math.min(...durations.map((item) => item.price));
+  if (priced.length === 1 && durations.length === 1) {
+    return withPriceNote(formatPrice(priced[0].price, locale), hasNote);
+  }
+
+  const minPrice = Math.min(...priced.map((item) => item.price));
   return withPriceNote(`${labels.from} ${formatPrice(minPrice, locale)}`, hasNote);
 }
 
@@ -64,5 +69,9 @@ export function formatDurationOption(
   locale: string,
   hasNote = false,
 ): string {
-  return `${formatDuration(duration.minutes, locale)} · ${withPriceNote(formatPrice(duration.price, locale), hasNote)}`;
+  const durationText = formatDuration(duration.minutes, locale);
+  if (duration.price <= 0) {
+    return durationText;
+  }
+  return `${durationText} · ${withPriceNote(formatPrice(duration.price, locale), hasNote)}`;
 }

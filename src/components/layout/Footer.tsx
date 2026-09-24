@@ -36,25 +36,29 @@ export function Footer({ locale, dictionary }: FooterProps) {
   const year = new Date().getFullYear();
   const linkClassName =
     "text-[0.9375rem] text-background/75 transition-colors duration-200 hover:text-accent";
+  const sectionTitleClassName = "text-sm font-medium tracking-wide text-accent";
 
   return (
     <footer className="bg-foreground text-background">
-      <Container className="py-12 sm:py-14 lg:py-16">
-        <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
-          <Logo
-            locale={locale}
-            title={dictionary.brand.name}
-            tagline={dictionary.brand.tagline}
-            onDark
-            showTagline
-          />
-        </div>
-
-        <div className="mt-10 grid gap-10 border-t border-accent/25 pt-10 sm:grid-cols-2 sm:gap-x-10 sm:gap-y-12 lg:grid-cols-3">
-          <div>
-            <p className="text-sm font-medium tracking-wide text-accent">
-              {dictionary.footer.nav}
+      <Container className="py-14 sm:py-16 lg:py-16">
+        <div className="grid grid-cols-1 gap-10 text-center md:grid-cols-3 md:gap-x-10 md:gap-y-12 md:text-left lg:grid-cols-[minmax(0,1.15fr)_repeat(3,minmax(0,1fr))] lg:items-start lg:gap-x-12 lg:gap-y-0">
+          <div className="flex flex-col items-center text-center md:col-span-3 lg:col-span-1">
+            <Logo
+              locale={locale}
+              title={dictionary.brand.name}
+              onDark
+              size="footer"
+            />
+            <p className="mt-3.5 text-[0.8125rem] font-medium uppercase tracking-[0.18em] text-accent">
+              {dictionary.brand.tagline}
             </p>
+            <p className="mt-2 max-w-[15rem] text-sm leading-relaxed text-background/65 lg:max-w-[16.5rem]">
+              {dictionary.footer.blurb}
+            </p>
+          </div>
+
+          <div>
+            <p className={sectionTitleClassName}>{dictionary.footer.nav}</p>
             <ul className="mt-4 space-y-2.5">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -67,10 +71,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
           </div>
 
           <div>
-            <p className="text-sm font-medium tracking-wide text-accent">
-              {dictionary.footer.contact}
-            </p>
-            <ul className="mt-4 space-y-2.5 text-[0.9375rem] text-background/75">
+            <p className={sectionTitleClassName}>{dictionary.footer.contact}</p>
+            <ul className="mt-4 space-y-2.5 text-[0.9375rem] leading-relaxed text-background/75">
               <li>
                 <PendingValue
                   value={site.contact.address}
@@ -83,14 +85,17 @@ export function Footer({ locale, dictionary }: FooterProps) {
                   pendingLabel={dictionary.contact.pending}
                 />
               </li>
-              <li>{site.city}</li>
+              <li>
+                <PendingValue
+                  value={site.contact.email}
+                  pendingLabel={dictionary.contact.pending}
+                />
+              </li>
             </ul>
           </div>
 
-          <div className="sm:col-span-2 lg:col-span-1">
-            <p className="text-sm font-medium tracking-wide text-accent">
-              {dictionary.footer.legal}
-            </p>
+          <div>
+            <p className={sectionTitleClassName}>{dictionary.footer.legal}</p>
             <ul className="mt-4 space-y-2.5">
               {legalLinks.map((link) => (
                 <li key={link.href}>
@@ -104,8 +109,8 @@ export function Footer({ locale, dictionary }: FooterProps) {
         </div>
       </Container>
 
-      <div className="border-t border-accent/25">
-        <Container className="flex flex-col gap-2 py-6 text-center text-sm text-background/60 sm:flex-row sm:justify-between sm:text-left">
+      <div className="border-t border-accent/20">
+        <Container className="flex flex-col items-center gap-2 py-7 text-center text-sm text-background/55 sm:flex-row sm:justify-between sm:text-left">
           <p>
             © {year} {dictionary.brand.name}. {dictionary.footer.rights}
           </p>
