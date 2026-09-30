@@ -1,4 +1,5 @@
 import { formatDuration, formatPrice } from "@/lib/format";
+import type { Locale } from "@/types/locale";
 import type { ServiceDuration } from "@/types/service";
 
 type DurationPriceLabels = {
@@ -70,8 +71,11 @@ export function formatDurationOption(
   hasNote = false,
 ): string {
   const durationText = formatDuration(duration.minutes, locale);
-  if (duration.price <= 0) {
-    return durationText;
-  }
-  return `${durationText} · ${withPriceNote(formatPrice(duration.price, locale), hasNote)}`;
+  const priceText =
+    duration.price > 0
+      ? withPriceNote(formatPrice(duration.price, locale), hasNote)
+      : "";
+  const label = duration.label?.[locale as Locale];
+
+  return [label, durationText, priceText].filter(Boolean).join(" · ");
 }

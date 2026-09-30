@@ -22,6 +22,8 @@ export type ServiceDuration = {
    * Never reuse IDs from the former Ritual Essences account.
    */
   bookingId?: number;
+  /** Optional display name for named variants (e.g. Presoterapia express). */
+  label?: LocalizedString;
 };
 
 export const serviceIds = [

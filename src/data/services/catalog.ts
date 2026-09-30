@@ -1055,13 +1055,38 @@ export const servicesCatalog: Service[] = [
         en: "A wellbeing moment that feels especially welcome after long days on your feet.",
       },
     ],
-    // bookingId 14 — price/duration to confirm; pricingLabel is shown instead of 0 €
-    durations: [{ minutes: 30, price: 0, bookingId: 14 }],
-    pricingLabel: {
-      es: "Precio y duración por confirmar",
-      gl: "Prezo e duración por confirmar",
-      en: "Price and duration to be confirmed",
-    },
+    durations: [
+      {
+        minutes: 15,
+        price: 10,
+        bookingId: 19,
+        label: {
+          es: "Presoterapia express",
+          gl: "Presoterapia express",
+          en: "Express pressotherapy",
+        },
+      },
+      {
+        minutes: 25,
+        price: 18,
+        bookingId: 18,
+        label: {
+          es: "Presoterapia peregrino",
+          gl: "Presoterapia peregrino",
+          en: "Pilgrim pressotherapy",
+        },
+      },
+      {
+        minutes: 30,
+        price: 25,
+        bookingId: 14,
+        label: {
+          es: "Presoterapia + masaje de piernas y pies",
+          gl: "Presoterapia + masaxe de pernas e pés",
+          en: "Pressotherapy + legs and feet massage",
+        },
+      },
+    ],
     image: "/images/services/presoterapia.webp",
   },
 ];

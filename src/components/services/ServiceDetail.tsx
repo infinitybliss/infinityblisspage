@@ -136,7 +136,10 @@ export function ServiceDetail({
                   <ul className="mt-5 space-y-0">
                     {localized.durations.map((duration) => (
                       <li
-                        key={`${duration.minutes}-${duration.price}`}
+                        key={
+                          duration.bookingId ??
+                          `${duration.minutes}-${duration.price}`
+                        }
                         className="flex items-center justify-between gap-4 border-b border-border-subtle py-4 last:border-b-0"
                       >
                         <span className="text-base font-medium text-foreground sm:text-lg">
