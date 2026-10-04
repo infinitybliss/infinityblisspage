@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { fontSans, fontSerif } from "@/lib/fonts";
-import { site } from "@/data/site";
+import { SITE_ORIGIN } from "@/data/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -8,7 +8,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(SITE_ORIGIN),
 };
 
 export default function RootLayout({

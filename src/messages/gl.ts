@@ -2,9 +2,9 @@ import type { Dictionary } from "@/types/dictionary";
 
 export const gl: Dictionary = {
   meta: {
-    title: "Infinity Bliss | Nails & Massage en Santiago de Compostela",
+    title: "Infinity Bliss | Masaxes, uñas e benestar en Santiago de Compostela",
     description:
-      "Masaxes e tratamentos de benestar en Santiago de Compostela para peregrinos e clientes locais.",
+      "Centro de benestar en Santiago de Compostela especializado en masaxes, rituais, manicura, pedicura e presoterapia. Reserva a túa cita en Infinity Bliss.",
   },
   brand: {
     name: "Infinity Bliss",
@@ -29,7 +29,7 @@ export const gl: Dictionary = {
     primaryCta: "Reservar cita",
     secondaryCta: "Ver servizos",
     imageLabel: "Fotografía",
-    imageAlt: "Espazo reservado para unha fotografía do centro ou dun tratamento",
+    imageAlt: "Masaxe de mans en Infinity Bliss, Santiago de Compostela",
   },
   intro: {
     eyebrow: "Santiago de Compostela",
@@ -97,7 +97,7 @@ export const gl: Dictionary = {
       },
     },
     imageLabel: "O centro",
-    imageAlt: "Espazo reservado para unha fotografía do interior de Infinity Bliss",
+    imageAlt: "Tratamento facial en Infinity Bliss, Santiago de Compostela",
   },
   reviews: {
     eyebrow: "Opinións",
@@ -131,7 +131,7 @@ export const gl: Dictionary = {
     changeTreatment: "Cambiar tratamento",
     metaTitle: "Reservas | Infinity Bliss",
     metaDescription:
-      "Reserva masaxes e tratamentos de benestar en Infinity Bliss, Santiago de Compostela.",
+      "Reserva online masaxes, rituais, manicura, pedicura e presoterapia en Infinity Bliss, Santiago de Compostela.",
   },
   contact: {
     eyebrow: "Visítanos",

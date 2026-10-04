@@ -1,21 +1,39 @@
 import { LocaleLayoutShell } from "@/components/layout/LocaleLayoutShell";
 import { site } from "@/data/site";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
+import { seoAssets } from "@/lib/seo";
 import { localeOpenGraph } from "@/types/locale";
 import type { Metadata } from "next";
 
+const dictionary = getDictionary("es");
+
 export const metadata: Metadata = {
   title: {
-    default: getDictionary("es").meta.title,
+    default: dictionary.meta.title,
     template: `%s | ${site.name}`,
   },
-  description: getDictionary("es").meta.description,
+  description: dictionary.meta.description,
   openGraph: {
     type: "website",
     locale: localeOpenGraph.es,
     siteName: site.name,
-    title: getDictionary("es").meta.title,
-    description: getDictionary("es").meta.description,
+    title: dictionary.meta.title,
+    description: dictionary.meta.description,
+    url: `${site.url}/es`,
+    images: [
+      {
+        url: seoAssets.ogImage,
+        width: 1024,
+        height: 691,
+        alt: seoAssets.ogImageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: dictionary.meta.title,
+    description: dictionary.meta.description,
+    images: [seoAssets.ogImage],
   },
 };
 

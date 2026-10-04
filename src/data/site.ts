@@ -1,13 +1,16 @@
 export type ContactField = string | null;
 
+/** Canonical production domain for SEO (canonical, sitemap, Open Graph, schema). */
+export const SITE_ORIGIN = "https://infinitybliss.es";
+
 export const site = {
   name: "Infinity Bliss",
   city: "Santiago de Compostela",
   /**
-   * Replace with the real production domain when it is confirmed.
-   * Used for canonical URLs, Open Graph and sitemap.
+   * Canonical production origin for metadata, sitemap and structured data.
+   * Always infinitybliss.es so workers.dev / localhost never become canonical.
    */
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: SITE_ORIGIN,
   contact: {
     address: "Calle Gómez Ulla 4, Bajo, 15702 Santiago de Compostela" as ContactField,
     phone: "+34 600 62 28 07" as ContactField,

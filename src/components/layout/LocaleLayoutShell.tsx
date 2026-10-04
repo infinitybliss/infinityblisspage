@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { SkipLink } from "@/components/layout/SkipLink";
+import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { getDictionary } from "@/lib/i18n/get-dictionary";
 import { localeHtmlLang } from "@/types/locale";
 import type { Locale } from "@/types/locale";
@@ -16,6 +17,7 @@ export function LocaleLayoutShell({ locale, children }: LocaleLayoutShellProps) 
 
   return (
     <>
+      <LocalBusinessJsonLd />
       <script
         dangerouslySetInnerHTML={{
           __html: `document.documentElement.lang=${JSON.stringify(localeHtmlLang[locale])}`,

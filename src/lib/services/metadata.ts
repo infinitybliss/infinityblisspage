@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/data/site";
+import { SITE_ORIGIN, site } from "@/data/site";
 import { buildServiceLanguageAlternates } from "@/lib/i18n/alternates";
 import { locales } from "@/lib/i18n/config";
 import {
@@ -10,6 +10,7 @@ import {
   localizeService,
 } from "@/lib/services";
 import { getRouteAlternates } from "@/lib/i18n/metadata";
+import { seoAssets } from "@/lib/seo";
 import type { Locale } from "@/types/locale";
 import type { Service } from "@/types/service";
 
@@ -19,19 +20,24 @@ export function getServicesPageMetadata(locale: Locale): Metadata {
   const titles: Record<Locale, string> = {
     es: "Servicios de bienestar en Santiago de Compostela",
     gl: "Servizos de benestar en Santiago de Compostela",
-    en: "Wellbeing treatments in Santiago de Compostela",
+    en: "Wellness treatments in Santiago de Compostela",
   };
   const descriptions: Record<Locale, string> = {
-    es: "Masajes, rituales y tratamientos de bienestar en Santiago de Compostela. Descubre duraciones, precios y reserva tu cita.",
-    gl: "Masaxes, rituais e tratamentos de benestar en Santiago de Compostela. Descubre duracións, prezos e reserva a túa cita.",
-    en: "Massages, rituals and wellbeing treatments in Santiago de Compostela. Explore durations, prices and book your appointment.",
+    es: "Masajes, rituales, manicura, pedicura y presoterapia en Infinity Bliss, Santiago de Compostela. Consulta duraciones, precios y reserva tu cita.",
+    gl: "Masaxes, rituais, manicura, pedicura e presoterapia en Infinity Bliss, Santiago de Compostela. Consulta duracións, prezos e reserva a túa cita.",
+    en: "Massage, rituals, manicure, pedicure and pressotherapy at Infinity Bliss in Santiago de Compostela. Check durations, prices and book your appointment.",
   };
+
+  const routeMeta = getRouteAlternates(locale, "services");
 
   return {
     title: titles[locale],
     description: descriptions[locale],
-    ...getRouteAlternates(locale, "services"),
+    ...routeMeta,
     openGraph: {
+      ...routeMeta.openGraph,
+      title: `${titles[locale]} | ${site.name}`,
+      description: descriptions[locale],
       url: `${site.url}${getServicesHref(locale)}`,
     },
   };
@@ -46,19 +52,46 @@ export function getServiceDetailMetadata(
     locale === "en"
       ? `${localized.name} in Santiago de Compostela`
       : `${localized.name} en Santiago de Compostela`;
-  const description = localized.shortDescription;
+
+  const descriptionByLocale: Record<Locale, string> = {
+    es: `${localized.shortDescription} Disponible en Infinity Bliss, Santiago de Compostela.`,
+    gl: `${localized.shortDescription} Dispoñible en Infinity Bliss, Santiago de Compostela.`,
+    en: `${localized.shortDescription} Available at Infinity Bliss in Santiago de Compostela.`,
+  };
+  const description = descriptionByLocale[locale];
+
+  const canonical = `${site.url}${getEquivalentServiceHref(service, locale)}`;
+  const imageSrc = service.image
+    ? `${SITE_ORIGIN}${service.image}`
+    : seoAssets.ogImage;
 
   return {
     title,
     description,
     alternates: {
-      canonical: `${site.url}${getEquivalentServiceHref(service, locale)}`,
+      canonical,
       languages: buildServiceLanguageAlternates(service),
     },
     openGraph: {
-      title,
+      title: `${title} | ${site.name}`,
       description,
-      url: `${site.url}${getEquivalentServiceHref(service, locale)}`,
+      url: canonical,
+      siteName: site.name,
+      type: "website",
+      locale:
+        locale === "es" ? "es_ES" : locale === "gl" ? "gl_ES" : "en_GB",
+      images: [
+        {
+          url: imageSrc,
+          alt: localized.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${site.name}`,
+      description,
+      images: [imageSrc],
     },
   };
 }

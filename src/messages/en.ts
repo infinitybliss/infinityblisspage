@@ -2,9 +2,9 @@ import type { Dictionary } from "@/types/dictionary";
 
 export const en: Dictionary = {
   meta: {
-    title: "Infinity Bliss | Nails & Massage in Santiago de Compostela",
+    title: "Infinity Bliss | Massage, Nails & Wellness in Santiago de Compostela",
     description:
-      "Massage, wellbeing rituals and spa treatments in Santiago de Compostela, including treatments designed for pilgrims walking the Camino de Santiago.",
+      "Wellness centre in Santiago de Compostela offering massage treatments, nail care, pedicures and pressotherapy. Book your appointment at Infinity Bliss.",
   },
   brand: {
     name: "Infinity Bliss",
@@ -29,7 +29,7 @@ export const en: Dictionary = {
     primaryCta: "Book an appointment",
     secondaryCta: "View treatments",
     imageLabel: "Photograph",
-    imageAlt: "Placeholder for a photograph of the centre or a treatment",
+    imageAlt: "Hand massage at Infinity Bliss in Santiago de Compostela",
   },
   intro: {
     eyebrow: "Santiago de Compostela",
@@ -97,7 +97,7 @@ export const en: Dictionary = {
       },
     },
     imageLabel: "The centre",
-    imageAlt: "Placeholder for a photograph of the interior of Infinity Bliss",
+    imageAlt: "Facial treatment at Infinity Bliss in Santiago de Compostela",
   },
   reviews: {
     eyebrow: "Reviews",
@@ -131,7 +131,7 @@ export const en: Dictionary = {
     changeTreatment: "Change treatment",
     metaTitle: "Booking | Infinity Bliss",
     metaDescription:
-      "Book massages and wellbeing treatments at Infinity Bliss, Santiago de Compostela.",
+      "Book massage, rituals, manicure, pedicure and pressotherapy online at Infinity Bliss in Santiago de Compostela.",
   },
   contact: {
     eyebrow: "Visit us",
