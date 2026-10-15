@@ -16,7 +16,11 @@ export const site = {
     phone: "+34 600 62 28 07" as ContactField,
     whatsapp: "+34 600 62 28 07" as ContactField,
     email: "Infinitybliss.santiago@gmail.com" as ContactField,
-    hours: "10:00 – 20:00" as ContactField,
+  },
+  /** Opening hours for schema.org; display copy lives in locale messages. */
+  schedule: {
+    weekdays: { opens: "10:00", closes: "20:00" },
+    sunday: { opens: "12:00", closes: "20:00" },
   },
   /**
    * Public SimplyBook.me booking URL (widget + fallback link).

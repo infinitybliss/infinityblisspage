@@ -121,6 +121,8 @@ export type Dictionary = {
     whatsapp: string;
     email: string;
     hours: string;
+    hoursWeekdays: string;
+    hoursSunday: string;
     pending: string;
     mapLabel: string;
     mapPlaceholder: string;

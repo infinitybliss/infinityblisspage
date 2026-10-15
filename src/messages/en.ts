@@ -146,6 +146,8 @@ export const en: Dictionary = {
     whatsapp: "WhatsApp",
     email: "Email",
     hours: "Opening hours",
+    hoursWeekdays: "Mon–Sat 10:00 – 20:00",
+    hoursSunday: "Sun 12:00 – 20:00",
     pending: "To be confirmed",
     mapLabel: "Location map",
     mapPlaceholder: "The map will appear here once we confirm the address.",

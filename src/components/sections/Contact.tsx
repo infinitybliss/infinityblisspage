@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PendingValue } from "@/components/ui/PendingValue";
@@ -20,15 +21,17 @@ function ContactItem({
   pendingLabel,
 }: {
   label: string;
-  value: string | null;
+  value: string | null | ReactNode;
   href: string | null;
   pendingLabel: string;
 }) {
+  const isPlainString = typeof value === "string" || value === null;
+
   return (
     <div>
       <dt className="text-[0.9375rem] font-medium text-foreground">{label}</dt>
       <dd className="mt-1.5 text-[0.9375rem] leading-relaxed text-muted sm:text-base">
-        {href && value ? (
+        {href && typeof value === "string" ? (
           <a
             href={href}
             className="transition-colors duration-200 hover:text-primary"
@@ -38,8 +41,10 @@ function ContactItem({
           >
             {value}
           </a>
-        ) : (
+        ) : isPlainString ? (
           <PendingValue value={value} pendingLabel={pendingLabel} />
+        ) : (
+          value
         )}
       </dd>
     </div>
@@ -99,7 +104,14 @@ export function Contact({ locale, dictionary }: ContactProps) {
             />
             <ContactItem
               label={dictionary.contact.hours}
-              value={site.contact.hours}
+              value={
+                <>
+                  {dictionary.contact.hoursWeekdays}
+                  <span className="lg:hidden"> · </span>
+                  <br className="hidden lg:block" />
+                  {dictionary.contact.hoursSunday}
+                </>
+              }
               href={null}
               pendingLabel={dictionary.contact.pending}
             />

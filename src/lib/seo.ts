@@ -54,5 +54,26 @@ export function getLocalBusinessJsonLd() {
       name: "Santiago de Compostela",
     },
     priceRange: "€€",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ],
+        opens: site.schedule.weekdays.opens,
+        closes: site.schedule.weekdays.closes,
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: "Sunday",
+        opens: site.schedule.sunday.opens,
+        closes: site.schedule.sunday.closes,
+      },
+    ],
   };
 }
