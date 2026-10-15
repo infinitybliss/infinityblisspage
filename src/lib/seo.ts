@@ -15,6 +15,8 @@ export const seoAssets = {
   logo: absoluteUrl(brandAssets.logo),
   ogImage: absoluteUrl(siteImages.hero.src),
   ogImageAlt: siteImages.hero.alt.es,
+  ogImageWidth: siteImages.hero.width,
+  ogImageHeight: siteImages.hero.height,
 } as const;
 
 export function getLocalBusinessJsonLd() {

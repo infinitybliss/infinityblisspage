@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: seoAssets.ogImage,
-        width: 1024,
-        height: 691,
+        width: seoAssets.ogImageWidth,
+        height: seoAssets.ogImageHeight,
         alt: seoAssets.ogImageAlt,
       },
     ],

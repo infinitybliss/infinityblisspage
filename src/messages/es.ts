@@ -30,6 +30,10 @@ export const es: Dictionary = {
     secondaryCta: "Ver servicios",
     imageLabel: "Fotografía",
     imageAlt: "Masaje de manos en Infinity Bliss, Santiago de Compostela",
+    carouselLabel: "Fotos del centro Infinity Bliss",
+    previousSlide: "Foto anterior",
+    nextSlide: "Foto siguiente",
+    goToSlide: "Ir a la foto",
   },
   intro: {
     eyebrow: "Santiago de Compostela",

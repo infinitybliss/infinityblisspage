@@ -27,6 +27,10 @@ export type Dictionary = {
     secondaryCta: string;
     imageLabel: string;
     imageAlt: string;
+    carouselLabel: string;
+    previousSlide: string;
+    nextSlide: string;
+    goToSlide: string;
   };
   intro: {
     eyebrow: string;

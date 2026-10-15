@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { MediaImage } from "@/components/ui/MediaImage";
-import { siteImages } from "@/data/media";
+import { HeroCarousel } from "@/components/sections/HeroCarousel";
+import { heroSlides } from "@/data/media";
 import { getBookingHref } from "@/lib/i18n/paths";
 import { getServicesHref } from "@/lib/services";
 import type { Dictionary } from "@/types/dictionary";
@@ -33,19 +33,22 @@ export function Hero({ locale, dictionary }: HeroProps) {
             {hero.text}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href={getBookingHref(locale)}>
-              {hero.primaryCta}
-            </Button>
+            <Button href={getBookingHref(locale)}>{hero.primaryCta}</Button>
             <Button href={getServicesHref(locale)} variant="secondary">
               {hero.secondaryCta}
             </Button>
           </div>
         </div>
-        <MediaImage
-          image={siteImages.hero}
+        <HeroCarousel
+          slides={heroSlides}
           locale={locale}
-          priority
-          className="min-h-[20rem] lg:min-h-[28rem]"
+          labels={{
+            carouselLabel: hero.carouselLabel,
+            previousSlide: hero.previousSlide,
+            nextSlide: hero.nextSlide,
+            goToSlide: hero.goToSlide,
+          }}
+          className="min-h-[22rem] sm:min-h-[26rem] lg:min-h-[32rem]"
           sizes="(max-width: 1024px) 100vw, 50vw"
         />
       </Container>
